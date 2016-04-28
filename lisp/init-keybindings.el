@@ -25,5 +25,8 @@
 ;; org mode
 (global-set-key (kbd "C-c a") 'org-agenda)
 
+;; indent key-binding
+(global-set-key (kbd "C-M-\\")  'indent-region-or-buffer)
+
 
 (provide 'init-keybindings)
