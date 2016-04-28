@@ -1,0 +1,10 @@
+ls
+ls
+cd ./emacs.d
+ls -f
+cd /.emacs.d
+cd .emacs.d/
+clear
+cd lisp/
+touch init-ui.el
+ls -f

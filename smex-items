@@ -1,0 +1,20 @@
+
+;; ----- smex-history -----
+(
+ eshell
+ shell
+ quit-window
+ exit-minibuffer
+ customize-group
+ cd
+ 5x5
+)
+
+;; ----- smex-data -----
+(
+ (customize-group . 2)
+ (eshell . 2)
+ (exit-minibuffer . 1)
+ (quit-window . 1)
+ (shell . 1)
+)
