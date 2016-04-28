@@ -19,5 +19,11 @@
 (global-set-key (kbd "C-h f") 'counsel-describe-function)
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
+;; git keys
+(global-set-key (kbd "C-c p f") 'counsel-git)
+
+;; org mode
+(global-set-key (kbd "C-c a") 'org-agenda)
+
 
 (provide 'init-keybindings)
