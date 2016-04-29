@@ -61,12 +61,49 @@
 	  )
       (progn
 	(indent-buffer)
-	(message "Indented buffer.")
-	)
-      )
-    )
-  )
+	(message "Indented buffer.")))))
 
+;; hippie expand settings
+(setq hippie-expand-try-functions-list '(
+					 try-expand-dabbrev
+					 try-expand-dabbrev-all-buffers
+					 try-expand-dabbrev-from-kill
+					 try-complete-file-name-partially
+					 try-complete-file-name
+					 try-expand-all-abbrevs
+					 try-expand-list
+					 try-expand-line
+					 try-complete-lisp-symbol-partially
+					 try-complete-lisp-symbol))
+
+
+
+;;===============================================
+;;Dired mode settings
+;;===============================================
+
+;; set recursive deletes and copies
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+;; set only one buffer for dired mode
+(put 'dired-find-alternate-file 'disabled nil)
+
+;; 主动加载 Dired Mode
+;;(require 'dired)
+;;(defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+
+;;延迟Dired load
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+
+;; this setting allows you to use keybindings: C-x C-j to enter the path of current file folder
+(require 'dired-x)
+
+;; this setting allows you to copy the contents to the other window when more than two
+;; windows are available in a frame.
+(setq dired-dwin-target t)
 
 
 (provide 'init-better-defaults)

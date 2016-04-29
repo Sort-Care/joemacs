@@ -18,6 +18,10 @@
 			    js2-mode
 			    exec-path-from-shell
 			    popwin
+			    reveal-in-osx-finder
+			    expand-region
+			    iedit
+			    bison-mode
 
 	    ) "Default packages")
 
@@ -77,5 +81,12 @@
 
 ;;load theme
 (load-theme 'spacemacs-dark t)
+
+
+;;reveal-in-osx-finder
+(require 'reveal-in-osx-finder)
+
+(require 'expand-region)
+
 
 (provide 'init-packages)

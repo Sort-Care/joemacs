@@ -8,3 +8,8 @@ clear
 cd lisp/
 touch init-ui.el
 ls -f
+flex fbcl.l 
+flex fbcl.l
+ls -f
+cc lex.yy.c -ll
+./a.out 

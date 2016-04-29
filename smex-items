@@ -1,22 +1,27 @@
 
 ;; ----- smex-history -----
 (
- indent-buffer
- counsel-git
  eshell
- shell
- quit-window
- exit-minibuffer
+ load-library
+ load-file
  customize-group
+ org-todo
+ 2048-game
+ package-install
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 2)
- (eshell . 2)
+ (customize-group . 10)
+ (eshell . 3)
  (exit-minibuffer . 1)
  (quit-window . 1)
  (shell . 1)
  (counsel-git . 1)
- (indent-buffer . 3)
+ (indent-buffer . 6)
+ (package-install . 1)
+ (load-file . 3)
+ (2048-game . 1)
+ (org-todo . 1)
+ (load-library . 1)
 )
