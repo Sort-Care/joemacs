@@ -6,6 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.1)
  '(company-minimum-prefix-length 1)
+ '(org-default-priority 66)
  '(org-todo-keyword-faces
    (quote
     (("DONE" . "99ff66")
@@ -14,11 +15,12 @@
      ("KNOWNCAUSE" . "#B2DFEE")
      ("FIXED" . "#DDA0DD")
      ("CANCELED" . "#548B54")
-     ("TODO" . "#FF34B3"))))
+     ("TODO" . "#FF34B3")
+     ("W_FEEDBACK" . "#00F5FF"))))
  '(org-todo-keywords
    (quote
     ((sequence "TODO(t)" "|" "DONE(d!)")
-     (sequence "REPORT(r!)" "BUG(b@/!)" "KNOWNCAUSE(k!)" "|" "FIXED(f@/!)")
+     (sequence "REPORT(r!)" "BUG(b@/!)" "KNOWNCAUSE(k!)" "W_FEEDBACK(!)" "|" "FIXED(f@/!)")
      (sequence "|" "CANCELED(c!)"))))
  '(spacemacs-theme-org-highlight nil))
 (custom-set-faces
