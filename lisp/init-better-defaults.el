@@ -105,5 +105,17 @@
 ;; windows are available in a frame.
 (setq dired-dwin-target t)
 
+;; using y / n instead of yes / no
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; recursive delete and copy
+(setq dired-recursive-deletes 'always)
+(setq dired-recursive-copies 'always)
+
+
+;;
+(put 'dired-find-alternate-file 'disabled nil)
+
+
 
 (provide 'init-better-defaults)
