@@ -51,4 +51,10 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
+;;org capture
+(global-set-key (kbd "C-c r") 'org-capture)
+
+;;org pomodoro
+(global-set-key (kbd "C-c o p") 'org-pomodoro)
+
 (provide 'init-keybindings)

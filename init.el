@@ -8,6 +8,8 @@
 ;; add path block
 
 (add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/elpa/moe-theme")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/moe-theme")
 
 ;;============================================
 ;;============================================

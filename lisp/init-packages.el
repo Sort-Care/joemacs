@@ -22,6 +22,9 @@
 			    expand-region
 			    iedit
 			    bison-mode
+			    moe-theme
+			    spaceline
+			    org-pomodoro
 
 	    ) "Default packages")
 
@@ -79,14 +82,33 @@
 ;;global company mode activation
 (global-company-mode t)
 
-;;load theme
-(load-theme 'spacemacs-dark t)
+
+(require 'org-pomodoro)
 
 
 ;;reveal-in-osx-finder
 (require 'reveal-in-osx-finder)
 
 (require 'expand-region)
+
+
+
+;;(require 'spaceline-config)
+;;(spaceline-spacemacs-theme)
+
+;; moe theme settings
+(require 'moe-theme)
+;;(setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
+(setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+(setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+
+
+
+
+;;load theme
+;;(load-theme 'spacemacs-dark t)
+(moe-light)
+;;(moe-dark)
 
 
 (provide 'init-packages)

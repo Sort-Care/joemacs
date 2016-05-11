@@ -1,18 +1,18 @@
 
 ;; ----- smex-history -----
 (
+ org-pomodoro
  customize-group
+ hudsonjoe/insert-chrome-current-tab-url
+ customize-themes
  eshell
  load-library
  load-file
- org-todo
- 2048-game
- package-install
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 14)
+ (customize-group . 18)
  (eshell . 3)
  (exit-minibuffer . 1)
  (quit-window . 1)
@@ -24,4 +24,7 @@
  (2048-game . 1)
  (org-todo . 1)
  (load-library . 1)
+ (customize-themes . 7)
+ (hudsonjoe/insert-chrome-current-tab-url . 8)
+ (org-pomodoro . 5)
 )
