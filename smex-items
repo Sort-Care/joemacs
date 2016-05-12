@@ -1,8 +1,8 @@
 
 ;; ----- smex-history -----
 (
- org-pomodoro
  customize-group
+ org-pomodoro
  hudsonjoe/insert-chrome-current-tab-url
  customize-themes
  eshell
@@ -12,7 +12,7 @@
 
 ;; ----- smex-data -----
 (
- (customize-group . 18)
+ (customize-group . 19)
  (eshell . 3)
  (exit-minibuffer . 1)
  (quit-window . 1)
