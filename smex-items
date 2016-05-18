@@ -12,7 +12,7 @@
 
 ;; ----- smex-data -----
 (
- (customize-group . 19)
+ (customize-group . 20)
  (eshell . 3)
  (exit-minibuffer . 1)
  (quit-window . 1)

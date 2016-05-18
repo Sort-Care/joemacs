@@ -25,6 +25,7 @@
 			    moe-theme
 			    spaceline
 			    org-pomodoro
+			    popwin
 
 	    ) "Default packages")
 
@@ -109,6 +110,9 @@
 ;;(load-theme 'spacemacs-dark t)
 (moe-light)
 ;;(moe-dark)
+
+(require 'popwin)
+(popwin-mode 1)
 
 
 (provide 'init-packages)

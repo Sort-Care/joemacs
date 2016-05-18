@@ -13,8 +13,8 @@
 (global-linum-mode 'linum-mode)
 
 
-;; turn off auto revert 
-(global-auto-revert-mode t)
+;; turn on auto revert 
+(global-auto-revert-mode 1)
 
 
 
@@ -35,6 +35,14 @@
 ;; recent files
 (recentf-mode 1)
 (setq recentf-max-menu-items 25)
+
+(defadvice show-paren-function (around fix-show-paren-function activate)
+  (cond ((looking-at-p "\\s(") ad-do-it)
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     ad-do-it)))
+  )
+
 
 ;;hight matching parenthesis
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)

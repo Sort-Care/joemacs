@@ -17,6 +17,8 @@
       '(("t" "Todo" entry (file+headline "~/org/routine.org" "May")
 	 "* TODO [#B] %?\n  %i\n"
 	 :empty-lines 1)))
+
+  (setq org-export-with-sub-superscripts (quote {})) 
   )
 
 
