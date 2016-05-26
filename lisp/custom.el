@@ -42,7 +42,8 @@
    (quote
     ("#dc322f" "#cb4b16" "#b58900" "#546E00" "#B4C342" "#00629D" "#2aa198" "#d33682" "#6c71c4")))
  '(org-default-priority 66)
- '(org-pomodoro-length 55)
+ '(org-pomodoro-length 50)
+ '(org-pomodoro-short-break-length 10)
  '(org-todo-keyword-faces
    (quote
     (("DONE" . "99ff66")

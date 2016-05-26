@@ -31,7 +31,7 @@
 
 (global-set-key (kbd "s-/") 'hippie-expand)
 
-
+;;reveal-in-osx-finder
 (global-set-key (kbd "C-c z") 'reveal-in-osx-finder)
 
 ;;expand-region

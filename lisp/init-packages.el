@@ -1,4 +1,5 @@
- 
+ ;;;packages
+
 (when (>= emacs-major-version 24)
   (package-initialize)
   (require 'package)
@@ -26,6 +27,8 @@
 			    spaceline
 			    org-pomodoro
 			    popwin
+			    swift-mode
+			    flycheck
 
 	    ) "Default packages")
 
@@ -92,7 +95,8 @@
 
 (require 'expand-region)
 
-
+;;swift mode
+(require 'swift-mode)
 
 ;;(require 'spaceline-config)
 ;;(spaceline-spacemacs-theme)
@@ -108,11 +112,12 @@
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)
-(moe-light)
-;;(moe-dark)
+;;(moe-light)
+(moe-dark)
 
 (require 'popwin)
 (popwin-mode 1)
 
 
 (provide 'init-packages)
+;;; init-packages.el ends here

@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
+ eshell
  customize-group
+ indent-region
+ load-library
  org-pomodoro
  hudsonjoe/insert-chrome-current-tab-url
  customize-themes
- eshell
- load-library
- load-file
 )
 
 ;; ----- smex-data -----
 (
- (customize-group . 20)
- (eshell . 3)
+ (customize-group . 21)
+ (eshell . 7)
  (exit-minibuffer . 1)
  (quit-window . 1)
  (shell . 1)
@@ -23,8 +23,9 @@
  (load-file . 3)
  (2048-game . 1)
  (org-todo . 1)
- (load-library . 1)
+ (load-library . 2)
  (customize-themes . 7)
  (hudsonjoe/insert-chrome-current-tab-url . 8)
  (org-pomodoro . 5)
+ (indent-region . 2)
 )

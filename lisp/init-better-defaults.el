@@ -150,6 +150,10 @@
     (format "%s" (s-chop-suffix "\"" (s-chop-prefix "\"" result)))))
 
 
+;; move line or region
+(require 'move-lines)
+(move-lines-binding)
+
 
 
 (provide 'init-better-defaults)
