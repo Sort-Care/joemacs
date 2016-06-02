@@ -32,3 +32,15 @@ swiftc swiftTest101.swift
 swiftc swiftTest101.swift 
 ls
 ./swiftTest101 
+ls
+make Makefile.ch3 
+make Makefile.ch3 
+bison -d fb3_1.y
+ls
+flex -ofb3_1.lex.c fb3_1.l
+ls
+g++ test.cpp 
+ls
+./a,out
+./a.out
+g++ test.cpp 

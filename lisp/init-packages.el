@@ -28,7 +28,11 @@
 			    org-pomodoro
 			    popwin
 			    swift-mode
-			    flycheck
+			    web-mode
+			    helm-ag
+			    yasnippet
+			    auto-yasnippet
+			    neotree
 
 	    ) "Default packages")
 
@@ -77,10 +81,11 @@
 (smartparens-global-mode t)
 
 
-;; configure js2-mode for js files
+;; configure js2-mode, html-mode for files
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))
+       '(("\\.html\\'" . web-mode))
        auto-mode-alist))
 
 ;;global company mode activation
@@ -98,6 +103,11 @@
 ;;swift mode
 (require 'swift-mode)
 
+
+;;flycheck
+;;(global-flycheck-mode)
+
+
 ;;(require 'spaceline-config)
 ;;(spaceline-spacemacs-theme)
 
@@ -109,6 +119,16 @@
 
 
 
+;;yasnippet
+(require 'yasnippet) 
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
+
+;;
+(require 'neotree)
+
+
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)
@@ -117,7 +137,6 @@
 
 (require 'popwin)
 (popwin-mode 1)
-
 
 (provide 'init-packages)
 ;;; init-packages.el ends here

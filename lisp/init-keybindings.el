@@ -57,4 +57,18 @@
 ;;org pomodoro
 (global-set-key (kbd "C-c o p") 'org-pomodoro)
 
+
+;;helm ag
+(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+
+;;auto yasnippet
+(global-set-key (kbd "C-c s c") 'aya-create)
+(global-set-key (kbd "C-c s e") 'aya-expand)
+
+
+;;neotree
+(global-set-key [f8] 'neotree-toggle)
+
+
 (provide 'init-keybindings)

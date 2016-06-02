@@ -1,24 +1,24 @@
 
 ;; ----- smex-history -----
 (
+ indent-buffer
  eshell
- customize-group
- indent-region
- load-library
- org-pomodoro
- hudsonjoe/insert-chrome-current-tab-url
- customize-themes
+ aya-expand
+ aya-create
+ hungry-delete-mode
+ helm-do-ag
+ helm-ag
 )
 
 ;; ----- smex-data -----
 (
  (customize-group . 21)
- (eshell . 7)
+ (eshell . 9)
  (exit-minibuffer . 1)
  (quit-window . 1)
  (shell . 1)
  (counsel-git . 1)
- (indent-buffer . 6)
+ (indent-buffer . 8)
  (package-install . 1)
  (load-file . 3)
  (2048-game . 1)
@@ -28,4 +28,12 @@
  (hudsonjoe/insert-chrome-current-tab-url . 8)
  (org-pomodoro . 5)
  (indent-region . 2)
+ (c++-mode . 1)
+ (hungry-delete-mode . 8)
+ (describe-font . 1)
+ (flycheck-mode . 2)
+ (helm-ag . 1)
+ (helm-do-ag . 1)
+ (aya-create . 3)
+ (aya-expand . 2)
 )
