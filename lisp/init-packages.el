@@ -27,7 +27,6 @@
 			    spaceline
 			    org-pomodoro
 			    popwin
-			    swift-mode
 			    web-mode
 			    helm-ag
 			    yasnippet
@@ -100,8 +99,6 @@
 
 (require 'expand-region)
 
-;;swift mode
-(require 'swift-mode)
 
 
 ;;flycheck
