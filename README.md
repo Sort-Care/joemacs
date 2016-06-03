@@ -10,6 +10,14 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
     - [Quick Install](#quick-install-with-git)
     - [Manually](#manually)
     - [Dependencies](#dependencies)
+- [Packages and Usage](#packages-and-usage)
+    - [Included Packages](#included-packages) 
+    - [Existed Keybindings](#existed-keybindings)
+         - [Functionalities](#1-functionalities)
+         - [Window Move](#2-window-move)
+         - [Org Mode](#3-org-mode)
+         - [Editing](#4-editing)
+- [File Tree](#file-tree)
  
  
 
@@ -35,7 +43,7 @@ If you don't want to use git, try install manually:
 - helm-ag: to make helm ag work, you need to install [the silver searcher](https://github.com/ggreer/the_silver_searcher)
 
 ## Packages and Usage
-### Installed packages
+### Included packages
 ```
 			     ;;---------- special file modes ----------
 			     js2-mode
@@ -152,3 +160,29 @@ Put this in init-org.el, after the (require 'org) or between the parentheses of 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--- custom.el<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--- move-lines.el<br>
 
+## Appendix
+### Files containing 'with-eval-after-load'
+1. init-better-defaults.el: line 105: (with-eval-after-load 'dired
+2. init-keybindings.el    : line 47 : (with-eval-after-load 'company
+3. init-keybindings.el    : line 54 : (with-eval-after-load 'dired
+4. init-org.el            : line 4  : (with-eval-after-load 'org
+
+If you are using emacs earlier than version 24.4, you need to locate these file and replace all "with-eval-after-load", or the emacs launching process will throw errors like
+```
+Symbol's function definition is void: with-eval-after-load
+```
+
+### Replacing Example:
+For init-better-defaults.el, line 105:
+The origin code are as follows:
+```
+;;延迟Dired load
+(with-eval-after-load 'dired
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+```
+Assume that we have come across an error saying function definition is void for: with-eval-after-load. To fix it, we need to disable codes above and add some lines as depcit below:
+```
+(require 'dired)
+(defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+```
+DO NOT Replace "with-eval-after-load" with "require" if not necessary, it is feasible by will slow down the launch speed of Emacs.
