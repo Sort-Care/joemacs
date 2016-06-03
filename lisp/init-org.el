@@ -4,7 +4,7 @@
 (with-eval-after-load 'org
   (setq org-src-fontify-natively t)
 
-  (setq org-agenda-files '("~/org"))
+;;  (setq org-agenda-files '("~/org"))
 
   (defun org-summary-todo (n-done n-not-done)
     "Switch entry to DONE when all subentries are done, to TODO otherwise."
@@ -13,10 +13,10 @@
   
   (add-hook 'org-after-todo-statistics-hook 'org-summary-todo)
 
-  (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/routine.org" "May")
-	 "* TODO [#B] %?\n  %i\n"
-	 :empty-lines 1)))
+;;  (setq org-capture-templates
+;;      '(("t" "Todo" entry (file+headline "~/org/routine.org" "May")
+;;	 "* TODO [#B] %?\n  %i\n"
+;;	 :empty-lines 1)))
 
   (setq org-export-with-sub-superscripts (quote {})) 
   )
