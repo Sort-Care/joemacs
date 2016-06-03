@@ -10,7 +10,6 @@
 ;;add whatever packages you want here
 (defvar hudsonjoe/packages '(
 			    company
-			    spacemacs-theme
 			    monokai-theme
 			    hungry-delete
 			    swiper
@@ -24,7 +23,6 @@
 			    iedit
 			    bison-mode
 			    moe-theme
-			    spaceline
 			    org-pomodoro
 			    popwin
 			    web-mode
