@@ -21,6 +21,8 @@
 
 ;; git keys
 (global-set-key (kbd "C-c p f") 'counsel-git)
+(global-set-key (kbd "C-c p a") 'counsel-ag)
+(global-set-key (kbd "C-c c l") 'counsel-locate)
 
 ;; org mode
 (global-set-key (kbd "C-c a") 'org-agenda)
