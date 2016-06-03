@@ -14,7 +14,7 @@ Screen Shots (Using [moe-theme](https://github.com/kuanyui/moe-theme.el))
     - [Dependencies](#dependencies)
 - [Packages and Usage](#packages-and-usage)
     - [Included Packages](#included-packages) 
-    - [Existed Keybindings](#existed-keybindings)
+    - [Existing Keybindings](#existing-keybindings)
          - [1. Functionalities](#1-functionalities)
          - [2. Window Move](#2-window-move)
          - [3. Org Mode](#3-org-mode)
@@ -91,7 +91,7 @@ If you don't want to use git, try install joemacs manually:
 			     moe-theme	   
 ```
 
-### Existed Keybindings
+### Existing Keybindings
 
 #### 1. Functionalities
 | File and Command Functions       | Key Bindings           |
