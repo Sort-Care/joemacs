@@ -5,11 +5,11 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 ![Light](img/light.png)
 
 **Table of Contents**
-- [Installation](#Installation)
-    - [Cautions and Prerequisites](#Cautions and Prerequisites)
-    - [Quick Install](#Quick Install with Git)
-    - [Manually](#Manually)
-    - [Dependencies](#Dependencies)
+- [Installation](#installation)
+    - [Cautions and Prerequisites](#cautions-and-prerequisites)
+    - [Quick Install](#quick-install-with-git)
+    - [Manually](#manually)
+    - [Dependencies](#dependencies)
  
  
 
