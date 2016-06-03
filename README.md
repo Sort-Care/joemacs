@@ -8,7 +8,7 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 - [Installation](#installation)
     - [Cautions and Prerequisites](#cautions-and-prerequisites)
     - [Quick Install](#quick-install-with-git)
-    - [Manually](#manually)
+    - [Manually Install](#manually-install)
     - [Dependencies](#dependencies)
 - [Packages and Usage](#packages-and-usage)
     - [Included Packages](#included-packages) 
@@ -36,7 +36,7 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 git clone https://github.com/Sort-Care/joemacs ~/.emacs.d
 ```
 
-### Manually
+### Manually Install
 If you don't want to use git, try install manually:
 - create folder .emacs.d under your home path(~).
 - copy init.el and lisp folder to your .emacs.d folder
