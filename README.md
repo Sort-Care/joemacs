@@ -8,6 +8,8 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 - [Installation](#installation)
     - [Cautions and Prerequisites](#cautions-and-prerequisites)
     - [Quick Install](#quick-install-with-git)
+         - [For Mac or Linux Users](#for-mac-or-linux-users)
+         - [For Windows Users](#for-windows-users)
     - [Manually Install](#manually-install)
     - [Dependencies](#dependencies)
 - [Packages and Usage](#packages-and-usage)
@@ -33,13 +35,21 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 - Do customize the codes in init-org.el before you use org-agenda and org-capture functions.
 
 ### Quick Install with Git
+#### For Mac or Linux Users
 ```
 git clone https://github.com/Sort-Care/joemacs ~/.emacs.d
+```
+#### For Windows Users
+If you are using windows [see here](http://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html). 
+Or, [Windows用户配置的中文说明](http://www.cnblogs.com/FelixLee/archive/2011/01/21/2412620.html)
+After setting the **"[home-path]"** in Windows, use the similar command to install it:
+```
+git clone https://github.com/Sort-Care/joemacs [home-path]/.emacs.d
 ```
 
 ### Manually Install
 If you don't want to use git, try install joemacs manually:
-- create folder .emacs.d under your home path(~). If you are using windows [see here](http://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html). [windows 下的配置中文说明](#http://www.cnblogs.com/FelixLee/archive/2011/01/21/2412620.html)
+- create folder .emacs.d under your home path(~). 
 - copy init.el and lisp folder to your .emacs.d folder.
 - restart your emacs, it will install all packages needed from the internet.
 
