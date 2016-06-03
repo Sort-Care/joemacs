@@ -18,6 +18,9 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
          - [3. Org Mode](#3-org-mode)
          - [4. Editing](#4-editing)
 - [File Tree](#file-tree)
+- [Appendix](#appendix)
+    - [Files containing with-eval-after-load](#files-containing-witn-eval-after-load)
+    - [Replacing Example](#replacing-example)
  
  
 
@@ -161,7 +164,7 @@ Put this in init-org.el, after the (require 'org) or between the parentheses of 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--- move-lines.el<br>
 
 ## Appendix
-### Files containing 'with-eval-after-load'
+### Files containing with-eval-after-load
 1. init-better-defaults.el: line 105: (with-eval-after-load 'dired
 2. init-keybindings.el    : line 47 : (with-eval-after-load 'company
 3. init-keybindings.el    : line 54 : (with-eval-after-load 'dired
@@ -172,7 +175,7 @@ If you are using emacs earlier than version 24.4, you need to locate these file 
 Symbol's function definition is void: with-eval-after-load
 ```
 
-### Replacing Example:
+### Replacing Example
 For init-better-defaults.el, line 105:
 The origin code are as follows:
 ```
