@@ -26,10 +26,11 @@ Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
 
 ## Installation
 ### Cautions and Prerequisites
-- Your Emacs Version HAS TO be NO LOWER THAN 24.4, for there are many usages of 'with-eval-after-load'. However, if you still want to use it in some early version of emacs, make sure that you get rid of all 'with-eval-after-load', replacing them with (require 'package-name) instead. All files containing 'with-eval-after-load' will be given in Appendix.
+- First, you gonna need an [Emacs](http://www.gnu.org/software/emacs/emacs.html), or there is [another way](https://emacsformacosx.com) to install it for Mac users.
+- Your Emacs Version must be NO LOWER THAN 24.4, for there are many uses of 'with-eval-after-load'. However, if you are so determined to use it with some early versions of emacs, make sure that you get rid of all 'with-eval-after-load' functions, and replace them with (require 'package-name). All files containing 'with-eval-after-load' and examples to replace them will be given in [Appendix](#appendix).
 
-- If you are using Windows, probably the neotree package functions would not work right.
-- Do customize the codes in init-org.el before you use org-agenda and org-capture 
+- If you are using Windows, probably the [neotree](https://github.com/jaypei/emacs-neotree) package could not work right.
+- Do customize the codes in init-org.el before you use org-agenda and org-capture functions.
 
 ### Quick Install with Git
 ```
@@ -37,24 +38,24 @@ git clone https://github.com/Sort-Care/joemacs ~/.emacs.d
 ```
 
 ### Manually Install
-If you don't want to use git, try install manually:
-- create folder .emacs.d under your home path(~).
-- copy init.el and lisp folder to your .emacs.d folder
-- restart your emacs, it will install all packages needed from the internet
+If you don't want to use git, try install joemacs manually:
+- create folder .emacs.d under your home path(~). If you are using windows [see here](http://www.gnu.org/software/emacs/manual/html_node/efaq-w32/Location-of-init-file.html). [windows 下的配置中文说明](#http://www.cnblogs.com/FelixLee/archive/2011/01/21/2412620.html)
+- copy init.el and lisp folder to your .emacs.d folder.
+- restart your emacs, it will install all packages needed from the internet.
 
 ### Dependencies
-- helm-ag: to make helm ag work, you need to install [the silver searcher](https://github.com/ggreer/the_silver_searcher)
+- helm-ag: to make helm-ag work, you need to install [the silver searcher](https://github.com/ggreer/the_silver_searcher)
 
 ## Packages and Usage
 ### Included packages
 ```
-			     ;;---------- special file modes ----------
+			     ;;---------------- Packages for special file modes ----------
 			     js2-mode
 			     bison-mode
 			     web-mode
 
 			     
-			     ;;----------- functionalities ---------- 
+			     ;;----------- Packages providing awesome functionalities ---------- 
 			     company
 			     swiper
 			     counsel
@@ -68,14 +69,14 @@ If you don't want to use git, try install manually:
 			     exec-path-from-shell
 			     
 			     
-			     ;;---------- edit convenience ---------- 
+			     ;;---------------- Packages for edit convenience ---------- 
 			     hungry-delete
 			     smartparens
 			     expand-region
 			     iedit
 
 			     
-			     ;;--------------- theme ---------- 
+			     ;;-------------------------- themes ---------- 
 			     monokai-theme
 			     moe-theme	   
 ```
@@ -115,8 +116,19 @@ Caution: Note that if you are using systems **other than Mac**, you need to rede
 
 
 #### 3. Org Mode
-I added some TODO states to org mode, use C-c C-t to see what are they. Some of these states would require some information for changing into them. 
-Before using Open Org Agenda shortcut, you need to appoint a folder like the example:
+I added some TODO List states to org mode, 
+![todo states](img/todo_states.png)
+you can totally customize them by:
+```
+M-x customize-group [RET] org-todo  
+```
+Then find the group named "Org Todo Keywords". 
+![Org Todo Keywords](img/todo_customize.png)
+
+About arguments in the parentheses:
+>Since it is normally too much to record a note for every state, Org mode expects configuration on a per-keyword basis for this. This is achieved by adding special markers ‘!’ (for a timestamp) or ‘@’ (for a note with timestamp) in parentheses after each keyword.
+
+Before using Open Org Agenda shortcut, you need to appoint a folder:
 ```
  (setq org-agenda-files '("~/org"))
 ```
@@ -170,20 +182,20 @@ Put this in init-org.el, after the (require 'org) or between the parentheses of 
 3. init-keybindings.el    : line 54 : (with-eval-after-load 'dired
 4. init-org.el            : line 4  : (with-eval-after-load 'org
 
-If you are using emacs earlier than version 24.4, you need to locate these file and replace all "with-eval-after-load", or the emacs launching process will throw errors like
+If you are using emacs earlier than version 24.4, you need to locate these files and replace all "with-eval-after-load" with "require", or the emacs launching process will throw errors like
 ```
 Symbol's function definition is void: with-eval-after-load
 ```
 
 ### Replacing Example
 For init-better-defaults.el, line 105:
-The origin code are as follows:
+The origin function is as follows:
 ```
 ;;延迟Dired load
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 ```
-Assume that we have come across an error saying function definition is void for: with-eval-after-load. To fix it, we need to disable codes above and add some lines as depcit below:
+Assume that we have come across an error saying that function definition is void for: with-eval-after-load. To fix it, we need to disable codes above and add some lines as below:
 ```
 (require 'dired)
 (defined-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
