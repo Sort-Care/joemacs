@@ -1,24 +1,37 @@
 # joemacs
-My personal emacs configuration
+HudsonJoe's personal emacs configuration 
+Screen Shots (Using [meo-theme](https://github.com/kuanyui/moe-theme.el))
+![Dark](img/dark2.png)
+![Light](img/light.png)
+
+**Table of Contents**
+- [Installation](#Installation)
+    - [Cautions and Prerequisites](#Cautions and Prerequisites)
+    - [Quick Install](#Quick Install with Git)
+    - [Manually](#Manually)
+    - [Dependencies](#Dependencies)
+ 
+ 
+
 ## Installation
-### 0. Cautions and Prerequisites
+### Cautions and Prerequisites
 - Your Emacs Version HAS TO be NO LOWER THAN 24.4, for there are many usages of 'with-eval-after-load'. However, if you still want to use it in some early version of emacs, make sure that you get rid of all 'with-eval-after-load', replacing them with (require 'package-name) instead. All files containing 'with-eval-after-load' will be given in Appendix.
 
 - If you are using Windows, probably the neotree package functions would not work right.
 - Do customize the codes in init-org.el before you use org-agenda and org-capture 
 
-### 1. Quick install with Git
+### Quick Install with Git
 ```
 git clone https://github.com/Sort-Care/joemacs ~/.emacs.d
 ```
 
-### 2. Manually
+### Manually
 If you don't want to use git, try install manually:
 - create folder .emacs.d under your home path(~).
 - copy init.el and lisp folder to your .emacs.d folder
 - restart your emacs, it will install all packages needed from the internet
 
-### 3. Dependencies
+### Dependencies
 - helm-ag: to make helm ag work, you need to install [the silver searcher](https://github.com/ggreer/the_silver_searcher)
 
 ## Packages and Usage
@@ -65,7 +78,7 @@ If you don't want to use git, try install manually:
 | Find Function      | C-h C-f      |
 | Find Variable | C-h C-v      |
 |Find Function on key|C-h C-k|
-|Open Swiper| C-s |
+|Open [Swiper](https://github.com/abo-abo/swiper)| C-s |
 |ivy-resume|C-c C-r|
 |Open counsel M-x|M-x|
 |Find File|C-x C-f|
@@ -74,8 +87,8 @@ If you don't want to use git, try install manually:
 |Counsel Git Search| C-c p f|
 |Counsel Ag Search| C-c p a|
 |Counsel Locate Word| C-c c l|
-|Reveal File in Finder (Mac OS X)|C-c z|
-|Helm-ag Search Project Root|C-c p s|
+|[Reveal File in Finder (Mac OS X)](https://github.com/kaz-yos/reveal-in-osx-finder)|C-c z|
+|[Helm-ag](https://github.com/syohex/emacs-helm-ag) Search Project Root|C-c p s|
 |Open File Tree ([neotree](https://github.com/jaypei/emacs-neotree))|f8|
 
 #### 2. Window Move
@@ -115,13 +128,16 @@ Put this in init-org.el, after the (require 'org) or between the parentheses of 
 | --------- |:--------------:|
 |Indent Buffer or Region|C-M-\\|
 |Hippie Expand Completion|s-/|
-|Expand Region Select|C-=|
-|Enter iedit Mode|M-s e|
-|Selecting Candidates of Company Completion||
+|[Expand Region Select](https://github.com/magnars/expand-region.el)|C-=|
+|Enter [iedit](https://github.com/victorhge/iedit) Mode|M-s e|
+|Selecting Candidates of [Company](https://github.com/company-mode/company-mode) Completion||
 |------- Next One|C-n|
 |------- Previous One|C-p|
-|Auto yasnippet Create| C-c s c|
+|[Auto yasnippet](https://github.com/abo-abo/auto-yasnippet) Create| C-c s c|
 |Auto yasnippet Expand| C-c s e|
+|[Move Line or Region](https://github.com/targzeta/move-lines)||
+|------- Up|M-p|
+|------- Down|M-n|
 
 
 ## File Tree
