@@ -9,27 +9,37 @@
 
 ;;add whatever packages you want here
 (defvar hudsonjoe/packages '(
-			    company
-			    monokai-theme
-			    hungry-delete
-			    swiper
-			    counsel
-			    smartparens
-			    js2-mode
-			    exec-path-from-shell
-			    popwin
-			    reveal-in-osx-finder
-			    expand-region
-			    iedit
-			    bison-mode
-			    moe-theme
-			    org-pomodoro
-			    popwin
-			    web-mode
-			    helm-ag
-			    yasnippet
-			    auto-yasnippet
-			    neotree
+	                 ;;---------------- Packages for special file modes ----------
+	                 js2-mode
+	                 bison-mode
+	                 web-mode
+	
+	
+	                 ;;----------- Packages providing awesome functionalities ---------- 
+	                 company
+	                 swiper
+	                 counsel
+	                 popwin
+	                 reveal-in-osx-finder
+	                 org-pomodoro
+	                 helm-ag
+	                 yasnippet
+	                 auto-yasnippet
+	                 neotree
+	                 exec-path-from-shell
+	                 which-key
+	
+	
+	                 ;;---------------- Packages for edit convenience ---------- 
+	                 hungry-delete
+	                 smartparens
+	                 expand-region
+	                 iedit
+	
+	
+	                 ;;-------------------------- themes ---------- 
+	                 monokai-theme
+	                 moe-theme    
 
 	    ) "Default packages")
 
@@ -120,9 +130,11 @@
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 
-;;
+;;neotree
 (require 'neotree)
 
+;;which key
+(which-key-mode 1)
 
 
 ;;load theme
