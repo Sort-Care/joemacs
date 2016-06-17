@@ -20,6 +20,20 @@
 
   (setq org-export-with-sub-superscripts (quote {})) 
   )
+;;the code following is not working for Chinese
+(defun org-mode-my-init()
+  (set-face-attribute 'org-level-1 nil :height 1.6)
+  (set-face-attribute 'org-level-2 nil :height 1.4)
+  (set-face-attribute 'org-level-3 nil :height 1.2)
+  (define-key org-mode-map (kbd "＊")(kbd "*"))
+  (define-key org-mode-map (kbd "－")(kbd "-"))
+  (define-key org-mode-map (kbd "（")(kbd "("))
+  (define-key org-mode-map (kbd "）")(kbd ")"))
+  (define-key org-mode-map (kbd "＋")(kbd "+"))
+  (define-key org-mode-map (kbd "｜")(kbd "|"))
+  (define-key org-mode-map (kbd "：")(kbd ":"))
+  )
 
+(add-hook 'org-mode-hook 'org-mode-my-init)
 
 (provide 'init-org)
