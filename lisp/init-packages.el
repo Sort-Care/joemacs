@@ -28,6 +28,10 @@
 	                 neotree
 	                 exec-path-from-shell
 	                 which-key
+          		 auctex
+		     	 company-auctex
+		         chinese-fonts-setup
+		     	 ag
 	
 	
 	                 ;;---------------- Packages for edit convenience ---------- 
@@ -136,6 +140,16 @@
 ;;which key
 (which-key-mode 1)
 
+;;company-auctex
+(require 'company-auctex)
+(company-auctex-init)
+
+
+;;chinese-fonts-setup
+(require 'chinese-fonts-setup)
+
+;;ag
+(require 'ag)
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)
