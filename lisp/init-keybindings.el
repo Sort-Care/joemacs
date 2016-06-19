@@ -73,4 +73,14 @@
 (global-set-key [f8] 'neotree-toggle)
 
 
+;;window movep
+(global-set-key (kbd "C-c w p") 'windmove-up)
+(global-set-key (kbd "C-c w n") 'windmove-down)
+(global-set-key (kbd "C-c w b") 'windmove-left)
+(global-set-key (kbd "C-c w f") 'windmove-right)
+
+;;chinese-fonts-setup
+(global-set-key (kbd "C-c f i") 'cfs-increase-fontsize)
+(global-set-key (kbd "C-c f d") 'cfs-decrease-fontsize)
+
 (provide 'init-keybindings)
