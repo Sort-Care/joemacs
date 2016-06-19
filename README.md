@@ -119,10 +119,10 @@ Caution: Note that if you are using systems **other than Mac**, you need to rede
 |Window Move| Key Bindings|
 |---|:---:|
 |Move Focusing Window ||
-|--------- window up|C-S-p|
-|--------- window down|C-S-n|
-|--------- window left|C-S-b|
-|--------- window right|C-S-f|
+|--------- window up|C-c w p|
+|--------- window down|C-c w n|
+|--------- window left|C-c w b|
+|--------- window right|C-c w f|
 
 
 #### 3. Org Mode
