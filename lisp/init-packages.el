@@ -9,50 +9,53 @@
 
 ;;add whatever packages you want here
 (defvar hudsonjoe/packages '(
-	                 ;;---------------- Packages for special file modes ----------
-	                 js2-mode
-	                 bison-mode
-	                 web-mode
-	
-	
-	                 ;;----------- Packages providing awesome functionalities ---------- 
-	                 company
-	                 swiper
-	                 counsel
-	                 popwin
-	                 reveal-in-osx-finder
-	                 org-pomodoro
-	                 helm-ag
-	                 yasnippet
-	                 auto-yasnippet
-	                 neotree
-	                 exec-path-from-shell
-	                 which-key
-          		 auctex
-		     	 company-auctex
-		         chinese-fonts-setup
-		     	 ag
-	
-	
-	                 ;;---------------- Packages for edit convenience ---------- 
-	                 hungry-delete
-	                 smartparens
-	                 expand-region
-	                 iedit
-	
-	
-	                 ;;-------------------------- themes ---------- 
-	                 monokai-theme
-	                 moe-theme    
+							 ;;---------------- Packages for special file modes ----------
+							 js2-mode
+							 bison-mode
+							 web-mode
+							 
+							 
+							 ;;----------- Packages providing awesome functionalities ---------- 
+							 company
+							 swiper
+							 counsel
+							 popwin
+							 reveal-in-osx-finder
+							 org-pomodoro
+							 helm-ag
+							 yasnippet
+							 auto-yasnippet
+							 neotree
+							 exec-path-from-shell
+							 which-key
+							 auctex
+							 company-auctex
+							 chinese-fonts-setup
+							 ag
+							 helm
+							 helm-swoop
+							 helm-gtags
+							 ggtags
+							 
+							 ;;---------------- Packages for edit convenience ---------- 
+							 hungry-delete
+							 smartparens
+							 expand-region
+							 iedit
+							 
+							 
+							 ;;-------------------------- themes ---------- 
+							 monokai-theme
+							 moe-theme    
 
-	    ) "Default packages")
+							 ) "Default packages")
 
 (setq package-selected-packages hudsonjoe/packages)
 
 (defun hudsonjoe/packages-installed-p ()
   (loop for pkg in hudsonjoe/packages
-	when (not (package-installed-p pkg)) do (return nil)
-	finally (return t)))
+		when (not (package-installed-p pkg)) do (return nil)
+		finally (return t)))
 
 (unless (hudsonjoe/packages-installed-p)
   (message "%s" "Refreshing package database...")

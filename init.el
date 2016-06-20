@@ -22,6 +22,12 @@
 
 ;;recent file
 (require 'recentf)
+(require 'init-cindent)
+(require 'recentf)
+(require 'setup-helm)
+(require 'setup-helm-gtags)
+(require 'setup-ggtags)
+(require 'sr-speedbar)
 ;;============================================
 
 
