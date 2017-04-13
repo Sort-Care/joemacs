@@ -1,0 +1,25 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [42 61])
+            ("string" include (:system-flag t) nil [62 79])
+            ("fstream" include (:system-flag t) nil [80 98])
+            ("map" include (:system-flag t) nil [99 113])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [115 135])
+            ("main" function (:type "int") nil [137 1221]))          
+      :file "greedy.cpp"
+      :pointmax 1222
+      :fsize 1221
+      :lastmodtime '(22737 23126 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!USACO!GreedyGift!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

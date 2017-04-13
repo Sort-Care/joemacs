@@ -41,6 +41,7 @@
 
 ;;iedit
 (global-set-key (kbd "M-s e") 'iedit-mode)
+(global-set-key (kbd "M-s q") 'iedit-quit)
 
 ;;company keys
 (with-eval-after-load 'company
@@ -82,5 +83,12 @@
 ;;chinese-fonts-setup
 (global-set-key (kbd "C-c f i") 'cfs-increase-fontsize)
 (global-set-key (kbd "C-c f d") 'cfs-decrease-fontsize)
+
+(global-set-key (kbd "M-s i") 'counsel-imenu)
+
+;;
+(global-set-key (kbd "C-w") 'backward-kill-word)
+
+(global-set-key (kbd "C-c '") 'shell-pop)
 
 (provide 'init-keybindings)

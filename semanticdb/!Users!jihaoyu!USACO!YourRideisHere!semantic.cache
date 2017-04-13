@@ -1,0 +1,24 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [42 61])
+            ("fstream" include (:system-flag t) nil [62 80])
+            ("string" include (:system-flag t) nil [81 98])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [100 120])
+            ("main" function (:type "int") nil [122 641]))          
+      :file "yourride.cpp"
+      :pointmax 642
+      :fsize 641
+      :lastmodtime '(22734 28009 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!USACO!YourRideisHere!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

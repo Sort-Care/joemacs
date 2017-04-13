@@ -129,7 +129,8 @@
 (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
 (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
 
-
+(require 'powerline)
+(powerline-moe-theme)
 
 ;;yasnippet
 (require 'yasnippet) 
@@ -158,9 +159,24 @@
 ;;(load-theme 'spacemacs-dark t)
 ;;(moe-light)
 (moe-dark)
+(moe-theme-set-color 'purple)
 
 (require 'popwin)
 (popwin-mode 1)
+
+;;window numbering
+(window-numbering-mode 1)
+
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+
+;;
+(require 'shell-pop)
+
+;;speedbar
+;;(setq speedbar-directory-unshown-regexp "^\\(CVS\\|RCS\\|SCCS\\|\\.\\.*$\\)\\'")
+(setq speedbar-directory-unshown-regexp "^$")
 
 (provide 'init-packages)
 ;;; init-packages.el ends here
