@@ -1,9 +1,9 @@
 (setq indent-tabs-mode nil)
-(setq default-tab-width 4)
-(setq tab-width 4)
-(setq tab-stop-list ())
-(loop for x downfrom 40 to 1 do
-      (setq tab-stop-list (cons (* x 4) tab-stop-list)))
+;;(setq default-tab-width 4)
+;;(setq tab-width 4)
+;; (setq tab-stop-list ())
+;; (loop for x downfrom 40 to 1 do
+;;       (setq tab-stop-list (cons (* x 4) tab-stop-list)))
 
 (defconst my-c-style
   '((c-tab-always-indent        . t)

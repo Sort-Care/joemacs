@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "config.json"
+      :pointmax 491
+      :fsize 490
+      :lastmodtime '(22780 742 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Library!Application Support!Alfred 3!Workflow Data!info.sleeplessmind.time!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -41,6 +41,10 @@
 
 (semantic-mode 1)
 
+(setq org-ditaa-jar-path "~/.emacs.d/lisp/script/ditaa.jar")
+
+ (setq org-plantuml-jar-path
+      (expand-file-name "~/.emacs.d/lisp/script/plantuml.jar"))
 
 (provide 'init-exclusive)
 

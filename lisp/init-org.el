@@ -36,4 +36,32 @@
 
 (add-hook 'org-mode-hook 'org-mode-my-init)
 
+;;switch line 
+(add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+
+;;auto load languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '(
+   (sh . t)
+   (python . t)
+   (R . t)
+   (ruby . t)
+   (ditaa . t)
+   (dot . t)
+   (octave . t)
+   (sqlite . t)
+   (perl . t)
+   (C . t)
+   ))
+
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
+;; active Org-babel languages
+(org-babel-do-load-languages
+'org-babel-load-languages
+'(;; other Babel languages
+(plantuml . t)))
+
 (provide 'init-org)

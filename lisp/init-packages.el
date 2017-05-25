@@ -178,5 +178,16 @@
 ;;(setq speedbar-directory-unshown-regexp "^\\(CVS\\|RCS\\|SCCS\\|\\.\\.*$\\)\\'")
 (setq speedbar-directory-unshown-regexp "^$")
 
+
+;;jekyll mode
+(add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))
+
+(add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)   ; with AUCTeX LaTeX mode
+(add-hook 'latex-mode-hook 'turn-on-cdlatex)   ; with Emacs latex mode
+
+(progn (require 'artist)
+       (artist-figlet-get-font-list))
+
 (provide 'init-packages)
 ;;; init-packages.el ends here

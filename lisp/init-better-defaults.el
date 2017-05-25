@@ -193,4 +193,7 @@
 (add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))
 
+;;latex
+(setq-default TeX-engine 'xetex)
+
 (provide 'init-better-defaults)
