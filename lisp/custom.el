@@ -66,7 +66,7 @@
      (sequence "|" "CANCELED(c!)"))))
  '(package-selected-packages
    (quote
-    (figlet gnuplot gnuplot-mode cdlatex org-bullets jekyll-modes markdown-mode powerline shell-pop undo-tree window-numbering js2-mode bison-mode web-mode company swiper counsel popwin reveal-in-osx-finder org-pomodoro helm-ag yasnippet auto-yasnippet neotree exec-path-from-shell which-key auctex company-auctex chinese-fonts-setup ag helm helm-swoop helm-gtags ggtags hungry-delete smartparens expand-region iedit monokai-theme moe-theme)))
+    (org-jekyll figlet gnuplot gnuplot-mode cdlatex org-bullets jekyll-modes markdown-mode powerline shell-pop undo-tree window-numbering js2-mode bison-mode web-mode company swiper counsel popwin reveal-in-osx-finder org-pomodoro helm-ag yasnippet auto-yasnippet neotree exec-path-from-shell which-key auctex company-auctex chinese-fonts-setup ag helm helm-swoop helm-gtags ggtags hungry-delete smartparens expand-region iedit monokai-theme moe-theme)))
  '(pos-tip-background-color "#eee8d5")
  '(pos-tip-foreground-color "#586e75")
  '(smartrep-mode-line-active-bg (solarized-color-blend "#859900" "#eee8d5" 0.2))

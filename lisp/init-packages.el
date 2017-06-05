@@ -189,5 +189,8 @@
 (progn (require 'artist)
        (artist-figlet-get-font-list))
 
+;; org-jekyll
+(require 'org-jekyll)
+
 (provide 'init-packages)
 ;;; init-packages.el ends here

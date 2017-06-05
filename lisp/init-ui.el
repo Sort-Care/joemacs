@@ -24,8 +24,8 @@
 
 ;;(set-frame-parameter (selected-frame) 'alpha '(<active> . <inactive>))
  ;;(set-frame-parameter (selected-frame) 'alpha <both>)
-(set-frame-parameter (selected-frame) 'alpha '(90 . 40))
-(add-to-list 'default-frame-alist '(alpha . (90 . 40)))
+(set-frame-parameter (selected-frame) 'alpha '(95 . 50))
+(add-to-list 'default-frame-alist '(alpha . (95 . 50)))
 
  (defun toggle-transparency ()
    (interactive)
@@ -37,7 +37,7 @@
                      ;; Also handle undocumented (<active> <inactive>) form.
                      ((numberp (cadr alpha)) (cadr alpha)))
                100)
-          '(85 . 50) '(100 . 100)))))
- (global-set-key (kbd "C-c C-c C-t") 'toggle-transparency)
+          '(95 . 50) '(100 . 100)))))
+ (global-set-key (kbd "C-c c t") 'toggle-transparency)
 
 (provide 'init-ui)
