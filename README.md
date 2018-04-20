@@ -1,5 +1,7 @@
 # joemacs
 HudsonJoe's personal emacs configuration 
+Screen Shots Atom One Dark Theme
+![ATOM ONE](img/aod.png)
 Screen Shots (Using [moe-theme](https://github.com/kuanyui/moe-theme.el))
 ![Dark](img/dark2.png)
 ![Light](img/light.png)
