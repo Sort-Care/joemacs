@@ -43,17 +43,18 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '(
-   (sh . t)
-   (python . t)
-   (R . t)
-   (ruby . t)
-   (ditaa . t)
-   (dot . t)
-   (octave . t)
-   (sqlite . t)
-   (perl . t)
-   (C . t)
-   (gnuplot . t)
+;;   (sh . t)
+;;   (python . t)
+;;   (R . t)
+;;   (ruby . t)
+;;   (ditaa . t)
+;;   (dot . t)
+;;   (octave . t)
+;;   (sqlite . t)
+;;   (perl . t)
+;;   (C . t)
+   ;;   (gnuplot . t)
+   ;; Add languages that are supported on your machine here and config their execute path
    ))
 
 (require 'org-bullets)
