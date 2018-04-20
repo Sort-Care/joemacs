@@ -1,0 +1,1485 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("utils" include nil nil [73 92])
+            ("SudokuReader" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [176 194])
+                            ("self" variable nil (reparse-symbol indented_block_body) [243 259])
+                            ("self" variable nil (reparse-symbol indented_block_body) [339 398]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [139 143]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [126 399])
+                    ("readSudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [425 429])
+                            ("filename" variable nil (reparse-symbol function_parameters) [431 439]))                          
+                        :documentation "Read in sudoku from file")
+                        (reparse-symbol indented_block_body) [410 1311])
+                    ("printSudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1357 1361])
+                            ("filename" variable nil (reparse-symbol function_parameters) [1363 1371]))                          
+                        :documentation "print sudoku to file and command line")
+                        (reparse-symbol indented_block_body) [1341 2002]))                  
+                :type "class")
+                nil [96 2002])
+            ("Problem" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2084 2106])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2115 2131]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2049 2053])
+                            ("initial" variable nil (reparse-symbol function_parameters) [2055 2062])
+                            ("goal" variable nil (reparse-symbol function_parameters) [2064 2068]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2036 2132])
+                    ("actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2149 2153])
+                            ("state" variable nil (reparse-symbol function_parameters) [2155 2160]))                          )
+                        (reparse-symbol indented_block_body) [2137 2198])
+                    ("result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2214 2218])
+                            ("state" variable nil (reparse-symbol function_parameters) [2220 2225])
+                            ("action" variable nil (reparse-symbol function_parameters) [2227 2233]))                          )
+                        (reparse-symbol indented_block_body) [2203 2270])
+                    ("goal_test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2289 2293])
+                            ("state" variable nil (reparse-symbol function_parameters) [2295 2300]))                          )
+                        (reparse-symbol indented_block_body) [2275 2337])
+                    ("path_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2356 2360])
+                            ("c" variable nil (reparse-symbol function_parameters) [2362 2363])
+                            ("state1" variable nil (reparse-symbol function_parameters) [2365 2371])
+                            ("action" variable nil (reparse-symbol function_parameters) [2373 2379])
+                            ("state2" variable nil (reparse-symbol function_parameters) [2381 2387]))                          )
+                        (reparse-symbol indented_block_body) [2342 2409])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2424 2428])
+                            ("state" variable nil (reparse-symbol function_parameters) [2430 2435]))                          )
+                        (reparse-symbol indented_block_body) [2414 2472]))                  
+                :type "class")
+                nil [2008 2472])
+            ("SudokuCSP" type
+               (:superclasses ("Problem")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"initialize from a sudoku reader\"\"\"" code nil (reparse-symbol indented_block_body) [2551 2588])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2597 2636])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2645 2673])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2682 2712])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2721 2745])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2754 2771])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2789 2812])
+                            ("for" code nil (reparse-symbol indented_block_body) [2821 3856]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2518 2522])
+                            ("sur" variable nil (reparse-symbol function_parameters) [2524 2527])
+                            ("constraints" variable nil (reparse-symbol function_parameters) [2529 2540]))                          
+                        :documentation "initialize from a sudoku reader"
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2505 3856])
+                    ("assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3873 3877])
+                            ("var" variable nil (reparse-symbol function_parameters) [3879 3882])
+                            ("val" variable nil (reparse-symbol function_parameters) [3884 3887])
+                            ("asgn" variable nil (reparse-symbol function_parameters) [3889 3893]))                          )
+                        (reparse-symbol indented_block_body) [3862 3947])
+                    ("unassign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3965 3969])
+                            ("var" variable nil (reparse-symbol function_parameters) [3971 3974])
+                            ("asgn" variable nil (reparse-symbol function_parameters) [3976 3980]))                          )
+                        (reparse-symbol indented_block_body) [3952 4033])
+                    ("nconflicts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4053 4057])
+                            ("var" variable nil (reparse-symbol function_parameters) [4059 4062])
+                            ("val" variable nil (reparse-symbol function_parameters) [4064 4067])
+                            ("asgn" variable nil (reparse-symbol function_parameters) [4069 4073]))                          )
+                        (reparse-symbol indented_block_body) [4038 4274])
+                    ("display" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4291 4295])
+                            ("asgn" variable nil (reparse-symbol function_parameters) [4297 4301]))                          )
+                        (reparse-symbol indented_block_body) [4279 4346])
+                    ("actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4364 4368])
+                            ("state" variable nil (reparse-symbol function_parameters) [4370 4375]))                          
+                        :documentation "find next unassigned variable and its valid values")
+                        (reparse-symbol indented_block_body) [4352 4747])
+                    ("result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4763 4767])
+                            ("state" variable nil (reparse-symbol function_parameters) [4769 4774])
+                            ("action" variable nil (reparse-symbol function_parameters) [4776 4782]))                          
+                        :documentation "Perform an action and return the new state")
+                        (reparse-symbol indented_block_body) [4752 4907])
+                    ("goal_test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4931 4935])
+                            ("state" variable nil (reparse-symbol function_parameters) [4937 4942]))                          
+                        :documentation " test assigned variables and conflicts to determine whether it is the goal")
+                        (reparse-symbol indented_block_body) [4917 5247])
+                    ("support_pruning" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5281 5285]))                          )
+                        (reparse-symbol indented_block_body) [5261 5409])
+                    ("suppose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5426 5430])
+                            ("var" variable nil (reparse-symbol function_parameters) [5432 5435])
+                            ("value" variable nil (reparse-symbol function_parameters) [5437 5442]))                          
+                        :documentation "start accumulating inferences")
+                        (reparse-symbol indented_block_body) [5414 5661])
+                    ("prune" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5676 5680])
+                            ("var" variable nil (reparse-symbol function_parameters) [5682 5685])
+                            ("value" variable nil (reparse-symbol function_parameters) [5687 5692])
+                            ("removals" variable nil (reparse-symbol function_parameters) [5694 5702]))                          
+                        :documentation "ruel out")
+                        (reparse-symbol indented_block_body) [5666 5848])
+                    ("choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5865 5869])
+                            ("var" variable nil (reparse-symbol function_parameters) [5871 5874]))                          )
+                        (reparse-symbol indented_block_body) [5853 5933])
+                    ("infer_assignment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5959 5963]))                          )
+                        (reparse-symbol indented_block_body) [5938 6115])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6132 6136])
+                            ("removals" variable nil (reparse-symbol function_parameters) [6138 6146]))                          )
+                        (reparse-symbol indented_block_body) [6120 6222])
+                    ("conflicted_vars" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6247 6251])
+                            ("current" variable nil (reparse-symbol function_parameters) [6253 6260]))                          )
+                        (reparse-symbol indented_block_body) [6227 6377]))                  
+                :type "class")
+                nil [2474 6377])
+            ("AC3" function
+               (:documentation "[Figure 6.3]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [6506 6509])
+                    ("queue" variable nil (reparse-symbol function_parameters) [6511 6516])
+                    ("removals" variable nil (reparse-symbol function_parameters) [6523 6531]))                  )
+                nil [6498 7270])
+            ("revise" function
+               (:documentation "Return true if we remove a value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [7283 7286])
+                    ("Xi" variable nil (reparse-symbol function_parameters) [7288 7290])
+                    ("Xj" variable nil (reparse-symbol function_parameters) [7292 7294])
+                    ("removals" variable nil (reparse-symbol function_parameters) [7296 7304]))                  )
+                nil [7272 7647])
+            ("first_unassigned_variable" function
+               (:documentation "The default variable order."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [7765 7775])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7777 7780]))                  )
+                nil [7735 7895])
+            ("unordered_domain_values" function
+               (:documentation "The default value order."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7925 7928])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7930 7940])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7942 7945]))                  )
+                nil [7897 8011])
+            ("mrv" function
+               (:documentation "Minimum-remaining-values heuristic."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [8020 8030])
+                    ("csp" variable nil (reparse-symbol function_parameters) [8032 8035]))                  )
+                nil [8012 8237])
+            ("no_inference" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [8338 8341])
+                ("var" variable nil (reparse-symbol function_parameters) [8343 8346])
+                ("value" variable nil (reparse-symbol function_parameters) [8348 8353])
+                ("assignment" variable nil (reparse-symbol function_parameters) [8355 8365])
+                ("removals" variable nil (reparse-symbol function_parameters) [8367 8375]))              ) nil [8321 8394])
+            ("forward_checking" function
+               (:documentation "Prune neighbor values inconsistent with var=value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8417 8420])
+                    ("var" variable nil (reparse-symbol function_parameters) [8422 8425])
+                    ("value" variable nil (reparse-symbol function_parameters) [8427 8432])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8434 8444])
+                    ("removals" variable nil (reparse-symbol function_parameters) [8446 8454]))                  )
+                nil [8396 9084])
+            ("mac" function
+               (:documentation "Maintain arc consistency."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [9094 9097])
+                    ("var" variable nil (reparse-symbol function_parameters) [9099 9102])
+                    ("value" variable nil (reparse-symbol function_parameters) [9104 9109])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [9111 9121])
+                    ("removals" variable nil (reparse-symbol function_parameters) [9123 9131]))                  )
+                nil [9086 9240])
+            ("num_legal_values" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [9265 9268])
+                ("var" variable nil (reparse-symbol function_parameters) [9270 9273])
+                ("assignment" variable nil (reparse-symbol function_parameters) [9275 9285]))              ) nil [9244 9478])
+            ("backtracking_search_cnt" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [9507 9510])
+                ("su" variable nil (reparse-symbol function_parameters) [9512 9514])
+                ("select_unassigned_variable" variable nil (reparse-symbol function_parameters) [9540 9566])
+                ("order_domain_values" variable nil (reparse-symbol function_parameters) [9620 9639])
+                ("inference" variable nil (reparse-symbol function_parameters) [9691 9700]))              ) nil [9479 10781])
+            ("backtracking_search" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [10808 10811])
+                ("su" variable nil (reparse-symbol function_parameters) [10813 10815])
+                ("select_unassigned_variable" variable nil (reparse-symbol function_parameters) [10841 10867])
+                ("order_domain_values" variable nil (reparse-symbol function_parameters) [10921 10940])
+                ("inference" variable nil (reparse-symbol function_parameters) [10992 11001]))              ) nil [10784 11962])
+            ("alldiff" function (:arguments 
+              ( ("var" variable nil (reparse-symbol function_parameters) [11979 11982])
+                ("val" variable nil (reparse-symbol function_parameters) [11984 11987])
+                ("var2" variable nil (reparse-symbol function_parameters) [11989 11993])
+                ("val2" variable nil (reparse-symbol function_parameters) [11995 11999]))              ) nil [11967 12065]))          
+      :file "sudoku.py"
+      :pointmax 12408
+      :fsize 21842
+      :lastmodtime '(23191 28225 975067 356000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"Provides some utilities widely used by other modules\"\"\"" code nil nil [1 59])
+            ("bisect" include nil nil [61 74])
+            ("collections" include nil nil [75 93])
+            ("collections.abc" include nil nil [94 116])
+            ("operator" include nil nil [117 132])
+            ("os.path" include nil nil [133 147])
+            ("random" include nil nil [148 161])
+            ("math" include nil nil [162 173])
+            ("functools" include nil nil [174 190])
+            ("itertools" include nil nil [191 232])
+            ("sequence" function
+               (:documentation "Coerce iterable to sequence, if it is not already one."
+                :arguments 
+                  ( ("iterable" variable nil (reparse-symbol function_parameters) [370 378]))                  )
+                nil [357 551])
+            ("removeall" function
+               (:documentation "Return a copy of seq (or string) with all occurences of item removed."
+                :arguments 
+                  ( ("item" variable nil (reparse-symbol function_parameters) [567 571])
+                    ("seq" variable nil (reparse-symbol function_parameters) [573 576]))                  )
+                nil [553 780])
+            ("unique" function
+               (:documentation "Remove duplicate elements from seq. Assumes hashable elements."
+                :arguments 
+                  ( ("seq" variable nil (reparse-symbol function_parameters) [793 796]))                  )
+                nil [782 924])
+            ("count" function
+               (:documentation "Count the number of items in sequence that are interpreted as true."
+                :arguments 
+                  ( ("seq" variable nil (reparse-symbol function_parameters) [936 939]))                  )
+                nil [926 1057])
+            ("product" function
+               (:documentation "Return the product of the numbers, e.g. product([2, 3, 10]) == 60"
+                :arguments 
+                  ( ("numbers" variable nil (reparse-symbol function_parameters) [1071 1078]))                  )
+                nil [1059 1232])
+            ("first" function
+               (:documentation "Return the first element of an iterable or the next element of a generator; or default."
+                :arguments 
+                  ( ("iterable" variable nil (reparse-symbol function_parameters) [1244 1252])
+                    ("default" variable nil (reparse-symbol function_parameters) [1254 1261]))                  )
+                nil [1234 1510])
+            ("is_in" function
+               (:documentation "Similar to (elt in seq), but compares with 'is', not '=='."
+                :arguments 
+                  ( ("elt" variable nil (reparse-symbol function_parameters) [1522 1525])
+                    ("seq" variable nil (reparse-symbol function_parameters) [1527 1530]))                  )
+                nil [1512 1640])
+            ("mode" function
+               (:documentation "Return the most common data item. If there are ties, return any one of them."
+                :arguments 
+                  ( ("data" variable nil (reparse-symbol function_parameters) [1651 1655]))                  )
+                nil [1642 1824])
+            ("powerset" function
+               (:documentation "powerset([1,2,3]) --> (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
+                :arguments 
+                  ( ("iterable" variable nil (reparse-symbol function_parameters) [1839 1847]))                  )
+                nil [1826 2032])
+            ("identity" variable nil nil [2137 2159])
+            ("argmin" variable nil nil [2161 2173])
+            ("argmax" variable nil nil [2174 2186])
+            ("argmin_random_tie" function
+               (:documentation "Return a minimum element of seq; break ties at random."
+                :arguments 
+                  ( ("seq" variable nil (reparse-symbol function_parameters) [2211 2214])
+                    ("key" variable nil (reparse-symbol function_parameters) [2216 2219]))                  )
+                nil [2189 2338])
+            ("argmax_random_tie" function
+               (:documentation "Return an element with highest fn(seq[i]) score; break ties at random."
+                :arguments 
+                  ( ("seq" variable nil (reparse-symbol function_parameters) [2362 2365])
+                    ("key" variable nil (reparse-symbol function_parameters) [2367 2370]))                  )
+                nil [2340 2505])
+            ("shuffled" function
+               (:documentation "Randomly shuffle a copy of iterable."
+                :arguments 
+                  ( ("iterable" variable nil (reparse-symbol function_parameters) [2520 2528]))                  )
+                nil [2507 2648])
+            ("histogram" function
+               (:documentation "Return a list of (value, count) pairs, summarizing the input values.
+    Sorted by increasing value, or if mode=1, by decreasing count.
+    If bin_function is given, map it over values first."
+                :arguments 
+                  ( ("values" variable nil (reparse-symbol function_parameters) [2788 2794])
+                    ("mode" variable nil (reparse-symbol function_parameters) [2796 2800])
+                    ("bin_function" variable nil (reparse-symbol function_parameters) [2804 2816]))                  )
+                nil [2774 3335])
+            ("dotproduct" function
+               (:documentation "Return the sum of the element-wise product of vectors X and Y."
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [3352 3353])
+                    ("Y" variable nil (reparse-symbol function_parameters) [3355 3356]))                  )
+                nil [3337 3476])
+            ("element_wise_product" function
+               (:documentation "Return vector as an element-wise product of vectors X and Y"
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [3503 3504])
+                    ("Y" variable nil (reparse-symbol function_parameters) [3506 3507]))                  )
+                nil [3478 3649])
+            ("matrix_multiplication" function
+               (:documentation "Return a matrix as a matrix-multiplication of X_M and arbitary number of matrices *Y_M"
+                :arguments 
+                  ( ("X_M" variable nil (reparse-symbol function_parameters) [3677 3680])
+                    ("Y_M" variable nil (reparse-symbol function_parameters) [3682 3686]))                  )
+                nil [3651 4568])
+            ("vector_to_diagonal" function
+               (:documentation "Converts a vector to a diagonal matrix with vector elements
+    as the diagonal elements of the matrix"
+                :arguments 
+                  ( ("v" variable nil (reparse-symbol function_parameters) [4593 4594]))                  )
+                nil [4570 4865])
+            ("vector_add" function
+               (:documentation "Component-wise addition of two vectors."
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [4882 4883])
+                    ("b" variable nil (reparse-symbol function_parameters) [4885 4886]))                  )
+                nil [4867 4981])
+            ("scalar_vector_product" function
+               (:documentation "Return vector as a product of a scalar and a vector"
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [5009 5010])
+                    ("Y" variable nil (reparse-symbol function_parameters) [5012 5013]))                  )
+                nil [4983 5108])
+            ("scalar_matrix_product" function
+               (:documentation "Return matrix as a product of a scalar and a matrix"
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [5136 5137])
+                    ("Y" variable nil (reparse-symbol function_parameters) [5139 5140]))                  )
+                nil [5110 5257])
+            ("inverse_matrix" function
+               (:documentation "Inverse a given square matrix of size 2x2"
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [5278 5279]))                  )
+                nil [5259 5560])
+            ("probability" function
+               (:documentation "Return true with probability p."
+                :arguments 
+                  ( ("p" variable nil (reparse-symbol function_parameters) [5578 5579]))                  )
+                nil [5562 5664])
+            ("weighted_sample_with_replacement" function
+               (:documentation "Pick n samples from seq at random, with replacement, with the
+    probability of each element in proportion to its corresponding
+    weight."
+                :arguments 
+                  ( ("n" variable nil (reparse-symbol function_parameters) [5703 5704])
+                    ("seq" variable nil (reparse-symbol function_parameters) [5706 5709])
+                    ("weights" variable nil (reparse-symbol function_parameters) [5711 5718]))                  )
+                nil [5666 5957])
+            ("weighted_sampler" function
+               (:documentation "Return a random-sample function that picks from seq weighted by weights."
+                :arguments 
+                  ( ("seq" variable nil (reparse-symbol function_parameters) [5980 5983])
+                    ("weights" variable nil (reparse-symbol function_parameters) [5985 5992]))                  )
+                nil [5959 6249])
+            ("rounder" function
+               (:documentation "Round a single number, or sequence of numbers, to d decimal places."
+                :arguments 
+                  ( ("numbers" variable nil (reparse-symbol function_parameters) [6263 6270])
+                    ("d" variable nil (reparse-symbol function_parameters) [6272 6273]))                  )
+                nil [6251 6572])
+            ("num_or_str" function
+               (:documentation "The argument is a string; convert to a number if
+       possible, or strip it."
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [6589 6590]))                  )
+                nil [6574 6838])
+            ("normalize" function
+               (:documentation "Multiply each number by a constant such that the sum is 1.0"
+                :arguments 
+                  ( ("dist" variable nil (reparse-symbol function_parameters) [6854 6858]))                  )
+                nil [6840 7226])
+            ("norm" function
+               (:documentation "Return the n-norm of vector X"
+                :arguments 
+                  ( ("X" variable nil (reparse-symbol function_parameters) [7237 7238])
+                    ("n" variable nil (reparse-symbol function_parameters) [7240 7241]))                  )
+                nil [7228 7327])
+            ("clip" function
+               (:documentation "Return x clipped to the range [lowest..highest]."
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [7338 7339])
+                    ("lowest" variable nil (reparse-symbol function_parameters) [7341 7347])
+                    ("highest" variable nil (reparse-symbol function_parameters) [7349 7356]))                  )
+                nil [7329 7458])
+            ("sigmoid_derivative" function (:arguments 
+              ( ("value" variable nil (reparse-symbol function_parameters) [7483 7488]))              ) nil [7460 7522])
+            ("sigmoid" function
+               (:documentation "Return activation value of x with sigmoid function"
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [7536 7537]))                  )
+                nil [7524 7633])
+            ("step" function
+               (:documentation "Return activation value of x with sign function"
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [7644 7645]))                  )
+                nil [7635 7736])
+            ("gaussian" function
+               (:documentation "Given the mean and standard deviation of a distribution, it returns the probability of x."
+                :arguments 
+                  ( ("mean" variable nil (reparse-symbol function_parameters) [7751 7755])
+                    ("st_dev" variable nil (reparse-symbol function_parameters) [7757 7763])
+                    ("x" variable nil (reparse-symbol function_parameters) [7765 7766]))                  )
+                nil [7738 7953])
+            ("try" code nil nil [7955 8267])
+            ("weighted_choice" function
+               (:documentation "A weighted version of random.choice"
+                :arguments 
+                  ( ("choices" variable nil (reparse-symbol function_parameters) [8289 8296]))                  )
+                nil [8269 8598])
+            ("orientations" variable nil nil [8700 8776])
+            ("turns" variable nil nil [8777 8807])
+            ("turn_heading" function (:arguments 
+              ( ("heading" variable nil (reparse-symbol function_parameters) [8827 8834])
+                ("inc" variable nil (reparse-symbol function_parameters) [8836 8839])
+                ("headings" variable nil (reparse-symbol function_parameters) [8841 8849]))              ) nil [8810 8934])
+            ("turn_right" function (:arguments 
+              ( ("heading" variable nil (reparse-symbol function_parameters) [8951 8958]))              ) nil [8936 9001])
+            ("turn_left" function (:arguments 
+              ( ("heading" variable nil (reparse-symbol function_parameters) [9017 9024]))              ) nil [9003 9066])
+            ("distance" function
+               (:documentation "The distance between two (x, y) points."
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [9081 9082])
+                    ("b" variable nil (reparse-symbol function_parameters) [9084 9085]))                  )
+                nil [9068 9212])
+            ("distance_squared" function
+               (:documentation "The square of the distance between two (x, y) points."
+                :arguments 
+                  ( ("a" variable nil (reparse-symbol function_parameters) [9235 9236])
+                    ("b" variable nil (reparse-symbol function_parameters) [9238 9239]))                  )
+                nil [9214 9375])
+            ("vector_clip" function
+               (:documentation "Return vector, except if any element is less than the corresponding
+    value of lowest or more than the corresponding value of highest, clip to
+    those values."
+                :arguments 
+                  ( ("vector" variable nil (reparse-symbol function_parameters) [9393 9399])
+                    ("lowest" variable nil (reparse-symbol function_parameters) [9401 9407])
+                    ("highest" variable nil (reparse-symbol function_parameters) [9409 9416]))                  )
+                nil [9377 9652])
+            ("memoize" function
+               (:documentation "Memoize fn: make it remember the computed value for any argument list.
+    If slot is specified, store result in that slot of first argument.
+    If slot is false, use lru_cache for caching the values."
+                :arguments 
+                  ( ("fn" variable nil (reparse-symbol function_parameters) [9766 9768])
+                    ("slot" variable nil (reparse-symbol function_parameters) [9770 9774])
+                    ("maxsize" variable nil (reparse-symbol function_parameters) [9781 9788]))                  )
+                nil [9754 10396])
+            ("name" function
+               (:documentation "Try to find some reasonable name for the object."
+                :arguments 
+                  ( ("obj" variable nil (reparse-symbol function_parameters) [10407 10410]))                  )
+                nil [10398 10632])
+            ("isnumber" function
+               (:documentation "Is x a number?"
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [10647 10648]))                  )
+                nil [10634 10709])
+            ("issequence" function
+               (:documentation "Is x a sequence?"
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [10726 10727]))                  )
+                nil [10711 10808])
+            ("print_table" function
+               (:documentation "Print a list of lists as a table, so that columns line up nicely.
+    header, if specified, will be printed as the first row.
+    numfmt is the format for all numbers; you might want e.g. '{:.2f}'.
+    (If you want different formats in different columns,
+    don't use print_table.) sep is the separator between columns."
+                :arguments 
+                  ( ("table" variable nil (reparse-symbol function_parameters) [10826 10831])
+                    ("header" variable nil (reparse-symbol function_parameters) [10833 10839])
+                    ("sep" variable nil (reparse-symbol function_parameters) [10846 10849])
+                    ("numfmt" variable nil (reparse-symbol function_parameters) [10857 10863]))                  )
+                nil [10810 11676])
+            ("open_data" function (:arguments 
+              ( ("name" variable nil (reparse-symbol function_parameters) [11692 11696])
+                ("mode" variable nil (reparse-symbol function_parameters) [11698 11702]))              ) nil [11678 11841])
+            ("failure_test" function
+               (:documentation "Grades the given algorithm based on how many tests it passes.
+    Most algorithms have arbitary output on correct execution, which is difficult
+    to check for correctness. On the other hand, a lot of algorithms output something
+    particular on fail (for example, False, or None).
+    tests is a list with each element in the form: (values, failure_output)."
+                :arguments 
+                  ( ("algorithm" variable nil (reparse-symbol function_parameters) [11860 11869])
+                    ("tests" variable nil (reparse-symbol function_parameters) [11871 11876]))                  )
+                nil [11843 12340])
+            ("Expr" type
+               (:documentation "A mathematical expression with an operator and 0 or more arguments.
+    op is a str like '+' or 'sin'; args are Expressions.
+    Expr('x') or Symbol('x') creates a symbol (a nullary Expr).
+    Expr('-', x) creates a unary; Expr('+', x, 1) creates a binary."
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [12927 12944])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12953 12969]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12901 12905])
+                            ("op" variable nil (reparse-symbol function_parameters) [12907 12909])
+                            ("args" variable nil (reparse-symbol function_parameters) [12911 12916]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12888 12970])
+                    ("__neg__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13012 13016]))                          )
+                        (reparse-symbol indented_block_body) [13000 13050])
+                    ("__pos__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13067 13071]))                          )
+                        (reparse-symbol indented_block_body) [13055 13105])
+                    ("__invert__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13125 13129]))                          )
+                        (reparse-symbol indented_block_body) [13110 13163])
+                    ("__add__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13180 13184])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13186 13189]))                          )
+                        (reparse-symbol indented_block_body) [13168 13228])
+                    ("__sub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13245 13249])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13251 13254]))                          )
+                        (reparse-symbol indented_block_body) [13233 13293])
+                    ("__mul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13310 13314])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13316 13319]))                          )
+                        (reparse-symbol indented_block_body) [13298 13358])
+                    ("__pow__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13375 13379])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13381 13384]))                          )
+                        (reparse-symbol indented_block_body) [13363 13424])
+                    ("__mod__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13441 13445])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13447 13450]))                          )
+                        (reparse-symbol indented_block_body) [13429 13489])
+                    ("__and__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13506 13510])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13512 13515]))                          )
+                        (reparse-symbol indented_block_body) [13494 13554])
+                    ("__xor__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13571 13575])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13577 13580]))                          )
+                        (reparse-symbol indented_block_body) [13559 13619])
+                    ("__rshift__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13639 13643])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13645 13648]))                          )
+                        (reparse-symbol indented_block_body) [13624 13688])
+                    ("__lshift__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13708 13712])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13714 13717]))                          )
+                        (reparse-symbol indented_block_body) [13693 13757])
+                    ("__truediv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13778 13782])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13784 13787]))                          )
+                        (reparse-symbol indented_block_body) [13762 13826])
+                    ("__floordiv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13848 13852])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13854 13857]))                          )
+                        (reparse-symbol indented_block_body) [13831 13897])
+                    ("__matmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13917 13921])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13923 13926]))                          )
+                        (reparse-symbol indented_block_body) [13902 13965])
+                    ("__or__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13981 13985])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [13987 13990]))                          
+                        :documentation "Allow both P | Q, and P |'==>'| Q.")
+                        (reparse-symbol indented_block_body) [13970 14178])
+                    ("__radd__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14229 14233])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14235 14238]))                          )
+                        (reparse-symbol indented_block_body) [14216 14277])
+                    ("__rsub__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14295 14299])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14301 14304]))                          )
+                        (reparse-symbol indented_block_body) [14282 14343])
+                    ("__rmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14361 14365])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14367 14370]))                          )
+                        (reparse-symbol indented_block_body) [14348 14409])
+                    ("__rdiv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14427 14431])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14433 14436]))                          )
+                        (reparse-symbol indented_block_body) [14414 14475])
+                    ("__rpow__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14493 14497])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14499 14502]))                          )
+                        (reparse-symbol indented_block_body) [14480 14542])
+                    ("__rmod__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14560 14564])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14566 14569]))                          )
+                        (reparse-symbol indented_block_body) [14547 14608])
+                    ("__rand__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14626 14630])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14632 14635]))                          )
+                        (reparse-symbol indented_block_body) [14613 14674])
+                    ("__rxor__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14692 14696])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14698 14701]))                          )
+                        (reparse-symbol indented_block_body) [14679 14740])
+                    ("__ror__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14757 14761])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14763 14766]))                          )
+                        (reparse-symbol indented_block_body) [14745 14805])
+                    ("__rrshift__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14826 14830])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14832 14835]))                          )
+                        (reparse-symbol indented_block_body) [14810 14875])
+                    ("__rlshift__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14896 14900])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14902 14905]))                          )
+                        (reparse-symbol indented_block_body) [14880 14945])
+                    ("__rtruediv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14967 14971])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [14973 14976]))                          )
+                        (reparse-symbol indented_block_body) [14950 15015])
+                    ("__rfloordiv__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15038 15042])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [15044 15047]))                          )
+                        (reparse-symbol indented_block_body) [15020 15087])
+                    ("__rmatmul__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15108 15112])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [15114 15117]))                          )
+                        (reparse-symbol indented_block_body) [15092 15156])
+                    ("__call__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15174 15178])
+                            ("args" variable nil (reparse-symbol function_parameters) [15180 15185]))                          )
+                        (reparse-symbol indented_block_body) [15161 15404])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15444 15448])
+                            ("other" variable nil (reparse-symbol function_parameters) [15450 15455]))                          )
+                        (reparse-symbol indented_block_body) [15433 15654])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15672 15676]))                          )
+                        (reparse-symbol indented_block_body) [15659 15718])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15736 15740]))                          )
+                        (reparse-symbol indented_block_body) [15723 16149]))                  
+                :type "class")
+                nil [12596 16149])
+            ("Number" variable nil nil [16263 16293])
+            ("Expression" variable nil nil [16294 16321])
+            ("Symbol" function
+               (:documentation "A Symbol is just an Expr with no args."
+                :arguments 
+                  ( ("name" variable nil (reparse-symbol function_parameters) [16335 16339]))                  )
+                nil [16324 16413])
+            ("symbols" function
+               (:documentation "Return a tuple of Symbols; names is a comma/whitespace delimited str."
+                :arguments 
+                  ( ("names" variable nil (reparse-symbol function_parameters) [16427 16432]))                  )
+                nil [16415 16590])
+            ("subexpressions" function
+               (:documentation "Yield the subexpressions of an Expression (including x itself)."
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [16611 16612]))                  )
+                nil [16592 16799])
+            ("arity" function
+               (:documentation "The number of sub-expressions in this expression."
+                :arguments 
+                  ( ("expression" variable nil (reparse-symbol function_parameters) [16811 16821]))                  )
+                nil [16801 17010])
+            ("PartialExpr" type
+               (:documentation "Given 'P |'==>'| Q, first form PartialExpr('==>', P), then combine with Q."
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self, self" code nil (reparse-symbol indented_block_body) [17229 17256]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17205 17209])
+                            ("op" variable nil (reparse-symbol function_parameters) [17211 17213])
+                            ("lhs" variable nil (reparse-symbol function_parameters) [17215 17218]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [17192 17257])
+                    ("__or__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17273 17277])
+                            ("rhs" variable nil (reparse-symbol function_parameters) [17279 17282]))                          )
+                        (reparse-symbol indented_block_body) [17262 17329])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17347 17351]))                          )
+                        (reparse-symbol indented_block_body) [17334 17419]))                  
+                :type "class")
+                nil [17084 17419])
+            ("expr" function
+               (:documentation "Shortcut to create an Expression. x is a str in which:
+    - identifiers are automatically defined as Symbols.
+    - ==> is treated as an infix |'==>'|, as are <== and <=>.
+    If x is already an Expression, it is returned unchanged. Example:
+    >>> expr('P & Q ==> Q')
+    ((P & Q) ==> Q)
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [17430 17431]))                  )
+                nil [17421 17864])
+            ("infix_ops" variable nil nil [17866 17899])
+            ("expr_handle_infix_ops" function
+               (:documentation "Given a str, return a new str with ==> replaced by |'==>'|, etc.
+    >>> expr_handle_infix_ops('P ==> Q')
+    \"P |'==>'| Q\"
+    "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [17928 17929]))                  )
+                nil [17902 18157])
+            ("defaultkeydict" type
+               (:documentation "Like defaultdict, but the default_factory is a function of the key.
+    >>> d = defaultkeydict(len); d['four']
+    4
+    "
+                :superclasses ("collections.defaultdict")
+                :members 
+                  ( ("__missing__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18358 18362])
+                            ("key" variable nil (reparse-symbol function_parameters) [18364 18367]))                          )
+                        (reparse-symbol indented_block_body) [18342 18447]))                  
+                :type "class")
+                nil [18159 18447])
+            ("hashabledict" type
+               (:documentation "Allows hashing by representing a dictionary as tuple of key:value pairs
+       May cause problems as the hash value may change during runtime
+    "
+                :superclasses ("dict")
+                :members 
+                  ( ("__tuplify__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18652 18656]))                          )
+                        (reparse-symbol indented_block_body) [18636 18702])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18720 18724]))                          )
+                        (reparse-symbol indented_block_body) [18707 18767])
+                    ("__lt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18783 18787])
+                            ("odict" variable nil (reparse-symbol function_parameters) [18789 18794]))                          )
+                        (reparse-symbol indented_block_body) [18772 18900])
+                    ("__gt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18916 18920])
+                            ("odict" variable nil (reparse-symbol function_parameters) [18922 18927]))                          )
+                        (reparse-symbol indented_block_body) [18905 19033])
+                    ("__le__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19049 19053])
+                            ("odict" variable nil (reparse-symbol function_parameters) [19055 19060]))                          )
+                        (reparse-symbol indented_block_body) [19038 19167])
+                    ("__ge__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19183 19187])
+                            ("odict" variable nil (reparse-symbol function_parameters) [19189 19194]))                          )
+                        (reparse-symbol indented_block_body) [19172 19301]))                  
+                :type "class")
+                nil [18449 19301])
+            ("Queue" type
+               (:documentation "Queue is an abstract class/interface. There are three types:
+        Stack(): A Last In First Out Queue.
+        FIFOQueue(): A First In First Out Queue.
+        PriorityQueue(order, f): Queue in sorted order (default min-first).
+    Each type supports the following methods and functions:
+        q.append(item)  -- add an item to the queue
+        q.extend(items) -- equivalent to: for item in items: q.append(item)
+        q.pop()         -- return the top item from the queue
+        len(q)          -- number of items in q (also q.__len())
+        item in q       -- does q contain item?
+    Note that isinstance(Stack(), Queue) is false, because we implement stacks
+    as lists.  If Python ever gets interfaces, Queue will be an interface."
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("raise" code nil (reparse-symbol indented_block_body) [20335 20360]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20320 20324]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20307 20361])
+                    ("extend" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20377 20381])
+                            ("items" variable nil (reparse-symbol function_parameters) [20383 20388]))                          )
+                        (reparse-symbol indented_block_body) [20366 20448]))                  
+                :type "class")
+                nil [19531 20448])
+            ("Stack" function (:documentation "Return an empty list, suitable as a Last-In-First-Out Queue.") nil [20450 20548])
+            ("FIFOQueue" type
+               (:documentation "A First-In-First-Out Queue."
+                :superclasses ("Queue")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [20669 20714]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20631 20635])
+                            ("maxlen" variable nil (reparse-symbol function_parameters) [20637 20643])
+                            ("items" variable nil (reparse-symbol function_parameters) [20650 20655]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20618 20715])
+                    ("append" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20731 20735])
+                            ("item" variable nil (reparse-symbol function_parameters) [20737 20741]))                          )
+                        (reparse-symbol indented_block_body) [20720 20916])
+                    ("extend" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20932 20936])
+                            ("items" variable nil (reparse-symbol function_parameters) [20938 20943]))                          )
+                        (reparse-symbol indented_block_body) [20921 21145])
+                    ("pop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21158 21162]))                          )
+                        (reparse-symbol indented_block_body) [21150 21301])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21318 21322]))                          )
+                        (reparse-symbol indented_block_body) [21306 21356])
+                    ("__contains__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21378 21382])
+                            ("item" variable nil (reparse-symbol function_parameters) [21384 21388]))                          )
+                        (reparse-symbol indented_block_body) [21361 21425]))                  
+                :type "class")
+                nil [20550 21425])
+            ("PriorityQueue" type
+               (:documentation "A queue in which the minimum (or maximum) element (as determined by f and
+    order) is returned first. If order is min, the item with minimum f(x) is
+    returned first; if order is max, then it is the item with maximum f(x).
+    Also supports dict-like lookup."
+                :superclasses ("Queue")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [21788 21799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21808 21826])
+                            ("self" variable nil (reparse-symbol indented_block_body) [21835 21845]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21747 21751])
+                            ("order" variable nil (reparse-symbol function_parameters) [21753 21758])
+                            ("f" variable nil (reparse-symbol function_parameters) [21764 21765]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [21734 21846])
+                    ("append" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21862 21866])
+                            ("item" variable nil (reparse-symbol function_parameters) [21868 21872]))                          )
+                        (reparse-symbol indented_block_body) [21851 21927])
+                    ("__len__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21944 21948]))                          )
+                        (reparse-symbol indented_block_body) [21932 21978])
+                    ("pop" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [21991 21995]))                          )
+                        (reparse-symbol indented_block_body) [21983 22113])
+                    ("__contains__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22135 22139])
+                            ("item" variable nil (reparse-symbol function_parameters) [22141 22145]))                          )
+                        (reparse-symbol indented_block_body) [22118 22203])
+                    ("__getitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22224 22228])
+                            ("key" variable nil (reparse-symbol function_parameters) [22230 22233]))                          )
+                        (reparse-symbol indented_block_body) [22208 22323])
+                    ("__delitem__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22344 22348])
+                            ("key" variable nil (reparse-symbol function_parameters) [22350 22353]))                          )
+                        (reparse-symbol indented_block_body) [22328 22465]))                  
+                :type "class")
+                nil [21427 22465])
+            ("Bool" type
+               (:documentation "Just like `bool`, except values display as 'T' and 'F' instead of 'True' and 'False'"
+                :superclasses ("int")
+                :members 
+                  ( ("'F'" code nil (reparse-symbol indented_block_body) [22737 22740]))                  
+                :type "class")
+                nil [22570 22741])
+            ("T" variable nil nil [22743 22757])
+            ("F" variable nil nil [22758 22773]))          
+      :file "utils.py"
+      :pointmax 22774
+      :fsize 22773
+      :lastmodtime '(23159 25875 628625 997000)
+      :unmatched-syntax '((NAME 22686 . 22693) (IF 22724 . 22726) (ELSE 22732 . 22736) (RETURN 15877 . 15883) (IF 15921 . 15923) (ELSE 15929 . 15933) (RETURN 7710 . 7716) (IF 7719 . 7721) (ELSE 7729 . 7733)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"CSP (Constraint Satisfaction Problems) problems and solvers. (Chapter 6).\"\"\"" code nil nil [1 80])
+            ("utils" include nil nil [82 131])
+            ("collections" include nil nil [133 168])
+            ("functools" include nil nil [169 197])
+            ("itertools" include nil nil [199 215])
+            ("re" include nil nil [216 225])
+            ("random" include nil nil [226 239])
+            ("CSP" type
+               (:documentation "This class describes finite-domain Constraint Satisfaction Problems.
+    A CSP is specified by the following inputs:
+        variables   A list of variables; each is atomic (e.g. int or string).
+        domains     A dict of {var:[possible_value, ...]} entries.
+        neighbors   A dict of {var:[var,...]} that for each variable lists
+                    the other variables that participate in constraints.
+        constraints A function f(A, a, B, b) that returns true if neighbors
+                    A, B satisfy the constraint when they have values A=a, B=b
+    In the textbook and in most mathematical definitions, the
+    constraints are specified as explicit pairs of allowable values,
+    but the formulation here is easier to express and more compact for
+    most cases. (For example, the n-Queens problem can be represented
+    in O(n) space using this notation, instead of O(N^4) for the
+    explicit representation.) In terms of describing the CSP as a
+    problem, that's all there is.
+    However, the class also supports data structures and methods that help you
+    solve CSPs by calling a search function on the CSP. Methods and slots are
+    as follows, where the argument 'a' represents an assignment, which is a
+    dict of {var:val} entries:
+        assign(var, val, a)     Assign a[var] = val; do other bookkeeping
+        unassign(var, a)        Do del a[var], plus other bookkeeping
+        nconflicts(var, val, a) Return the number of other variables that
+                                conflict with var=val
+        curr_domains[var]       Slot: remaining consistent values for var
+                                Used by constraint propagation routines.
+    The following methods are used only by graph_search and tree_search:
+        actions(state)          Return a list of actions
+        result(state, action)   Return a successor of state
+        goal_test(state)        Return true if all constraints satisfied
+    The following are just for debugging purposes:
+        nassigns                Slot: tracks the number of assignments made
+        display(a)              Print a human-readable representation
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Construct a CSP problem. If variables is empty, it becomes domains.keys().\"\"\"" code nil (reparse-symbol indented_block_body) [2498 2578])
+                            ("variables" code nil (reparse-symbol indented_block_body) [2587 2632])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2642 2668])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2677 2699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2708 2734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2743 2773])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2782 2799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2808 2832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2841 2858]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2439 2443])
+                            ("variables" variable nil (reparse-symbol function_parameters) [2445 2454])
+                            ("domains" variable nil (reparse-symbol function_parameters) [2456 2463])
+                            ("neighbors" variable nil (reparse-symbol function_parameters) [2465 2474])
+                            ("constraints" variable nil (reparse-symbol function_parameters) [2476 2487]))                          
+                        :documentation "Construct a CSP problem. If variables is empty, it becomes domains.keys()."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2426 2859])
+                    ("assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2875 2879])
+                            ("var" variable nil (reparse-symbol function_parameters) [2881 2884])
+                            ("val" variable nil (reparse-symbol function_parameters) [2886 2889])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [2891 2901]))                          
+                        :documentation "Add {var: val} to assignment; Discard the old value if any.")
+                        (reparse-symbol indented_block_body) [2864 3035])
+                    ("unassign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3053 3057])
+                            ("var" variable nil (reparse-symbol function_parameters) [3059 3062])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3064 3074]))                          
+                        :documentation "Remove {var: val} from assignment.
+        DO NOT call this if you are changing a variable to a new value;
+        just call assign for that.")
+                        (reparse-symbol indented_block_body) [3040 3295])
+                    ("nconflicts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3315 3319])
+                            ("var" variable nil (reparse-symbol function_parameters) [3321 3324])
+                            ("val" variable nil (reparse-symbol function_parameters) [3326 3329])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3331 3341]))                          
+                        :documentation "Return the number of conflicts var=val has with other variables.")
+                        (reparse-symbol indented_block_body) [3300 3949])
+                    ("display" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3966 3970])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3972 3982]))                          
+                        :documentation "Show a human-readable representation of the CSP.")
+                        (reparse-symbol indented_block_body) [3954 4180])
+                    ("support_pruning" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4249 4253]))                          
+                        :documentation "Make sure we can prune values from domains. (We want to pay
+        for this only if we use it.)")
+                        (reparse-symbol indented_block_body) [4229 4488])
+                    ("suppose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4505 4509])
+                            ("var" variable nil (reparse-symbol function_parameters) [4511 4514])
+                            ("value" variable nil (reparse-symbol function_parameters) [4516 4521]))                          
+                        :documentation "Start accumulating inferences from assuming var=value.")
+                        (reparse-symbol indented_block_body) [4493 4765])
+                    ("prune" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4780 4784])
+                            ("var" variable nil (reparse-symbol function_parameters) [4786 4789])
+                            ("value" variable nil (reparse-symbol function_parameters) [4791 4796])
+                            ("removals" variable nil (reparse-symbol function_parameters) [4798 4806]))                          
+                        :documentation "Rule out var=value.")
+                        (reparse-symbol indented_block_body) [4770 4963])
+                    ("choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4980 4984])
+                            ("var" variable nil (reparse-symbol function_parameters) [4986 4989]))                          
+                        :documentation "Return all values for var that aren't currently ruled out.")
+                        (reparse-symbol indented_block_body) [4968 5121])
+                    ("infer_assignment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5147 5151]))                          
+                        :documentation "Return the partial assignment implied by the current inferences.")
+                        (reparse-symbol indented_block_body) [5126 5382])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5399 5403])
+                            ("removals" variable nil (reparse-symbol function_parameters) [5405 5413]))                          
+                        :documentation "Undo a supposition and all inferences from it.")
+                        (reparse-symbol indented_block_body) [5387 5550]))                  
+                :type "class")
+                nil [242 5550])
+            ("AC3" function
+               (:documentation "[Figure 6.3]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [5677 5680])
+                    ("queue" variable nil (reparse-symbol function_parameters) [5682 5687])
+                    ("removals" variable nil (reparse-symbol function_parameters) [5694 5702]))                  )
+                nil [5669 6149])
+            ("revise" function
+               (:documentation "Return true if we remove a value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [6162 6165])
+                    ("Xi" variable nil (reparse-symbol function_parameters) [6167 6169])
+                    ("Xj" variable nil (reparse-symbol function_parameters) [6171 6173])
+                    ("removals" variable nil (reparse-symbol function_parameters) [6175 6183]))                  )
+                nil [6151 6529])
+            ("first_unassigned_variable" function
+               (:documentation "The default variable order."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6690 6700])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6702 6705]))                  )
+                nil [6660 6820])
+            ("mrv" function
+               (:documentation "Minimum-remaining-values heuristic."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6830 6840])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6842 6845]))                  )
+                nil [6822 7170])
+            ("num_legal_values" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7193 7196])
+                ("var" variable nil (reparse-symbol function_parameters) [7198 7201])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7203 7213]))              ) nil [7172 7406])
+            ("unordered_domain_values" function
+               (:documentation "The default value order."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7454 7457])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7459 7469])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7471 7474]))                  )
+                nil [7426 7540])
+            ("lcv" function
+               (:documentation "Least-constraining-values heuristic."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7550 7553])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7555 7565])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7567 7570]))                  )
+                nil [7542 7728])
+            ("no_inference" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7760 7763])
+                ("var" variable nil (reparse-symbol function_parameters) [7765 7768])
+                ("value" variable nil (reparse-symbol function_parameters) [7770 7775])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7777 7787])
+                ("removals" variable nil (reparse-symbol function_parameters) [7789 7797]))              ) nil [7743 7816])
+            ("forward_checking" function
+               (:documentation "Prune neighbor values inconsistent with var=value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [7839 7842])
+                    ("var" variable nil (reparse-symbol function_parameters) [7844 7847])
+                    ("value" variable nil (reparse-symbol function_parameters) [7849 7854])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7856 7866])
+                    ("removals" variable nil (reparse-symbol function_parameters) [7868 7876]))                  )
+                nil [7818 8239])
+            ("mac" function
+               (:documentation "Maintain arc consistency."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8249 8252])
+                    ("var" variable nil (reparse-symbol function_parameters) [8254 8257])
+                    ("value" variable nil (reparse-symbol function_parameters) [8259 8264])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8266 8276])
+                    ("removals" variable nil (reparse-symbol function_parameters) [8278 8286]))                  )
+                nil [8241 8395])
+            ("backtracking_search" function
+               (:documentation "[Figure 6.5]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8443 8446])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8448 8458])
+                    ("select_unassigned_variable" variable nil (reparse-symbol function_parameters) [8487 8513])
+                    ("order_domain_values" variable nil (reparse-symbol function_parameters) [8565 8584])
+                    ("inference" variable nil (reparse-symbol function_parameters) [8634 8643]))                  )
+                nil [8419 9669])
+            ("Sudoku" type
+               (:documentation "
+    Author: Haoyu Ji, Hanwen Xiong
+    This is a class for constructing Sudoku problem.
+    Sudoku world is a 3x3 boxes each containing 3x3 cells.
+    List xxx holds 81 variables for each cell,
+    dict xxx holds 81 keys whose values correspond to its domains.
+    "
+                :superclasses ("CSP")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10090 10102])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10111 10123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10132 10150])
+                            ("variables" variable nil (reparse-symbol indented_block_body) [10160 10198])
+                            ("domains" variable nil (reparse-symbol indented_block_body) [10207 10274])
+                            ("neighbors" variable nil (reparse-symbol indented_block_body) [10283 10336])
+                            ("for" code nil (reparse-symbol indented_block_body) [10345 10821])
+                            ("super" code nil (reparse-symbol indented_block_body) [10830 10902]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10075 10079]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10062 10903])
+                    ("read_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10924 10928])
+                            ("filename" variable nil (reparse-symbol function_parameters) [10930 10938]))                          
+                        :documentation "
+        Read Sudoku from file with format:
+        - 1 9 - - - - - -
+        - - 8 - - 3 - 5 -
+        - 7 - 6 - - - 8 -
+        - - 1 - - 6 8 - 9
+        8 - - - 4 - - - 7
+        9 4 - - - - - 1 -
+        - - - - - 2 - - -
+        - - - - 8 - 5 6 1
+        - - 3 7 - - - 9 -
+        ")
+                        (reparse-symbol indented_block_body) [10908 11583])
+                    ("print_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11605 11609])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11611 11619]))                          
+                        :documentation "
+        Print Sudoku solution to file with the same format
+        ")
+                        (reparse-symbol indented_block_body) [11588 12032])
+                    ("display_puzzle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12056 12060]))                          
+                        :documentation "
+        Display puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12037 12444])
+                    ("display_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12468 12472]))                          
+                        :documentation "
+        Display solution to this puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12449 12763])
+                    ("sudoku_constraints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12791 12795])
+                            ("A" variable nil (reparse-symbol function_parameters) [12797 12798])
+                            ("a" variable nil (reparse-symbol function_parameters) [12800 12801])
+                            ("B" variable nil (reparse-symbol function_parameters) [12803 12804])
+                            ("b" variable nil (reparse-symbol function_parameters) [12806 12807]))                          
+                        :documentation "
+        r and l are row and column of a variable in a sudoku world
+        b is coordinates of the box in which a variable lies
+        ")
+                        (reparse-symbol indented_block_body) [12768 13279]))                  
+                :type "class")
+                nil [9761 13279])
+            ("Sudoku_solver" function
+               (:documentation "
+    Solve an instance of Sudoku
+    "
+                :arguments 
+                  ( ("sudoku" variable nil (reparse-symbol function_parameters) [13299 13305]))                  )
+                nil [13281 13777])
+            ("sudoku" variable nil nil [13778 13778])
+            ("sudoku" code nil nil [13778 13778])
+            ("sudoku" code nil nil [13778 13778])
+            ("Sudoku_solver" code nil nil [13778 13778])
+            ("print" code nil nil [13778 13778])
+            ("print" code nil nil [13778 13778])
+            ("print" code nil nil [13778 13778]))          
+      :file "csp.py"
+      :pointmax 14460
+      :fsize 14459
+      :lastmodtime '(23192 22318 423268 209000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("naked_triple_subsets" function
+               (:documentation "find naked subsets of var
+    Note that naked subsets' size could be any number in range [2,3,...9]
+    Strength is for the upper bound of naked subsets' size
+    "
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [26 29])
+                    ("var" variable nil (reparse-symbol function_parameters) [31 34])
+                    ("value" variable nil (reparse-symbol function_parameters) [36 41])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [43 53])
+                    ("removals" variable nil (reparse-symbol function_parameters) [55 63]))                  )
+                nil [1 497])
+            ("prune_row_naked" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [518 521])
+                ("removals" variable nil (reparse-symbol function_parameters) [523 531])
+                ("strength" variable nil (reparse-symbol function_parameters) [533 541])
+                ("assignment" variable nil (reparse-symbol function_parameters) [543 553]))              ) nil [498 1257])
+            ("prune_col_naked" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [1279 1282])
+                ("removals" variable nil (reparse-symbol function_parameters) [1284 1292])
+                ("strength" variable nil (reparse-symbol function_parameters) [1294 1302])
+                ("assignment" variable nil (reparse-symbol function_parameters) [1304 1314]))              ) nil [1259 2018])
+            ("prune_block_naked" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [2041 2044])
+                ("removals" variable nil (reparse-symbol function_parameters) [2046 2054])
+                ("strength" variable nil (reparse-symbol function_parameters) [2056 2064])
+                ("assignment" variable nil (reparse-symbol function_parameters) [2066 2076]))              ) nil [2019 2792])
+            ("get_combination_vars" function (:arguments 
+              ( ("vlist" variable nil (reparse-symbol function_parameters) [2835 2840])
+                ("size" variable nil (reparse-symbol function_parameters) [2842 2846]))              ) nil [2810 2892])
+            ("delete_asgned" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [2911 2914])
+                ("vlist" variable nil (reparse-symbol function_parameters) [2916 2921])
+                ("assignment" variable nil (reparse-symbol function_parameters) [2923 2933]))              ) nil [2893 3150])
+            ("get_row" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3163 3166])
+                ("row" variable nil (reparse-symbol function_parameters) [3168 3171]))              ) nil [3151 3217])
+            ("get_col" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3230 3233])
+                ("col" variable nil (reparse-symbol function_parameters) [3235 3238]))              ) nil [3218 3284])
+            ("get_block" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3299 3302])
+                ("block" variable nil (reparse-symbol function_parameters) [3304 3309]))              ) nil [3285 3443])
+            ("get_domain_set" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3463 3466])
+                ("varlist" variable nil (reparse-symbol function_parameters) [3468 3475]))              ) nil [3444 3592])
+            ("prune_domain" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3610 3613])
+                ("domains" variable nil (reparse-symbol function_parameters) [3615 3622])
+                ("vlist" variable nil (reparse-symbol function_parameters) [3624 3629])
+                ("removals" variable nil (reparse-symbol function_parameters) [3631 3639]))              ) nil [3593 3777])
+            ("check_naked" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [3795 3798])
+                ("varlist" variable nil (reparse-symbol function_parameters) [3800 3807]))              ) nil [3779 4098])
+            ("is_peer" function
+               (:documentation "is v1 v2 of same row or column or block
+    return -1: not peers  0:same  1: row   2: column  3: block  4: row and block  5: col and block
+    "
+                :arguments 
+                  ( ("v1" variable nil (reparse-symbol function_parameters) [4112 4114])
+                    ("v2" variable nil (reparse-symbol function_parameters) [4116 4118]))                  )
+                nil [4100 4886])
+            ("get_peers" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [4907 4910])
+                ("var" variable nil (reparse-symbol function_parameters) [4912 4915])
+                ("peertype" variable nil (reparse-symbol function_parameters) [4917 4925]))              ) nil [4893 5849])
+            ("get_row_peers" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [5868 5871])
+                ("var" variable nil (reparse-symbol function_parameters) [5873 5876]))              ) nil [5850 6133])
+            ("get_col_peers" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [6152 6155])
+                ("var" variable nil (reparse-symbol function_parameters) [6157 6160]))              ) nil [6134 6366])
+            ("get_block_peers" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [6387 6390])
+                ("var" variable nil (reparse-symbol function_parameters) [6392 6395]))              ) nil [6367 6822]))          
+      :file "naked.py"
+      :pointmax 6822
+      :fsize 6821
+      :lastmodtime '(23191 26177 261821 402000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!683_AI!hw_2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

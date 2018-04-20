@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "package.json"
+      :pointmax 500
+      :fsize 534
+      :lastmodtime '(22858 36492 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!NutStore!Code!BullUp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -45,3 +45,4 @@
 (setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 (load-file custom-file)
+(put 'narrow-to-region 'disabled nil)

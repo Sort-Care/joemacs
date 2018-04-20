@@ -1,0 +1,173 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"
+Author: Haoyu Ji & Hanwen Xiong
+
+Knights Solution for Assignment 1 Question 5
+
+Description: 
+The knight starts at (0, 0) and can pick one of the following elements in set M to add to its current coordinates:
+
+	M = {
+		(+2, +1)
+		(+2, -1)
+		(-2, +1)
+		(-2, -1)
+
+		(+1, +2)
+		(+1, -2)
+		(-1, +2)
+		(-1, -2)
+	}
+
+Given a goal (x, y), compute what is the minimum number of steps needed to move from (0,0) to the target.
+
+\"\"\"" code nil nil [1 424])
+            ("" code nil nil [443 474])
+            ("math" include nil nil [475 486])
+            ("Problem" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [662 684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [693 709])
+                            ("self" variable nil (reparse-symbol indented_block_body) [828 950])
+                            ("self" variable nil (reparse-symbol indented_block_body) [959 975]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [617 621])
+                            ("initial" variable nil (reparse-symbol function_parameters) [623 630])
+                            ("goal" variable nil (reparse-symbol function_parameters) [640 644]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [604 976])
+                    ("actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [994 998])
+                            ("state" variable nil (reparse-symbol function_parameters) [1000 1005]))                          
+                        :documentation "return actions can be executed")
+                        (reparse-symbol indented_block_body) [982 1083])
+                    ("result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1099 1103])
+                            ("state" variable nil (reparse-symbol function_parameters) [1105 1110])
+                            ("action" variable nil (reparse-symbol function_parameters) [1112 1118]))                          )
+                        (reparse-symbol indented_block_body) [1088 1236])
+                    ("goal_test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1256 1260])
+                            ("state" variable nil (reparse-symbol function_parameters) [1262 1267]))                          )
+                        (reparse-symbol indented_block_body) [1242 1405])
+                    ("path_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1424 1428])
+                            ("c" variable nil (reparse-symbol function_parameters) [1430 1431])
+                            ("state1" variable nil (reparse-symbol function_parameters) [1433 1439])
+                            ("action" variable nil (reparse-symbol function_parameters) [1441 1447])
+                            ("state2" variable nil (reparse-symbol function_parameters) [1449 1455]))                          )
+                        (reparse-symbol indented_block_body) [1410 1479])
+                    ("h1" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1496 1500])
+                            ("node" variable nil (reparse-symbol function_parameters) [1502 1506]))                          )
+                        (reparse-symbol indented_block_body) [1489 1679]))                  
+                :type "class")
+                nil [576 1679])
+            ("Node" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1819 1837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1846 1866])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1875 1895])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1904 1930])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1939 1953])
+                            ("if" code nil (reparse-symbol indented_block_body) [1962 2015]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1754 1758])
+                            ("state" variable nil (reparse-symbol function_parameters) [1760 1765])
+                            ("parent" variable nil (reparse-symbol function_parameters) [1767 1773])
+                            ("action" variable nil (reparse-symbol function_parameters) [1780 1786])
+                            ("path_cost" variable nil (reparse-symbol function_parameters) [1795 1804]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1741 2015])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2033 2037]))                          )
+                        (reparse-symbol indented_block_body) [2020 2086])
+                    ("__lt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2102 2106])
+                            ("node" variable nil (reparse-symbol function_parameters) [2108 2112]))                          )
+                        (reparse-symbol indented_block_body) [2091 2154])
+                    ("expand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2170 2174])
+                            ("problem" variable nil (reparse-symbol function_parameters) [2176 2183]))                          )
+                        (reparse-symbol indented_block_body) [2159 2287])
+                    ("child_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2307 2311])
+                            ("problem" variable nil (reparse-symbol function_parameters) [2313 2320])
+                            ("action" variable nil (reparse-symbol function_parameters) [2322 2328]))                          )
+                        (reparse-symbol indented_block_body) [2292 2540])
+                    ("solution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2558 2562]))                          )
+                        (reparse-symbol indented_block_body) [2545 2622])
+                    ("path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2636 2640]))                          )
+                        (reparse-symbol indented_block_body) [2627 2806])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2822 2826])
+                            ("other" variable nil (reparse-symbol function_parameters) [2828 2833]))                          )
+                        (reparse-symbol indented_block_body) [2811 2905])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2923 2927]))                          )
+                        (reparse-symbol indented_block_body) [2910 2962]))                  
+                :type "class")
+                nil [1724 2962])
+            ("best_first_graph_search" function (:arguments 
+              ( ("problem" variable nil (reparse-symbol function_parameters) [3054 3061])
+                ("f" variable nil (reparse-symbol function_parameters) [3063 3064]))              ) nil [3026 3990])
+            ("astar_search" function (:arguments 
+              ( ("problem" variable nil (reparse-symbol function_parameters) [4009 4016])
+                ("h" variable nil (reparse-symbol function_parameters) [4018 4019]))              ) nil [3992 4142])
+            ("sys" include nil nil [4146 4156])
+            ("if" code nil nil [4158 4255])
+            ("knight" variable nil nil [4318 4346])
+            ("res" variable nil nil [4361 4387])
+            ("print" code nil nil [4466 4514])
+            ("print" code nil nil [4515 4536])
+            ("print" code nil nil [4537 4580]))          
+      :file "knights.py"
+      :pointmax 4621
+      :fsize 4620
+      :lastmodtime '(23171 21748 65525 150000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!683_AI!q5!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

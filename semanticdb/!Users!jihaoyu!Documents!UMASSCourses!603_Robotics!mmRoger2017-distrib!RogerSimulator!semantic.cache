@@ -1,0 +1,2323 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdlib.h" include (:system-flag t) nil [282 301])
+            ("matrix_math.h" include nil nil [302 326])
+            ("matrix_copy" function
+               (:arguments 
+                  ( ("rows" variable (:type "int") (reparse-symbol arg-sub-list) [391 400])
+                    ("cols" variable (:type "int") (reparse-symbol arg-sub-list) [401 410])
+                    ("t1" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [411 433])
+                    ("t2" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [438 460]))                  
+                :type "void")
+                nil [374 568])
+            ("matrix_mult" function
+               (:arguments 
+                  ( ("m1" variable (:type "int") (reparse-symbol arg-sub-list) [803 810])
+                    ("n1" variable (:type "int") (reparse-symbol arg-sub-list) [811 818])
+                    ("t1" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [819 837])
+                    ("n2" variable (:type "int") (reparse-symbol arg-sub-list) [837 844])
+                    ("t2" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [845 863])
+                    ("result" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [867 889]))                  
+                :type "void")
+                nil [786 1057])
+            ("matrix_transpose" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1297 1303])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1304 1310])
+                    ("in" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1311 1327])
+                    ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1328 1345]))                  
+                :type "void")
+                nil [1275 1448])
+            ("matrix_add" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [1682 1688])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [1689 1695])
+                    ("in1" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1696 1713])
+                    ("in2" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1714 1731])
+                    ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1734 1751]))                  
+                :type "void")
+                nil [1666 1867])
+            ("matrix_subtract" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [2106 2112])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2113 2119])
+                    ("in1" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2120 2137])
+                    ("in2" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2138 2155])
+                    ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2163 2180]))                  
+                :type "void")
+                nil [2085 2296])
+            ("matrix_invert" function
+               (:arguments 
+                  ( ("A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2748 2758])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [2759 2765])
+                    ("A_inv" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [2766 2780]))                  
+                :type "int")
+                nil [2730 4626])
+            ("pseudoinverse" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [4866 4872])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [4873 4879])
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4880 4895])
+                    ("A_pinv" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [4896 4916]))                  
+                :type "void")
+                nil [4847 5216])
+            ("nullspace" function
+               (:arguments 
+                  ( ("m" variable (:type "int") (reparse-symbol arg-sub-list) [5525 5531])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [5532 5538])
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5539 5554])
+                    ("A_pinv" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5555 5575])
+                    ("N" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [5579 5594]))                  
+                :type "void")
+                nil [5510 5740])
+            ("construct_wTb" function
+               (:arguments 
+                  ( ("base_pos" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("wTb" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [6223 6677])
+            ("HT_invert" function
+               (:arguments 
+                  ( ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("in" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [6759 7222])
+            ("invert_matrix22" function
+               (:arguments 
+                  ( ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("in" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [7589 7872])
+            ("determinant" function
+               (:arguments 
+                  ( ("x" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "double")
+                nil [7898 8714])
+            ("cofactors" function
+               (:arguments 
+                  ( ("cof" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [8716 11762])
+            ("invert_matrix44" function
+               (:arguments 
+                  ( ("out" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("in" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [11764 12079]))          
+      :file "matrix_math.c"
+      :pointmax 12080
+      :fsize 12079
+      :lastmodtime '(21637 60800 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [403 421])
+            ("stdlib.h" include (:system-flag t) nil [422 441])
+            ("time.h" include (:system-flag t) nil [442 459])
+            ("math.h" include (:system-flag t) nil [460 477])
+            ("Xkw/Xkw.h" include nil nil [478 498])
+            ("include/roger.h" include nil nil [500 526])
+            ("include/simulate.h" include nil nil [527 556])
+            ("include/control.h" include nil nil [557 585])
+            ("include/modes.h" include nil nil [586 612])
+            ("include/matrix_math.h" include nil nil [613 645])
+            ("mobile_base" variable (:type ("Base" type (:type "class") nil nil)) nil [696 713])
+            ("mobile_base_home" variable
+               (:type ("Base" type (:type "class") nil nil)
+                :typemodifiers ("extern"))
+                nil [714 743])
+            ("eyes" variable
+               (:type ("Eye" type (:type "class") nil nil)
+                :dereference 1)
+                nil [744 760])
+            ("eyes_home" variable
+               (:type ("Eye" type (:type "class") nil nil)
+                :typemodifiers ("extern")
+                :dereference 1)
+                nil [761 789])
+            ("arms" variable
+               (:type ("Arm" type (:type "class") nil nil)
+                :dereference 2)
+                nil [790 819])
+            ("arms_home" variable
+               (:type ("Arm" type (:type "class") nil nil)
+                :typemodifiers ("extern")
+                :dereference 2)
+                nil [820 861])
+            ("objects" variable
+               (:type ("PolyBall" type (:type "class") nil nil)
+                :dereference 1)
+                nil [862 886])
+            ("toy" variable (:type ("PolyBall" type (:type "class") nil nil)) nil [992 1005])
+            ("toy_home" variable
+               (:type ("PolyBall" type (:type "class") nil nil)
+                :typemodifiers ("extern"))
+                nil [1062 1087])
+            ("Roger" variable (:type ("Robot" type (:type "class") nil nil)) nil [1127 1139])
+            ("world_colors" variable
+               (:type ("SimColor" type (:type "class") nil nil)
+                :dereference 1)
+                nil [1190 1217])
+            ("draw_visual" variable
+               (:type "int"
+                :default-value "FALSE")
+                nil [1219 1243])
+            ("history" variable
+               (:type ("History" type (:type "class") nil nil)
+                :dereference 1)
+                nil [1245 1274])
+            ("history_ptr" variable
+               (:type "int"
+                :default-value "0")
+                nil [1323 1341])
+            ("init_control_flag" variable
+               (:type "int"
+                :default-value "TRUE")
+                nil [1343 1372])
+            ("reset" variable (:type "int") nil [1515 1525])
+            ("simtime" variable
+               (:type "double"
+                :default-value "0.0")
+                nil [1553 1574])
+            ("x_canvas_proc" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [1576 1651])
+            ("x_control_mode_proc" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [1652 1730])
+            ("x_room_proc" function
+               (:type "void"
+                :prototype-flag t)
+                nil [1731 1750])
+            ("project1_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [1752 1843])
+            ("project2_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [1844 1936])
+            ("project3_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [1937 2029])
+            ("project4_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2030 2122])
+            ("project5_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2123 2214])
+            ("project6_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2215 2307])
+            ("project7_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2308 2400])
+            ("project8_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2401 2493])
+            ("project9_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2494 2586])
+            ("project10_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2587 2683])
+            ("project11_enter_params" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2684 2780])
+            ("HT_invert" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2782 2816])
+            ("control_roger" function
+               (:type "void"
+                :constructor-flag t
+                :prototype-flag t)
+                nil [2818 2876])
+            ("inv_arm_kinematics" function
+               (:type "void"
+                :prototype-flag t)
+                nil [2954 2980])
+            ("display" variable
+               (:type ("Display" type (:type "class") nil nil)
+                :pointer 1)
+                nil [2982 3008])
+            ("window" variable (:type ("Window" type (:type "class") nil nil)) nil [3009 3033])
+            ("pixmap" variable (:type ("Pixmap" type (:type "class") nil nil)) nil [3034 3058])
+            ("app_con" variable (:type ("XtAppContext" type (:type "class") nil nil)) nil [3059 3084])
+            ("gc" variable (:type ("GC" type (:type "class") nil nil)) nil [3085 3105])
+            ("screen" variable (:type "int") nil [3106 3130])
+            ("canvas_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("input_mode_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("control_mode_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("params_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("start_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("popup_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("room_w" variable
+               (:type ("Widget" type (:type "class") nil nil)
+                :default-value "NULL")
+                nil [3131 3230])
+            ("intensity_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3231 3270])
+            ("stream_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3231 3270])
+            ("timer" variable
+               (:type ("XtIntervalId" type (:type "class") nil nil)
+                :default-value "0")
+                nil [3271 3298])
+            ("width" variable
+               (:type "int"
+                :default-value "WIDTH")
+                nil [3299 3354])
+            ("height" variable
+               (:type "int"
+                :default-value "HEIGHT")
+                nil [3299 3354])
+            ("depth" variable (:type "int") nil [3299 3354])
+            ("foreground" variable (:type "unsigned long") nil [3355 3395])
+            ("background" variable (:type "unsigned long") nil [3355 3395])
+            ("zoom" variable
+               (:type "int"
+                :default-value "ZOOM_SCALE")
+                nil [3397 3419])
+            ("x_init_colors" function (:type "void") nil [3422 6384])
+            ("write_interface" function
+               (:type "void"
+                :arguments 
+                  ( ("reset" variable (:type "int") nil nil))                  )
+                nil [6386 8501])
+            ("read_interface" function (:type "void") nil [8505 9495])
+            ("motor_model" function
+               (:type "double"
+                :arguments 
+                  ( ("omega_0" variable (:type "double") nil nil)
+                    ("tau_s" variable (:type "double") nil nil)
+                    ("omega" variable (:type "double") nil nil)
+                    ("tau" variable (:type "double") nil nil))                  )
+                nil [9497 9929])
+            ("initialize_simulator" function
+               (:type "void"
+                :arguments 
+                  ( ("rst" variable (:type "int") nil nil))                  )
+                nil [9931 10617])
+            ("initialize_roger" function (:type "void") nil [10619 12495])
+            ("initialize_inertial_objects" function (:type "void") nil [12574 18781])
+            ("R_GOAL" variable (:constant-flag t) nil [18857 18863])
+            ("initialize_random_object" function (:type "void") nil [18870 19659])
+            ("place_object" function
+               (:type "void"
+                :arguments 
+                  ( ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("id" variable (:type "int") nil nil))                  )
+                nil [19661 20492])
+            ("x_start_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [20498 20865])
+            ("x_params_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [20867 21566])
+            ("change_input_mode" function (:type "int") nil [21568 21725])
+            ("x_input_mode_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [21727 22389])
+            ("initialize_control_mode" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [22609 24174])
+            ("change_control_mode" function (:type "int") nil [24176 24384])
+            ("x_control_mode_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [24386 25610])
+            ("initialize_room" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [25612 27122])
+            ("change_room_num" function (:type "int") nil [27124 27233])
+            ("x_room_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [27235 27671])
+            ("x_visualize_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27695 27697])
+                    ("" variable (:type ("client_data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27697 27709])
+                    ("" variable (:type ("call_data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27709 27719]))                  )
+                nil [27673 27796])
+            ("x_quit_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [27798 27996])
+            ("x_canvas_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [27998 29219])
+            ("x_draw_line" function
+               (:type "void"
+                :arguments 
+                  ( ("color" variable (:type "int") nil nil)
+                    ("end_y" variable (:type "double") nil nil)
+                    ("end_x" variable (:type "double") nil nil)
+                    ("start_y" variable (:type "double") nil nil)
+                    ("start_x" variable (:type "double") nil nil))                  )
+                nil [29221 29520])
+            ("x_expose" function (:type "void") nil [29522 29610])
+            ("x_clear" function (:type "void") nil [29612 29733])
+            ("SIMfwd_kinematics" function
+               (:type "void"
+                :arguments 
+                  ( ("arm_id" variable (:type "int") nil nil)
+                    ("theta2" variable (:type "double") nil nil)
+                    ("theta1" variable (:type "double") nil nil)
+                    ("y" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil))                  )
+                nil [29811 30105])
+            ("SIMarm_Jacobian" function
+               (:type "void"
+                :arguments 
+                  ( ("theta2" variable (:type "double") nil nil)
+                    ("theta1" variable (:type "double") nil nil)
+                    ("Jacobian" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  )
+                nil [30107 30439])
+            ("compute_external_forces" function (:type "void") nil [30441 35886])
+            ("get_dynamics" function
+               (:type "void"
+                :arguments 
+                  ( ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  )
+                nil [35964 36128])
+            ("copy_object" function
+               (:type "void"
+                :arguments 
+                  ( ("i" variable (:type "int") nil nil)
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("PolyBall" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [36130 36820])
+            ("update_objects" function (:type "void") nil [36948 41266])
+            ("NSAMPLES" variable (:constant-flag t) nil [41276 41284])
+            ("update_cspace_arms" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [41289 43373])
+            ("draw_history" function (:type "void") nil [44730 45180])
+            ("draw_all" function (:type "void") nil [45182 49691])
+            ("draw_circle" function
+               (:type "void"
+                :arguments 
+                  ( ("fill" variable (:type "int") nil nil)
+                    ("r" variable (:type "int") nil nil)
+                    ("cv" variable (:type "int") nil nil)
+                    ("cu" variable (:type "int") nil nil))                  )
+                nil [49693 49924])
+            ("draw_frames" function (:type "void") nil [49926 52145])
+            ("draw_frame" function
+               (:type "void"
+                :arguments 
+                  ( ("xform" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  )
+                nil [52147 53022])
+            ("draw_boundaries" function (:type "void") nil [53024 54643])
+            ("draw_potential_maps" function (:type "void") nil [54724 57874])
+            ("draw_object" function
+               (:type "void"
+                :arguments 
+                  ( ("obj" variable (:type ("PolyBall" type (:type "class") nil nil)) nil nil))                  )
+                nil [57876 58466])
+            ("draw_object2" function
+               (:type "void"
+                :arguments 
+                  ( ("obj" variable (:type ("PolyBall" type (:type "class") nil nil)) nil nil))                  )
+                nil [58468 61773])
+            ("draw_eye" function
+               (:type "void"
+                :arguments 
+                  ( ("base" variable (:type ("Base" type (:type "class") nil nil)) nil nil)
+                    ("eye" variable (:type ("Eye" type (:type "class") nil nil)) nil nil))                  )
+                nil [61775 63672])
+            ("draw_image" function
+               (:type "void"
+                :arguments 
+                  ( ("eye" variable (:type "int") nil nil))                  )
+                nil [63674 64492])
+            ("draw_roger" function
+               (:type "void"
+                :arguments 
+                  ( ("mobile_base" variable (:type ("Base" type (:type "class") nil nil)) nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [64494 71931])
+            ("FRAME_L" variable (:constant-flag t) nil [71941 71948])
+            ("draw_observation" function
+               (:arguments 
+                  ( ("obs" variable (:type ("Observation" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [72000 75523])
+            ("STEP" variable (:constant-flag t) nil [75533 75537])
+            ("STREAM_SPACE" variable (:constant-flag t) nil [75559 75571])
+            ("draw_streamlines" function
+               (:type "void"
+                :arguments 
+                  ( ("color" variable (:type "int") nil nil))                  )
+                nil [75649 77936])
+            ("draw_current_streamline" function (:type "void") nil [77944 78819])
+            ("mark_used" function
+               (:type "void"
+                :arguments 
+                  ( ("c" variable (:type "int") nil nil)
+                    ("r" variable (:type "int") nil nil)
+                    ("aux" variable
+                       (:dereference 2
+                        :type "int")
+                        nil nil))                  )
+                nil [78821 79220])
+            ("VMAG" variable (:constant-flag t) nil [79230 79234])
+            ("draw_estimate0" function
+               (:type "void"
+                :arguments 
+                  ( ("scale" variable (:type "double") nil nil)
+                    ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  )
+                nil [79277 79593])
+            ("draw_estimate" function
+               (:type "void"
+                :arguments 
+                  ( ("scale" variable (:type "double") nil nil)
+                    ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  )
+                nil [79629 83254])
+            ("draw_ellipse" function
+               (:type "void"
+                :arguments 
+                  ( ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  )
+                nil [83256 85111])
+            ("_visible_object" type
+               (:type "struct"
+                :members 
+                  ( ("dx" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_visible_object")
+                        (reparse-symbol classsubparts) [85148 85162])
+                    ("dy" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_visible_object")
+                        (reparse-symbol classsubparts) [85148 85162])
+                    ("radius" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_visible_object")
+                        (reparse-symbol classsubparts) [85165 85179])
+                    ("color" variable
+                       (:depth 1
+                        :type "int"
+                        :parent "_visible_object")
+                        (reparse-symbol classsubparts) [85182 85192]))                  )
+                nil [85113 85209])
+            ("VisibleObject" type
+               (:type "typedef"
+                :typedef ("_visible_object" type (:type "struct") nil nil))
+                nil [85113 85209])
+            ("_circle" type
+               (:type "struct"
+                :members 
+                  ( ("x" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_circle")
+                        (reparse-symbol classsubparts) [85238 85250])
+                    ("y" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_circle")
+                        (reparse-symbol classsubparts) [85238 85250])
+                    ("radius" variable
+                       (:depth 1
+                        :type "double"
+                        :parent "_circle")
+                        (reparse-symbol classsubparts) [85253 85267])
+                    ("color" variable
+                       (:depth 1
+                        :type "int"
+                        :parent "_circle")
+                        (reparse-symbol classsubparts) [85270 85280]))                  )
+                nil [85211 85290])
+            ("Circle" type
+               (:type "typedef"
+                :typedef ("_circle" type (:type "struct") nil nil))
+                nil [85211 85290])
+            ("_edge" type
+               (:type "struct"
+                :members 
+                  ( ("endpt1" variable
+                       (:depth 1
+                        :type "double"
+                        :dereference 1
+                        :parent "_edge")
+                        (reparse-symbol classsubparts) [85317 85334])
+                    ("endpt2" variable
+                       (:depth 1
+                        :type "double"
+                        :dereference 1
+                        :parent "_edge")
+                        (reparse-symbol classsubparts) [85337 85354])
+                    ("color" variable
+                       (:depth 1
+                        :type "int"
+                        :parent "_edge")
+                        (reparse-symbol classsubparts) [85357 85367]))                  )
+                nil [85292 85375])
+            ("Edge" type
+               (:type "typedef"
+                :typedef ("_edge" type (:type "struct") nil nil))
+                nil [85292 85375])
+            ("_polygon" type
+               (:type "struct"
+                :members 
+                  ( ("n" variable
+                       (:depth 1
+                        :type "int"
+                        :parent "_polygon")
+                        (reparse-symbol classsubparts) [85405 85411])
+                    ("vertices" variable
+                       (:depth 1
+                        :type ("Circle" type (:type "class") nil nil)
+                        :pointer 1
+                        :parent "_polygon")
+                        (reparse-symbol classsubparts) [85421 85439])
+                    ("sides" variable
+                       (:depth 1
+                        :type ("Edge" type (:type "class") nil nil)
+                        :pointer 1
+                        :parent "_polygon")
+                        (reparse-symbol classsubparts) [85442 85455])
+                    ("color" variable
+                       (:depth 1
+                        :type "int"
+                        :parent "_polygon")
+                        (reparse-symbol classsubparts) [85458 85468]))                  )
+                nil [85377 85479])
+            ("Polygon" type
+               (:type "typedef"
+                :typedef ("_polygon" type (:type "struct") nil nil))
+                nil [85377 85479])
+            ("insertion_sort" function
+               (:type "void"
+                :arguments 
+                  ( ("vob" variable
+                       (:pointer 1
+                        :type ("VisibleObject" type (:type "class") nil nil))
+                        nil nil)
+                    ("num" variable (:type "int") nil nil)
+                    ("sort" variable
+                       (:pointer 1
+                        :type "int")
+                        nil nil))                  )
+                nil [85481 85876])
+            ("pinhole_camera" function
+               (:type "void"
+                :arguments 
+                  ( ("vob" variable (:type ("VisibleObject" type (:type "class") nil nil)) nil nil)
+                    ("i" variable (:type "int") nil nil))                  )
+                nil [85878 86957])
+            ("make_images" function (:type "void") nil [86959 89213])
+            ("x_timer_proc" function
+               (:type "void"
+                :arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  )
+                nil [89215 90653])
+            ("goal_detection" function (:type "void") nil [90655 91145])
+            ("Teleoperation_Cartesian_input_arms" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("button" variable (:type "int") nil nil))                  )
+                nil [91147 91707])
+            ("Teleoperation_Cartesian_input_base" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("button" variable (:type "int") nil nil))                  )
+                nil [91709 92112])
+            ("isConfigurationInput" function
+               (:type "int"
+                :arguments 
+                  ( ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("q2" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("q1" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("side" variable
+                       (:pointer 1
+                        :type "int")
+                        nil nil))                  )
+                nil [92180 93643])
+            ("isCartesianInput" function
+               (:type "int"
+                :arguments 
+                  ( ("y_input" variable (:type "double") nil nil)
+                    ("x_input" variable (:type "double") nil nil)
+                    ("y" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil))                  )
+                nil [93689 93967])
+            ("update_setpoints" function
+               (:type "void"
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  )
+                nil [94629 100127])
+            ("main" function
+               (:type "int"
+                :arguments 
+                  ( ("argc" variable (:type "int") nil nil)
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        nil nil))                  )
+                nil [100129 102304]))          
+      :file "xrobot.c"
+      :pointmax 102305
+      :fsize 102304
+      :lastmodtime '(23236 19474 382265 147000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NSAMPLES" . ((number "10" 41285 . 41287)))
+          ("VMAG" . ((number "0.5" 79023 . 79026)))
+          ("FRAME_L" . ((number "0.08" 71957 . 71961)))
+          ("STEP" . ((number "0.01" 75334 . 75338)))
+          ("R_GOAL" . ((number "0.45" 18864 . 18868)))
+          ("STREAM_SPACE" . ((number "1" 75360 . 75361)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [533 550])
+            ("stdlib.h" include (:system-flag t) nil [551 570])
+            ("include/Roger.h" include nil nil [571 597])
+            ("include/simulate.h" include nil nil [598 627])
+            ("include/control.h" include nil nil [628 656])
+            ("eyes_home" variable
+               (:dereference 1
+                :default-value "{ { {0.0, BASELINE}, 0.0, 0.0,
+                           {99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99},
+                           0.0},
+			 { {0.0, -BASELINE}, 0.0, 0.0,
+                           {99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99},
+			   0.0} }"
+                :type ("Eye" type (:type "class") nil nil))
+                nil [886 2254])
+            ("mobile_base_home" variable
+               (:default-value "{ { {  0.0, 1.0, 0.0,  0.0 },  /* wTb */
+      { -1.0, 0.0, 0.0,  0.0 },
+      {  0.0, 0.0, 1.0,  0.0 },
+      {  0.0, 0.0, 0.0,  1.0 } },
+    0.0, /* x */
+    0.0, /* x_dot */
+    0.0, /* y */
+    0.0, /* y_dot */
+    -M_PI/2.0, /* theta */
+    0.0, /* theta_dot */
+    { 0.0, 0.0 }, /* wheel_torque */
+    0.0, /* contact_theta */
+    { 0.0, 0.0 }, /* extForce (fx, fy) */
+    { 0.0, 0.0 }  /* wheel_theta_dot */
+  }"
+                :type ("Base" type (:type "class") nil nil))
+                nil [2484 2929])
+            ("wheel_speed" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [2951 3384])
+            ("l" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{LARM_1, LARM_2}"
+                :type "double")
+                nil [3614 3652])
+            ("m" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{MARM_1, MARM_2}"
+                :type "double")
+                nil [3653 3691])
+            ("arms_home" variable
+               (:dereference 2
+                :default-value "{ { { { { 1.0, 0.0, 0.0, 0.0 },         /* LEFT ARM         */
+	  { 0.0, 1.0, 0.0, ARM_OFFSET },  /* mobile base to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0  },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } },
+    { { { { 1.0, 0.0, 0.0, 0.0 },           /* RIGHT ARM        */
+	  { 0.0, 1.0, 0.0, -ARM_OFFSET },  /* world to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } } }"
+                :type ("Arm" type (:type "class") nil nil))
+                nil [3693 5371])
+            ("arm_dynamics" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [5373 6497])
+            ("invert" function
+               (:arguments 
+                  ( ("Ainv" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [6499 7638])
+            ("matrix_mult" function
+               (:arguments 
+                  ( ("y" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [7640 7870])
+            ("update_state" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [7872 9158])
+            ("rectify_theta" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [9168 9455])
+            ("simulate_roger" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [9473 12489])
+            ("roger_dynamics_BD" function
+               (:arguments 
+                  ( ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [12551 13593])
+            ("roger_dynamics" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [13642 16565])
+            ("invert_M" function
+               (:arguments 
+                  ( ("A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16745 16755])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [16756 16762])
+                    ("AInverse" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [16763 16780]))                  
+                :type "int")
+                nil [16732 18881]))          
+      :file "base+eyes.c"
+      :pointmax 18882
+      :fsize 18881
+      :lastmodtime '(21608 12717 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [533 550])
+            ("stdlib.h" include (:system-flag t) nil [551 570])
+            ("include/roger.h" include nil nil [571 597])
+            ("include/simulate.h" include nil nil [598 627])
+            ("include/control.h" include nil nil [628 656])
+            ("eyes_home" variable
+               (:dereference 1
+                :default-value "{ { {0.0, BASELINE}, 0.0, 0.0,
+                           {99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99},
+                           0.0},
+			 { {0.0, -BASELINE}, 0.0, 0.0,
+                           {99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,
+                            99,99,99,99,99,99,99,99,99,99,99,99,99,99,99,99},
+			   0.0} }"
+                :type ("Eye" type (:type "class") nil nil))
+                nil [886 2254])
+            ("mobile_base_home" variable
+               (:default-value "{ { {  0.0, 1.0, 0.0,  0.0 },  /* wTb */
+      { -1.0, 0.0, 0.0,  0.0 },
+      {  0.0, 0.0, 1.0,  0.0 },
+      {  0.0, 0.0, 0.0,  1.0 } },
+    0.0, /* x */
+    0.0, /* x_dot */
+    0.0, /* y */
+    0.0, /* y_dot */
+    -M_PI/2.0, /* theta */
+    0.0, /* theta_dot */
+    { 0.0, 0.0 }, /* wheel_torque */
+    0.0, /* contact_theta */
+    { 0.0, 0.0 }, /* extForce (fx, fy) */
+    { 0.0, 0.0 }  /* wheel_theta_dot */
+  }"
+                :type ("Base" type (:type "class") nil nil))
+                nil [2484 2929])
+            ("wheel_speed" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [2951 3384])
+            ("l" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{L_ARM1, L_ARM2}"
+                :type "double")
+                nil [3614 3652])
+            ("m" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{M_ARM1, M_ARM2}"
+                :type "double")
+                nil [3653 3691])
+            ("arms_home" variable
+               (:dereference 2
+                :default-value "{ { { { { 1.0, 0.0, 0.0, 0.0 },         /* LEFT ARM         */
+	  { 0.0, 1.0, 0.0, ARM_OFFSET },  /* mobile base to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0  },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (M_PI/2.0),0.0,
+//	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, L_ARM1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (0.0),0.0,
+//	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, L_ARM2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } },
+    { { { { 1.0, 0.0, 0.0, 0.0 },           /* RIGHT ARM        */
+	  { 0.0, 1.0, 0.0, -ARM_OFFSET },  /* world to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-M_PI/2.0),0.0,
+//	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, L_ARM1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (0.0),0.0,
+//	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, L_ARM2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } } }"
+                :type ("Arm" type (:type "class") nil nil))
+                nil [3693 5614])
+            ("arm_dynamics" function
+               (:arguments 
+                  ( ("base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [5616 7437])
+            ("update_state" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [7439 8725])
+            ("rectify_theta" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [8727 9014])
+            ("simulate_roger" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [10653 14765])
+            ("roger_dynamics_BD" function
+               (:arguments 
+                  ( ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [14815 16228])
+            ("roger_dynamics" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [16273 24094]))          
+      :file "whole_body.c"
+      :pointmax 24098
+      :fsize 24097
+      :lastmodtime '(22714 60533 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [533 550])
+            ("stdlib.h" include (:system-flag t) nil [551 570])
+            ("include/Roger.h" include nil nil [571 597])
+            ("include/simulate.h" include nil nil [598 627])
+            ("include/control.h" include nil nil [628 656])
+            ("eyes" variable
+               (:dereference 1
+                :type ("Eye" type (:type "class") nil nil))
+                nil [886 902])
+            ("mobile_base_home" variable
+               (:default-value "{ { {  0.0, 1.0, 0.0,  0.0 },  /* wTb */
+      { -1.0, 0.0, 0.0,  0.0 },
+      {  0.0, 0.0, 1.0,  0.0 },
+      {  0.0, 0.0, 0.0,  1.0 } },
+    0.0, /* x */
+    0.0, /* x_dot */
+    0.0, /* y */
+    0.0, /* y_dot */
+    -M_PI/2.0, /* theta */
+    0.0, /* theta_dot */
+    { 0.0, 0.0 }, /* wheel_torque */
+    0.0, /* contact_theta */
+    { 0.0, 0.0 }, /* extForce (fx, fy) */
+    { 0.0, 0.0 }  /* wheel_theta_dot */
+  }"
+                :type ("Base" type (:type "class") nil nil))
+                nil [1189 1634])
+            ("wheel_speed" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [1656 2089])
+            ("l" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{LARM_1, LARM_2}"
+                :type "double")
+                nil [2319 2357])
+            ("m" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :default-value "{MARM_1, MARM_2}"
+                :type "double")
+                nil [2358 2396])
+            ("arms_home" variable
+               (:dereference 2
+                :default-value "{ { { { { 1.0, 0.0, 0.0, 0.0 },         /* LEFT ARM         */
+	  { 0.0, 1.0, 0.0, ARM_OFFSET },  /* mobile base to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0  },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } },
+    { { { { 1.0, 0.0, 0.0, 0.0 },           /* RIGHT ARM        */
+	  { 0.0, 1.0, 0.0, -ARM_OFFSET },  /* world to frame 0 */
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, 0.0 },  /* frame 0 to frame 1 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (-9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_1 },  /* frame 1 to frame 2 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, REVOLUTE,ZAXIS, (9.0*M_PI/10.0),0.0,
+	0.0, {0.0,0.0} },
+      { { { 1.0, 0.0, 0.0, LARM_2 },  /* frame 2 to frame 3 */
+	  { 0.0, 1.0, 0.0, 0.0 },
+	  { 0.0, 0.0, 1.0, 0.0 },
+	  { 0.0, 0.0, 0.0, 1.0 } }, NOTYPE,NOAXIS, 0.0,0.0,
+	0.0, {0.0,0.0} } } }"
+                :type ("Arm" type (:type "class") nil nil))
+                nil [2398 4076])
+            ("arm_dynamics" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [4078 5202])
+            ("invert" function
+               (:arguments 
+                  ( ("Ainv" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil)
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [5204 6343])
+            ("matrix_mult" function
+               (:arguments 
+                  ( ("y" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("A" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [6345 6575])
+            ("update_state" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [6577 7863])
+            ("rectify_theta" function
+               (:arguments 
+                  ( ("arm" variable
+                       (:dereference 1
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [7873 8160])
+            ("simulate_roger" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [8194 10790])
+            ("roger_dynamics_BD" function
+               (:arguments 
+                  ( ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [10852 11894])
+            ("roger_dynamics" function
+               (:arguments 
+                  ( ("mobile_base" variable
+                       (:pointer 1
+                        :type ("Base" type (:type "class") nil nil))
+                        nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil)
+                    ("F" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("G" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("V" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil)
+                    ("M" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [11943 14303])
+            ("invert_M" function
+               (:arguments 
+                  ( ("A" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [14483 14493])
+                    ("n" variable (:type "int") (reparse-symbol arg-sub-list) [14494 14500])
+                    ("AInverse" variable
+                       (:pointer 1
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [14501 14518]))                  
+                :type "int")
+                nil [14470 16619]))          
+      :file "base+left_eye.c"
+      :pointmax 16620
+      :fsize 16619
+      :lastmodtime '(21581 48970 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [403 421])
+            ("stdlib.h" include (:system-flag t) nil [422 441])
+            ("time.h" include (:system-flag t) nil [442 459])
+            ("math.h" include (:system-flag t) nil [460 477])
+            ("Xkw/Xkw.h" include nil nil [478 498])
+            ("include/roger.h" include nil nil [500 526])
+            ("include/simulate.h" include nil nil [527 556])
+            ("include/control.h" include nil nil [557 585])
+            ("include/modes.h" include nil nil [586 612])
+            ("include/matrix_math.h" include nil nil [613 645])
+            ("mobile_base" variable (:type ("Base" type (:type "class") nil nil)) nil [696 713])
+            ("mobile_base_home" variable
+               (:typemodifiers ("extern")
+                :type ("Base" type (:type "class") nil nil))
+                nil [714 743])
+            ("eyes" variable
+               (:dereference 1
+                :type ("Eye" type (:type "class") nil nil))
+                nil [744 760])
+            ("eyes_home" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("Eye" type (:type "class") nil nil))
+                nil [761 789])
+            ("arms" variable
+               (:dereference 2
+                :type ("Arm" type (:type "class") nil nil))
+                nil [790 819])
+            ("arms_home" variable
+               (:dereference 2
+                :typemodifiers ("extern")
+                :type ("Arm" type (:type "class") nil nil))
+                nil [820 861])
+            ("objects" variable
+               (:dereference 1
+                :type ("PolyBall" type (:type "class") nil nil))
+                nil [862 886])
+            ("toy" variable (:type ("PolyBall" type (:type "class") nil nil)) nil [992 1005])
+            ("toy_home" variable
+               (:typemodifiers ("extern")
+                :type ("PolyBall" type (:type "class") nil nil))
+                nil [1062 1087])
+            ("Roger" variable (:type ("Robot" type (:type "class") nil nil)) nil [1127 1139])
+            ("world_colors" variable
+               (:dereference 1
+                :type ("SimColor" type (:type "class") nil nil))
+                nil [1190 1217])
+            ("draw_visual" variable
+               (:default-value "FALSE"
+                :type "int")
+                nil [1219 1243])
+            ("history" variable
+               (:dereference 1
+                :type ("History" type (:type "class") nil nil))
+                nil [1245 1274])
+            ("history_ptr" variable
+               (:default-value "0"
+                :type "int")
+                nil [1323 1341])
+            ("init_control_flag" variable
+               (:default-value "TRUE"
+                :type "int")
+                nil [1343 1372])
+            ("reset" variable (:type "int") nil [1515 1525])
+            ("simtime" variable
+               (:default-value "0.0"
+                :type "double")
+                nil [1553 1574])
+            ("x_canvas_proc" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [1576 1651])
+            ("x_control_mode_proc" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [1652 1730])
+            ("x_room_proc" function
+               (:prototype-flag t
+                :type "void")
+                nil [1731 1750])
+            ("project1_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [1752 1843])
+            ("project2_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [1844 1936])
+            ("project3_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [1937 2029])
+            ("project4_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2030 2122])
+            ("project5_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2123 2214])
+            ("project6_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2215 2307])
+            ("project7_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2308 2400])
+            ("project8_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2401 2493])
+            ("project9_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2494 2586])
+            ("project10_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2587 2683])
+            ("project11_enter_params" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2684 2780])
+            ("HT_invert" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2782 2816])
+            ("control_roger" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [2818 2876])
+            ("inv_arm_kinematics" function
+               (:prototype-flag t
+                :type "void")
+                nil [2954 2980])
+            ("display" variable
+               (:pointer 1
+                :type ("Display" type (:type "class") nil nil))
+                nil [2982 3008])
+            ("window" variable (:type ("Window" type (:type "class") nil nil)) nil [3009 3033])
+            ("pixmap" variable (:type ("Pixmap" type (:type "class") nil nil)) nil [3034 3058])
+            ("app_con" variable (:type ("XtAppContext" type (:type "class") nil nil)) nil [3059 3084])
+            ("gc" variable (:type ("GC" type (:type "class") nil nil)) nil [3085 3105])
+            ("screen" variable (:type "int") nil [3106 3130])
+            ("canvas_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("input_mode_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("control_mode_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("params_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("start_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("popup_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3131 3230])
+            ("room_w" variable
+               (:default-value "NULL"
+                :type ("Widget" type (:type "class") nil nil))
+                nil [3131 3230])
+            ("intensity_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3231 3270])
+            ("stream_w" variable (:type ("Widget" type (:type "class") nil nil)) nil [3231 3270])
+            ("timer" variable
+               (:default-value "0"
+                :type ("XtIntervalId" type (:type "class") nil nil))
+                nil [3271 3298])
+            ("width" variable
+               (:default-value "WIDTH"
+                :type "int")
+                nil [3299 3354])
+            ("height" variable
+               (:default-value "HEIGHT"
+                :type "int")
+                nil [3299 3354])
+            ("depth" variable (:type "int") nil [3299 3354])
+            ("foreground" variable (:type "unsigned long") nil [3355 3395])
+            ("background" variable (:type "unsigned long") nil [3355 3395])
+            ("zoom" variable
+               (:default-value "ZOOM_SCALE"
+                :type "int")
+                nil [3397 3419])
+            ("x_init_colors" function (:type "void") nil [3422 6384])
+            ("write_interface" function
+               (:arguments 
+                  ( ("reset" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [6386 8501])
+            ("read_interface" function (:type "void") nil [8505 9495])
+            ("motor_model" function
+               (:arguments 
+                  ( ("omega_0" variable (:type "double") nil nil)
+                    ("tau_s" variable (:type "double") nil nil)
+                    ("omega" variable (:type "double") nil nil)
+                    ("tau" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [9497 9929])
+            ("initialize_simulator" function
+               (:arguments 
+                  ( ("rst" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [9931 10617])
+            ("initialize_roger" function (:type "void") nil [10619 12495])
+            ("initialize_inertial_objects" function (:type "void") nil [12574 18781])
+            ("R_GOAL" variable (:constant-flag t) nil [18857 18863])
+            ("initialize_random_object" function (:type "void") nil [18870 19659])
+            ("place_object" function
+               (:arguments 
+                  ( ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("id" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [19661 20492])
+            ("x_start_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [20498 20865])
+            ("x_params_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [20867 21566])
+            ("change_input_mode" function (:type "int") nil [21568 21725])
+            ("x_input_mode_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [21727 22389])
+            ("initialize_control_mode" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [22609 24174])
+            ("change_control_mode" function (:type "int") nil [24176 24384])
+            ("x_control_mode_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [24386 25610])
+            ("initialize_room" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [25612 27122])
+            ("change_room_num" function (:type "int") nil [27124 27233])
+            ("x_room_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [27235 27671])
+            ("x_visualize_proc" function
+               (:arguments 
+                  ( ("" variable (:type ("w" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27695 27697])
+                    ("" variable (:type ("client_data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27697 27709])
+                    ("" variable (:type ("call_data" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27709 27719]))                  
+                :type "void")
+                nil [27673 27796])
+            ("x_quit_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [27798 27996])
+            ("x_canvas_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [27998 29219])
+            ("x_draw_line" function
+               (:arguments 
+                  ( ("color" variable (:type "int") nil nil)
+                    ("end_y" variable (:type "double") nil nil)
+                    ("end_x" variable (:type "double") nil nil)
+                    ("start_y" variable (:type "double") nil nil)
+                    ("start_x" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [29221 29520])
+            ("x_expose" function (:type "void") nil [29522 29610])
+            ("x_clear" function (:type "void") nil [29612 29733])
+            ("SIMfwd_kinematics" function
+               (:arguments 
+                  ( ("arm_id" variable (:type "int") nil nil)
+                    ("theta2" variable (:type "double") nil nil)
+                    ("theta1" variable (:type "double") nil nil)
+                    ("y" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [29811 30105])
+            ("SIMarm_Jacobian" function
+               (:arguments 
+                  ( ("theta2" variable (:type "double") nil nil)
+                    ("theta1" variable (:type "double") nil nil)
+                    ("Jacobian" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [30107 30439])
+            ("compute_external_forces" function (:type "void") nil [30441 35886])
+            ("copy_object" function
+               (:arguments 
+                  ( ("i" variable (:type "int") nil nil)
+                    ("obj" variable
+                       (:pointer 1
+                        :type ("PolyBall" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [35888 36578])
+            ("update_objects" function (:type "void") nil [36706 41024])
+            ("NSAMPLES" variable (:constant-flag t) nil [41034 41042])
+            ("update_cspace_arms" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [41047 43131])
+            ("draw_history" function (:type "void") nil [44488 44938])
+            ("draw_all" function (:type "void") nil [44940 49449])
+            ("draw_circle" function
+               (:arguments 
+                  ( ("fill" variable (:type "int") nil nil)
+                    ("r" variable (:type "int") nil nil)
+                    ("cv" variable (:type "int") nil nil)
+                    ("cu" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [49451 49682])
+            ("draw_frames" function (:type "void") nil [49684 51903])
+            ("draw_frame" function
+               (:arguments 
+                  ( ("xform" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [51905 52780])
+            ("draw_boundaries" function (:type "void") nil [52782 54401])
+            ("draw_potential_maps" function (:type "void") nil [54482 57632])
+            ("draw_object" function
+               (:arguments 
+                  ( ("obj" variable (:type ("PolyBall" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [57634 58224])
+            ("draw_object2" function
+               (:arguments 
+                  ( ("obj" variable (:type ("PolyBall" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [58226 61531])
+            ("draw_eye" function
+               (:arguments 
+                  ( ("base" variable (:type ("Base" type (:type "class") nil nil)) nil nil)
+                    ("eye" variable (:type ("Eye" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [61533 63430])
+            ("draw_image" function
+               (:arguments 
+                  ( ("eye" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [63432 64250])
+            ("draw_roger" function
+               (:arguments 
+                  ( ("mobile_base" variable (:type ("Base" type (:type "class") nil nil)) nil nil)
+                    ("arms" variable
+                       (:dereference 2
+                        :type ("Arm" type (:type "class") nil nil))
+                        nil nil)
+                    ("eyes" variable
+                       (:dereference 1
+                        :type ("Eye" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [64252 71689])
+            ("FRAME_L" variable (:constant-flag t) nil [71699 71706])
+            ("draw_observation" function
+               (:arguments 
+                  ( ("obs" variable (:type ("Observation" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [71758 75072])
+            ("STEP" variable (:constant-flag t) nil [75082 75086])
+            ("STREAM_SPACE" variable (:constant-flag t) nil [75108 75120])
+            ("draw_streamlines" function
+               (:arguments 
+                  ( ("color" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [75198 77485])
+            ("draw_current_streamline" function (:type "void") nil [77493 78368])
+            ("mark_used" function
+               (:arguments 
+                  ( ("c" variable (:type "int") nil nil)
+                    ("r" variable (:type "int") nil nil)
+                    ("aux" variable
+                       (:dereference 2
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [78370 78769])
+            ("VMAG" variable (:constant-flag t) nil [78779 78783])
+            ("draw_estimate0" function
+               (:arguments 
+                  ( ("scale" variable (:type "double") nil nil)
+                    ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [78826 79142])
+            ("draw_estimate" function
+               (:arguments 
+                  ( ("scale" variable (:type "double") nil nil)
+                    ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [79178 82803])
+            ("draw_ellipse" function
+               (:arguments 
+                  ( ("est" variable (:type ("Estimate" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [82805 84660])
+            ("_visible_object" type
+               (:members 
+                  ( ("dx" variable (:type "double") (reparse-symbol classsubparts) [84697 84711])
+                    ("dy" variable (:type "double") (reparse-symbol classsubparts) [84697 84711])
+                    ("radius" variable (:type "double") (reparse-symbol classsubparts) [84714 84728])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [84731 84741]))                  
+                :type "struct")
+                nil [84662 84758])
+            ("VisibleObject" type
+               (:typedef ("_visible_object" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [84662 84758])
+            ("_circle" type
+               (:members 
+                  ( ("x" variable (:type "double") (reparse-symbol classsubparts) [84787 84799])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [84787 84799])
+                    ("radius" variable (:type "double") (reparse-symbol classsubparts) [84802 84816])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [84819 84829]))                  
+                :type "struct")
+                nil [84760 84839])
+            ("Circle" type
+               (:typedef ("_circle" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [84760 84839])
+            ("_edge" type
+               (:members 
+                  ( ("endpt1" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [84866 84883])
+                    ("endpt2" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [84886 84903])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [84906 84916]))                  
+                :type "struct")
+                nil [84841 84924])
+            ("Edge" type
+               (:typedef ("_edge" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [84841 84924])
+            ("_polygon" type
+               (:members 
+                  ( ("n" variable (:type "int") (reparse-symbol classsubparts) [84954 84960])
+                    ("vertices" variable
+                       (:pointer 1
+                        :type ("Circle" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [84970 84988])
+                    ("sides" variable
+                       (:pointer 1
+                        :type ("Edge" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [84991 85004])
+                    ("color" variable (:type "int") (reparse-symbol classsubparts) [85007 85017]))                  
+                :type "struct")
+                nil [84926 85028])
+            ("Polygon" type
+               (:typedef ("_polygon" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [84926 85028])
+            ("insertion_sort" function
+               (:arguments 
+                  ( ("vob" variable
+                       (:pointer 1
+                        :type ("VisibleObject" type (:type "class") nil nil))
+                        nil nil)
+                    ("num" variable (:type "int") nil nil)
+                    ("sort" variable
+                       (:pointer 1
+                        :type "int")
+                        nil nil))                  
+                :type "void")
+                nil [85030 85425])
+            ("pinhole_camera" function
+               (:arguments 
+                  ( ("vob" variable (:type ("VisibleObject" type (:type "class") nil nil)) nil nil)
+                    ("i" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [85427 86506])
+            ("make_images" function (:type "void") nil [86508 88762])
+            ("x_timer_proc" function
+               (:arguments 
+                  ( ("w" variable (:type ("Widget" type (:type "class") nil nil)) nil nil)
+                    ("call_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil)
+                    ("client_data" variable (:type ("XtPointer" type (:type "class") nil nil)) nil nil))                  
+                :type "void")
+                nil [88764 90202])
+            ("goal_detection" function (:type "void") nil [90204 90694])
+            ("Teleoperation_Cartesian_input_arms" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("button" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [90696 91256])
+            ("Teleoperation_Cartesian_input_base" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("button" variable (:type "int") nil nil))                  
+                :type "void")
+                nil [91258 91661])
+            ("isConfigurationInput" function
+               (:arguments 
+                  ( ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("q2" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("q1" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("side" variable
+                       (:pointer 1
+                        :type "int")
+                        nil nil))                  
+                :type "int")
+                nil [91729 93192])
+            ("isCartesianInput" function
+               (:arguments 
+                  ( ("y_input" variable (:type "double") nil nil)
+                    ("x_input" variable (:type "double") nil nil)
+                    ("y" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil)
+                    ("x" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil))                  
+                :type "int")
+                nil [93238 93516])
+            ("update_setpoints" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [94178 99676])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") nil nil)
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        nil nil))                  
+                :type "int")
+                nil [99678 101853]))          
+      :file "xrobot.c.bak"
+      :pointmax 101854
+      :fsize 101853
+      :lastmodtime '(23236 16403 229072 54000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NSAMPLES" . ((number "10" 41043 . 41045)))
+          ("VMAG" . ((number "0.5" 78781 . 78784)))
+          ("FRAME_L" . ((number "0.08" 71715 . 71719)))
+          ("STEP" . ((number "0.01" 75092 . 75096)))
+          ("R_GOAL" . ((number "0.45" 18864 . 18868)))
+          ("STREAM_SPACE" . ((number "1" 75118 . 75119)))
+          )
+))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!603_Robotics!mmRoger2017-distrib!RogerSimulator!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

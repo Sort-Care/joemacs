@@ -1,0 +1,4 @@
+pwd
+cd ..
+bundle execute jekyll server
+bundle exec jekyll server

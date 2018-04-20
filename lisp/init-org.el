@@ -53,6 +53,7 @@
    (sqlite . t)
    (perl . t)
    (C . t)
+   (gnuplot . t)
    ))
 
 (require 'org-bullets)

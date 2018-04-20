@@ -157,9 +157,10 @@
 
 ;;load theme
 ;;(load-theme 'spacemacs-dark t)
+(load-theme 'atom-one-dark t)
 ;;(moe-light)
-(moe-dark)
-(moe-theme-set-color 'purple)
+;;(moe-dark)
+(moe-theme-set-color 'blue)
 
 (require 'popwin)
 (popwin-mode 1)
@@ -191,6 +192,27 @@
 
 ;; org-jekyll
 (require 'org-jekyll)
+
+;; web beautify
+(require 'web-beautify)
+
+;;multiple cursors
+(require 'multiple-cursors)
+
+
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+          (lambda ()
+            (when (derived-mode-p 'c-mode 'c++-mode 'java-mode 'asm-mode)
+              (ggtags-mode 1))))
+
+
+(require 'yasnippet)
+(yas-global-mode 1)
+
+(fa-config-default)
+
+(require 'flyspell-correct-helm)
 
 (provide 'init-packages)
 ;;; init-packages.el ends here

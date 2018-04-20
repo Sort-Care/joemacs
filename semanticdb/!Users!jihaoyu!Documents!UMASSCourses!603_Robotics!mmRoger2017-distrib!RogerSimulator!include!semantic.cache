@@ -1,0 +1,902 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("ACTUATE_BASE" variable (:constant-flag t) nil [471 483])
+            ("ACTUATE_EYES" variable (:constant-flag t) nil [530 542])
+            ("ACTUATE_ARMS" variable (:constant-flag t) nil [589 601])
+            ("HISTORY" variable (:constant-flag t) nil [648 655])
+            ("X" variable (:constant-flag t) nil [726 727])
+            ("Y" variable (:constant-flag t) nil [750 751])
+            ("XDOT" variable (:constant-flag t) nil [774 778])
+            ("YDOT" variable (:constant-flag t) nil [798 802])
+            ("THETA" variable (:constant-flag t) nil [823 828])
+            ("RED_CHANNEL" variable (:constant-flag t) nil [867 878])
+            ("GREEN_CHANNEL" variable (:constant-flag t) nil [893 906])
+            ("BLUE_CHANNEL" variable (:constant-flag t) nil [919 931])
+            ("EDGE" variable (:constant-flag t) nil [945 949])
+            ("LEFT_TOUCH" variable (:constant-flag t) nil [971 981])
+            ("RIGHT_TOUCH" variable (:constant-flag t) nil [997 1008])
+            ("EYES_BASE" variable (:constant-flag t) nil [1041 1050])
+            ("LEFT" variable (:constant-flag t) nil [1068 1072])
+            ("RIGHT" variable (:constant-flag t) nil [1092 1097])
+            ("TRUE" variable (:constant-flag t) nil [1116 1120])
+            ("FALSE" variable (:constant-flag t) nil [1140 1145])
+            ("OUT_OF_REACH" variable (:constant-flag t) nil [1242 1254])
+            ("IN_REACH" variable (:constant-flag t) nil [1270 1278])
+            ("" type
+               (:members 
+                  ( ("NO_REFERENCE" variable
+                       (:constant-flag t
+                        :default-value (1392 1393)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1377 1393])
+                    ("TRANSIENT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1397 1407])
+                    ("CONVERGED" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1410 1421]))                  
+                :type "enum")
+                nil [1368 1422])
+            ("SIGMA_OBS" variable (:constant-flag t) nil [1653 1662])
+            ("SIGMA_PROCESS" variable (:constant-flag t) nil [1726 1739])
+            ("OBS_DT" variable (:constant-flag t) nil [1794 1800])
+            ("THRESHOLD" variable (:constant-flag t) nil [1933 1942])
+            ("FREESPACE" variable (:constant-flag t) nil [1981 1990])
+            ("OBSTACLE" variable (:constant-flag t) nil [2014 2022])
+            ("GOAL" variable (:constant-flag t) nil [2044 2048])
+            ("DILATED_OBSTACLE" variable (:constant-flag t) nil [2077 2093])
+            ("SGN" variable (:constant-flag t) nil [2109 2112])
+            ("SQR" variable (:constant-flag t) nil [2155 2158])
+            ("MIN" variable (:constant-flag t) nil [2184 2187])
+            ("MAX" variable (:constant-flag t) nil [2225 2228])
+            ("ARM_CSPACE_MAP" variable (:constant-flag t) nil [2267 2281])
+            ("NSTEPS" variable (:constant-flag t) nil [2300 2306])
+            ("NBINS" variable (:constant-flag t) nil [2549 2554])
+            ("_map" type
+               (:members 
+                  ( ("occupancy_map" variable
+                       (:dereference 2
+                        :type "int")
+                        (reparse-symbol classsubparts) [2751 2783])
+                    ("potential_map" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [2786 2821])
+                    ("color_map" variable
+                       (:dereference 2
+                        :type "int")
+                        (reparse-symbol classsubparts) [2824 2852]))                  
+                :type "struct")
+                nil [2694 2859])
+            ("Map" type
+               (:typedef ("_map" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2694 2859])
+            ("Robot_interface" type
+               (:members 
+                  ( ("eye_theta" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3205 3229])
+                    ("eye_theta_dot" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3232 3260])
+                    ("image" variable
+                       (:dereference 3
+                        :type "int")
+                        (reparse-symbol classsubparts) [3263 3292])
+                    ("arm_theta" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [3305 3342])
+                    ("arm_theta_dot" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [3345 3386])
+                    ("ext_force" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [3389 3416])
+                    ("base_position" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3461 3485])
+                    ("base_velocity" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3513 3537])
+                    ("wheel_theta_dot" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3540 3572])
+                    ("eye_torque" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3587 3612])
+                    ("arm_torque" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [3615 3653])
+                    ("wheel_torque" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3656 3685])
+                    ("button_event" variable (:type "int") (reparse-symbol classsubparts) [3706 3723])
+                    ("button_reference" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3726 3753])
+                    ("control_mode" variable (:type "int") (reparse-symbol classsubparts) [3774 3791])
+                    ("input_mode" variable (:type "int") (reparse-symbol classsubparts) [3794 3809])
+                    ("room_num" variable (:type "int") (reparse-symbol classsubparts) [3822 3835])
+                    ("world_map" variable (:type ("Map" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3838 3868])
+                    ("arm_map" variable
+                       (:dereference 1
+                        :type ("Map" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [3838 3868])
+                    ("base_setpoint" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [3892 3916])
+                    ("arm_setpoint" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [3971 4011])
+                    ("eyes_setpoint" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4050 4078]))                  
+                :type "struct")
+                nil [3135 4135])
+            ("Robot" type
+               (:typedef ("Robot_interface" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [3135 4135])
+            ("_observation" type
+               (:members 
+                  ( ("pos" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4191 4205])
+                    ("cov" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [4236 4253])
+                    ("time" variable (:type "double") (reparse-symbol classsubparts) [4282 4294]))                  
+                :type "struct")
+                nil [4137 4364])
+            ("Observation" type
+               (:typedef ("_observation" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4137 4364])
+            ("_estimate" type
+               (:members 
+                  ( ("state" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4417 4433])
+                    ("cov" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [4469 4486])
+                    ("time" variable (:type "double") (reparse-symbol classsubparts) [4489 4501]))                  
+                :type "struct")
+                nil [4366 4562])
+            ("Estimate" type
+               (:typedef ("_estimate" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4366 4562])
+            ("_pr_dist" type
+               (:members 
+                  ( ("bin_size" variable (:type "double") (reparse-symbol classsubparts) [4841 4857])
+                    ("area" variable (:type "double") (reparse-symbol classsubparts) [4860 4872])
+                    ("dist" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4875 4894]))                  
+                :type "struct")
+                nil [4813 4905])
+            ("Pr_dist" type
+               (:typedef ("_pr_dist" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4813 4905]))          
+      :file "control.h"
+      :pointmax 4907
+      :fsize 4906
+      :lastmodtime '(23233 37320 700928 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("RED_CHANNEL" . ((number "0" 883 . 884)))
+          ("THRESHOLD" . ((number "0.00000000000001" 1956 . 1972)))
+          ("GOAL" . ((number "3" 2067 . 2068)))
+          ("NBINS" . ((number "64" 2555 . 2557)))
+          ("THETA" . ((number "2" 837 . 838)))
+          ("EDGE" . ((number "3" 961 . 962)))
+          ("MAX" (spp-arg-list ("x" "y") 2228 . 2233) . ((semantic-list "(((x)>(y)) ? (x) : (y))" 2234 . 2257)))
+          ("ACTUATE_EYES" . ((number "1" 544 . 545)))
+          ("HISTORY" . ((number "0" 662 . 663)))
+          ("GREEN_CHANNEL" . ((number "1" 909 . 910)))
+          ("TRUE" . ((number "1" 1130 . 1131)))
+          ("OUT_OF_REACH" . ((punctuation "-" 1259 . 1260) (number "1" 1260 . 1261)))
+          ("DILATED_OBSTACLE" . ((number "4" 2098 . 2099)))
+          ("MIN" (spp-arg-list ("x" "y") 2187 . 2192) . ((semantic-list "(((x)<(y)) ? (x) : (y))" 2193 . 2216)))
+          ("BLUE_CHANNEL" . ((number "2" 935 . 936)))
+          ("LEFT" . ((number "0" 1082 . 1083)))
+          ("FALSE" . ((number "0" 1154 . 1155)))
+          ("OBS_DT" . ((number "0.001" 1808 . 1813)))
+          ("NSTEPS" . ((number "2000" 2307 . 2311)))
+          ("LEFT_TOUCH" . ((number "4" 987 . 988)))
+          ("OBSTACLE" . ((number "2" 2034 . 2035)))
+          ("ACTUATE_BASE" . ((number "1" 485 . 486)))
+          ("SQR" (spp-arg-list ("x") 2158 . 2161) . ((semantic-list "(((x)*(x)))" 2164 . 2175)))
+          ("XDOT" . ((number "2" 788 . 789)))
+          ("EYES_BASE" . ((number "0" 1057 . 1058)))
+          ("FREESPACE" . ((number "1" 2004 . 2005)))
+          ("YDOT" . ((number "3" 812 . 813)))
+          ("SIGMA_OBS" . ((number "0.01" 1667 . 1671)))
+          ("ARM_CSPACE_MAP" . ((symbol "FALSE" 2286 . 2291)))
+          ("X" . ((number "0" 740 . 741)))
+          ("RIGHT" . ((number "1" 1106 . 1107)))
+          ("SIGMA_PROCESS" . ((number "10.0" 1740 . 1744)))
+          ("ACTUATE_ARMS" . ((number "1" 603 . 604)))
+          ("Y" . ((number "1" 764 . 765)))
+          ("RIGHT_TOUCH" . ((number "5" 1013 . 1014)))
+          ("IN_REACH" . ((number "1" 1288 . 1289)))
+          ("SGN" (spp-arg-list ("x") 2112 . 2115) . ((semantic-list "(((x) > 0) ? (1.0) : (-1.0))" 2118 . 2146)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("MODES_H" variable (:constant-flag t) nil [487 494])
+            ("LEFT_BUTTON" variable (:constant-flag t) nil [520 531])
+            ("MIDDLE_BUTTON" variable (:constant-flag t) nil [548 561])
+            ("RIGHT_BUTTON" variable (:constant-flag t) nil [578 590])
+            ("input_modes" type
+               (:members 
+                  ( ("JOINT_ANGLE_INPUT" variable
+                       (:constant-flag t
+                        :default-value (726 727)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [706 727])
+                    ("BASE_GOAL_INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [730 746])
+                    ("ARM_GOAL_INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [748 763])
+                    ("TOY_INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [765 775])
+                    ("MAP_INPUT" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [777 787])
+                    ("N_INPUT_MODES" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [789 823]))                  
+                :type "enum")
+                nil [686 824])
+            ("control_modes" type
+               (:members 
+                  ( ("PROJECT1" variable
+                       (:constant-flag t
+                        :default-value (860 861)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [849 861])
+                    ("PROJECT2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [865 874])
+                    ("PROJECT3" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [877 886])
+                    ("PROJECT4" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [889 898])
+                    ("PROJECT5" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [901 910])
+                    ("PROJECT6" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [913 922])
+                    ("PROJECT7" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [925 934])
+                    ("PROJECT8" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [937 946])
+                    ("PROJECT9" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [949 958])
+                    ("PROJECT10" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [961 971])
+                    ("PROJECT11" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [974 984])
+                    ("N_CONTROL_MODES" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [987 1022]))                  
+                :type "enum")
+                nil [826 1023])
+            ("room_num" type
+               (:members 
+                  ( ("R0" variable
+                       (:constant-flag t
+                        :default-value (1048 1049)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1043 1049])
+                    ("R1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1053 1056])
+                    ("R2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1059 1062])
+                    ("N_ROOMS" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1065 1093]))                  
+                :type "enum")
+                nil [1025 1094]))          
+      :file "modes.h"
+      :pointmax 1103
+      :fsize 1102
+      :lastmodtime '(21695 51098 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("LEFT_BUTTON" . ((symbol "Button1" 532 . 539)))
+          ("MIDDLE_BUTTON" . ((symbol "Button2" 562 . 569)))
+          ("MODES_H")
+          ("RIGHT_BUTTON" . ((symbol "Button3" 591 . 598)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("GRAVITY" variable (:constant-flag t) nil [730 737])
+            ("NDOF" variable (:constant-flag t) nil [1066 1070])
+            ("NWHEELS" variable (:constant-flag t) nil [1091 1098])
+            ("NARMS" variable (:constant-flag t) nil [1116 1121])
+            ("NARM_LINKS" variable (:constant-flag t) nil [1141 1151])
+            ("NARM_JOINTS" variable (:constant-flag t) nil [1166 1177])
+            ("NARM_FRAMES" variable (:constant-flag t) nil [1191 1202])
+            ("NEYES" variable (:constant-flag t) nil [1216 1221])
+            ("NPIXELS" variable (:constant-flag t) nil [1241 1248])
+            ("M_EYE" variable (:constant-flag t) nil [1502 1507])
+            ("L_EYE" variable (:constant-flag t) nil [1560 1565])
+            ("I_EYE" variable (:constant-flag t) nil [1626 1631])
+            ("BASELINE" variable (:constant-flag t) nil [1700 1708])
+            ("FOCAL_LENGTH" variable (:constant-flag t) nil [1767 1779])
+            ("M_ARM1" variable (:constant-flag t) nil [1827 1833])
+            ("M_ARM2" variable (:constant-flag t) nil [1900 1906])
+            ("ARM_OFFSET" variable (:constant-flag t) nil [1973 1983])
+            ("L_ARM1" variable (:constant-flag t) nil [2040 2046])
+            ("L_ARM2" variable (:constant-flag t) nil [2102 2108])
+            ("I_ARM1" variable (:constant-flag t) nil [2164 2170])
+            ("I_ARM2" variable (:constant-flag t) nil [2244 2250])
+            ("M_BASE" variable (:constant-flag t) nil [2325 2331])
+            ("R_BASE" variable (:constant-flag t) nil [2365 2371])
+            ("I_BASE" variable (:constant-flag t) nil [2433 2439])
+            ("R_AXLE" variable (:constant-flag t) nil [2486 2492])
+            ("R_WHEEL" variable (:constant-flag t) nil [2564 2571])
+            ("M_WBODY" variable (:constant-flag t) nil [2630 2637])
+            ("I_WBODY" variable (:constant-flag t) nil [2700 2707])
+            ("iobj" type
+               (:members 
+                  ( ("BASE" variable
+                       (:constant-flag t
+                        :default-value (2894 2895)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2887 2895])
+                    ("ARM1" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2899 2904])
+                    ("ARM2" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2907 2912])
+                    ("TOY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2915 2919])
+                    ("OGRID" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2922 2928])
+                    ("NBODY" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [2931 2938]))                  
+                :type "enum")
+                nil [2873 2939])
+            ("CIRCLE" variable (:constant-flag t) nil [2949 2955])
+            ("TRIANGLE" variable (:constant-flag t) nil [3011 3019])
+            ("M_BALL" variable (:constant-flag t) nil [3038 3044])
+            ("I_BALL" variable (:constant-flag t) nil [3076 3082])
+            ("R_BALL" variable (:constant-flag t) nil [3118 3124])
+            ("M_TRIANGLE" variable (:constant-flag t) nil [3185 3195])
+            ("I_TRIANGLE" variable (:constant-flag t) nil [3263 3273])
+            ("R_VERTEX" variable (:constant-flag t) nil [3305 3313])
+            ("R_SPOKE" variable (:constant-flag t) nil [3374 3381])
+            ("WHEEL_THICKNESS" variable (:constant-flag t) nil [3627 3642])
+            ("R_JOINT" variable (:constant-flag t) nil [3695 3702])
+            ("R_TACTILE" variable (:constant-flag t) nil [3763 3772])
+            ("R_EYE" variable (:constant-flag t) nil [3828 3833])
+            ("R_PUPIL" variable (:constant-flag t) nil [3890 3897])
+            ("IMAGE_WIDTH" variable (:constant-flag t) nil [3954 3965])
+            ("FOV" variable (:constant-flag t) nil [3979 3982])
+            ("K_COLLIDE" variable (:constant-flag t) nil [4296 4305])
+            ("B_COLLIDE" variable (:constant-flag t) nil [4324 4333])
+            ("OBJ_GRAVITY" variable (:constant-flag t) nil [4351 4362])
+            ("VISCOSITY" variable (:constant-flag t) nil [4439 4448])
+            ("STATIC_FORCE_THRESHOLD" variable (:constant-flag t) nil [4467 4489])
+            ("MU" variable (:constant-flag t) nil [4503 4505])
+            ("NFEATURES" variable (:constant-flag t) nil [4613 4622])
+            ("CENTROID" variable (:constant-flag t) nil [4638 4646])
+            ("LEFT_EDGE" variable (:constant-flag t) nil [4663 4672])
+            ("RIGHT_EDGE" variable (:constant-flag t) nil [4688 4698])
+            ("WHEEL_TS" variable (:constant-flag t) nil [4904 4912])
+            ("EYE_TS" variable (:constant-flag t) nil [4928 4934])
+            ("ELBOW_TS" variable (:constant-flag t) nil [4952 4960])
+            ("SHOULDER_TS" variable (:constant-flag t) nil [4976 4987])
+            ("WHEEL_W0" variable (:constant-flag t) nil [5038 5046])
+            ("EYE_W0" variable (:constant-flag t) nil [5062 5068])
+            ("ELBOW_W0" variable (:constant-flag t) nil [5086 5094])
+            ("SHOULDER_W0" variable (:constant-flag t) nil [5110 5121]))          
+      :file "roger.h"
+      :pointmax 5140
+      :fsize 5139
+      :lastmodtime '(22716 16749 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("I_BASE" . ((semantic-list "(M_BASE*R_BASE*R_BASE)" 2440 . 2462)))
+          ("STATIC_FORCE_THRESHOLD" . ((number "10.0" 4490 . 4494)))
+          ("M_WBODY" . ((semantic-list "(M_BASE + 2.0*M_EYE + 2.0*(M_ARM1+M_ARM2))" 2638 . 2680)))
+          ("OBJ_GRAVITY" . ((number "0.0" 4366 . 4369)))
+          ("LEFT_EDGE" . ((number "1" 4678 . 4679)))
+          ("R_BALL" . ((number "0.20" 3131 . 3135)))
+          ("WHEEL_THICKNESS" . ((number "0.04" 3643 . 3647)))
+          ("R_PUPIL" . ((number "0.04" 3905 . 3909)))
+          ("EYE_TS" . ((number "2.7" 4940 . 4943)))
+          ("EYE_W0" . ((number "122.2" 5072 . 5077)))
+          ("NEYES" . ((number "2" 1231 . 1232)))
+          ("R_BASE" . ((number "0.16" 2380 . 2384)))
+          ("R_WHEEL" . ((number "0.1" 2579 . 2582)))
+          ("TRIANGLE" . ((number "1" 3026 . 3027)))
+          ("R_JOINT" . ((number "0.02" 3710 . 3714)))
+          ("CENTROID" . ((number "0" 4653 . 4654)))
+          ("BASELINE" . ((number "0.08" 1715 . 1719)))
+          ("FOCAL_LENGTH" . ((number "64.0" 1781 . 1785)))
+          ("FOV" . ((semantic-list "(atan2((double)(NPIXELS/2.0), (double)FOCAL_LENGTH))" 3983 . 4035)))
+          ("MU" . ((number "0.5" 4508 . 4511)))
+          ("B_COLLIDE" . ((number "5.5" 4339 . 4342)))
+          ("NARM_LINKS" . ((number "2" 1156 . 1157)))
+          ("L_EYE" . ((number "0.04" 1575 . 1579)))
+          ("R_AXLE" . ((number "0.20" 2501 . 2505)))
+          ("R_TACTILE" . ((number "0.08" 3778 . 3782)))
+          ("NFEATURES" . ((number "3" 4628 . 4629)))
+          ("M_ARM1" . ((number "0.2" 1842 . 1845)))
+          ("VISCOSITY" . ((number "0.05" 4454 . 4458)))
+          ("GRAVITY" . ((number "0.0" 745 . 748)))
+          ("M_ARM2" . ((number "0.2" 1915 . 1918)))
+          ("I_TRIANGLE" . ((number "0.02" 3276 . 3280)))
+          ("K_COLLIDE" . ((number "4500.0" 4309 . 4315)))
+          ("NDOF" . ((number "8" 1081 . 1082)))
+          ("NARM_JOINTS" . ((number "2" 1181 . 1182)))
+          ("NPIXELS" . ((number "128" 1254 . 1257)))
+          ("M_EYE" . ((number "0.05" 1517 . 1521)))
+          ("M_BALL" . ((number "0.5" 3051 . 3054)))
+          ("R_SPOKE" . ((number "0.15" 3387 . 3391)))
+          ("WHEEL_TS" . ((number "475.0" 4914 . 4919)))
+          ("SHOULDER_TS" . ((number "205.3" 5000 . 5005)))
+          ("WHEEL_W0" . ((number "175.0" 5048 . 5053)))
+          ("SHOULDER_W0" . ((number "30.1" 5135 . 5139)))
+          ("I_EYE" . ((semantic-list "(M_EYE*L_EYE*L_EYE)" 1633 . 1652)))
+          ("I_ARM1" . ((semantic-list "(M_ARM1*L_ARM1*L_ARM1)" 2171 . 2193)))
+          ("M_BASE" . ((number "1.0" 2340 . 2343)))
+          ("I_WBODY" . ((semantic-list "(M_WBODY*R_BASE*R_BASE)" 2708 . 2731)))
+          ("CIRCLE" . ((number "0" 2964 . 2965)))
+          ("NWHEELS" . ((number "2" 1106 . 1107)))
+          ("NARM_FRAMES" . ((number "4" 1206 . 1207)))
+          ("L_ARM1" . ((number "0.5" 2055 . 2058)))
+          ("I_ARM2" . ((semantic-list "(M_ARM2*L_ARM2*L_ARM2)" 2251 . 2273)))
+          ("R_VERTEX" . ((number "0.15" 3318 . 3322)))
+          ("R_EYE" . ((number "0.07" 3843 . 3847)))
+          ("NARMS" . ((number "2" 1131 . 1132)))
+          ("ARM_OFFSET" . ((number "0.18" 1988 . 1992)))
+          ("L_ARM2" . ((number "0.5" 2117 . 2120)))
+          ("I_BALL" . ((number "0.02" 3089 . 3093)))
+          ("M_TRIANGLE" . ((number "0.5" 3198 . 3201)))
+          ("IMAGE_WIDTH" . ((number "256" 3967 . 3970)))
+          ("RIGHT_EDGE" . ((number "2" 4703 . 4704)))
+          ("ELBOW_TS" . ((number "120.7" 4962 . 4967)))
+          ("ELBOW_W0" . ((number "50.3" 5097 . 5101)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("NHEADINGS" variable (:constant-flag t) nil [384 393])
+            ("NH" variable (:constant-flag t) nil [405 407])
+            ("RAD_PER_HEADING_BIN" variable (:constant-flag t) nil [433 452])
+            ("B2H" variable (:constant-flag t) nil [557 560])
+            ("H2B" variable (:constant-flag t) nil [698 701]))          
+      :file "models.h"
+      :pointmax 825
+      :fsize 824
+      :lastmodtime '(21295 35366 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NHEADINGS" . ((number "64" 394 . 396)))
+          ("RAD_PER_HEADING_BIN" . ((semantic-list "(2.0*M_PI/NHEADINGS)" 453 . 473)))
+          ("H2B" (spp-arg-list ("num") 701 . 706) . ((semantic-list "( (int)((num+M_PI)/RAD_PER_HEADING_BIN) )" 707 . 748)))
+          ("NH" . ((symbol "NHEADINGS" 415 . 424)))
+          ("B2H" (spp-arg-list ("num") 560 . 565) . ((semantic-list "( ((double)num+0.5)*RAD_PER_HEADING_BIN - M_PI )" 566 . 614)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [297 314])
+            ("stdio.h" include (:system-flag t) nil [315 333])
+            ("matrix_copy" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [335 403])
+            ("matrix_subtract" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [404 457])
+            ("matrix_invert" function
+               (:prototype-flag t
+                :type "int")
+                nil [458 478])
+            ("HT_invert" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "void")
+                nil [515 549]))          
+      :file "matrix_math.h"
+      :pointmax 555
+      :fsize 554
+      :lastmodtime '(21637 60760 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("COUPLED_DYNAMICS" variable (:constant-flag t) nil [472 488])
+            ("WIDTH" variable (:constant-flag t) nil [624 629])
+            ("HEIGHT" variable (:constant-flag t) nil [662 668])
+            ("MIN_X" variable (:constant-flag t) nil [711 716])
+            ("MIN_Y" variable (:constant-flag t) nil [742 747])
+            ("MAX_X" variable (:constant-flag t) nil [773 778])
+            ("MAX_Y" variable (:constant-flag t) nil [804 809])
+            ("NBINS" variable (:constant-flag t) nil [835 840])
+            ("XDELTA" variable (:constant-flag t) nil [865 871])
+            ("YDELTA" variable (:constant-flag t) nil [908 914])
+            ("R_OBSTACLE" variable (:constant-flag t) nil [951 961])
+            ("T1" variable (:constant-flag t) nil [992 994])
+            ("T2" variable (:constant-flag t) nil [1020 1022])
+            ("T1_MIN" variable (:constant-flag t) nil [1048 1054])
+            ("T2_MIN" variable (:constant-flag t) nil [1076 1082])
+            ("T1_MAX" variable (:constant-flag t) nil [1104 1110])
+            ("T2_MAX" variable (:constant-flag t) nil [1132 1138])
+            ("TDELTA" variable (:constant-flag t) nil [1160 1166])
+            ("BOXH" variable (:constant-flag t) nil [1216 1220])
+            ("BOXW" variable (:constant-flag t) nil [1243 1247])
+            ("LEFT_MAP_CENTER_X" variable (:constant-flag t) nil [1347 1364])
+            ("LEFT_MAP_CENTER_Y" variable (:constant-flag t) nil [1378 1395])
+            ("CENTER_X" variable (:constant-flag t) nil [1409 1417])
+            ("CENTER_Y" variable (:constant-flag t) nil [1440 1448])
+            ("RIGHT_MAP_CENTER_X" variable (:constant-flag t) nil [1471 1489])
+            ("RIGHT_MAP_CENTER_Y" variable (:constant-flag t) nil [1502 1520])
+            ("ZOOM_SCALE" variable (:constant-flag t) nil [1534 1544])
+            ("MAP_SCALE" variable (:constant-flag t) nil [1565 1574])
+            ("W2DR" variable (:constant-flag t) nil [1654 1658])
+            ("W2DX" variable (:constant-flag t) nil [1722 1726])
+            ("W2DY" variable (:constant-flag t) nil [1795 1799])
+            ("D2WR" variable (:constant-flag t) nil [1890 1894])
+            ("D2WX" variable (:constant-flag t) nil [1953 1957])
+            ("D2WY" variable (:constant-flag t) nil [2027 2031])
+            ("T2DR" variable (:constant-flag t) nil [2128 2132])
+            ("T12LD" variable (:constant-flag t) nil [2187 2192])
+            ("T22LD" variable (:constant-flag t) nil [2266 2271])
+            ("T12RD" variable (:constant-flag t) nil [2345 2350])
+            ("T22RD" variable (:constant-flag t) nil [2425 2430])
+            ("LEFT_IMAGE_X" variable (:constant-flag t) nil [2506 2518])
+            ("RIGHT_IMAGE_X" variable (:constant-flag t) nil [2562 2575])
+            ("IMAGE_Y" variable (:constant-flag t) nil [2604 2611])
+            ("PIXEL_WIDTH" variable (:constant-flag t) nil [2635 2646])
+            ("PIXEL_HEIGHT" variable (:constant-flag t) nil [2684 2696])
+            ("TIMEOUT" variable (:constant-flag t) nil [2783 2790])
+            ("DT" variable (:constant-flag t) nil [2860 2862])
+            ("RENDER_RATE" variable (:constant-flag t) nil [2937 2948])
+            ("SERVO_RATE" variable (:constant-flag t) nil [3014 3024])
+            ("TIMER_UPDATE" variable (:constant-flag t) nil [3091 3103])
+            ("NOFILL" variable (:constant-flag t) nil [3121 3127])
+            ("FILL" variable (:constant-flag t) nil [3149 3153])
+            ("DARKRED" variable (:constant-flag t) nil [3320 3327])
+            ("RED" variable (:constant-flag t) nil [3345 3348])
+            ("LIGHTRED" variable (:constant-flag t) nil [3370 3378])
+            ("DARKBLUE" variable (:constant-flag t) nil [3395 3403])
+            ("BLUE" variable (:constant-flag t) nil [3420 3424])
+            ("LIGHTBLUE" variable (:constant-flag t) nil [3445 3454])
+            ("DARKGREEN" variable (:constant-flag t) nil [3470 3479])
+            ("GREEN" variable (:constant-flag t) nil [3495 3500])
+            ("LIGHTGREEN" variable (:constant-flag t) nil [3520 3530])
+            ("DARKYELLOW" variable (:constant-flag t) nil [3545 3555])
+            ("YELLOW" variable (:constant-flag t) nil [3570 3576])
+            ("LIGHTYELLOW" variable (:constant-flag t) nil [3595 3606])
+            ("GAZE_COLOR" variable (:constant-flag t) nil [3621 3631])
+            ("OBJECT_COLOR" variable (:constant-flag t) nil [3645 3657])
+            ("ARM_COLOR" variable (:constant-flag t) nil [3670 3679])
+            ("EYE_COLOR" variable (:constant-flag t) nil [3696 3705])
+            ("GOAL_COLOR" variable (:constant-flag t) nil [3727 3737])
+            ("NOTYPE" variable (:constant-flag t) nil [3904 3910])
+            ("NOAXIS" variable (:constant-flag t) nil [3978 3984])
+            ("REVOLUTE" variable (:constant-flag t) nil [4002 4010])
+            ("PRISMATIC" variable (:constant-flag t) nil [4026 4035])
+            ("XAXIS" variable (:constant-flag t) nil [4050 4055])
+            ("YAXIS" variable (:constant-flag t) nil [4074 4079])
+            ("ZAXIS" variable (:constant-flag t) nil [4098 4103])
+            ("_base" type
+               (:members 
+                  ( ("wTb" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [4281 4298])
+                    ("x" variable (:type "double") (reparse-symbol classsubparts) [4301 4310])
+                    ("x_dot" variable (:type "double") (reparse-symbol classsubparts) [4313 4326])
+                    ("y" variable (:type "double") (reparse-symbol classsubparts) [4329 4338])
+                    ("y_dot" variable (:type "double") (reparse-symbol classsubparts) [4341 4354])
+                    ("theta" variable (:type "double") (reparse-symbol classsubparts) [4357 4370])
+                    ("theta_dot" variable (:type "double") (reparse-symbol classsubparts) [4373 4390])
+                    ("wheel_torque" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4393 4416])
+                    ("contact_theta" variable (:type "double") (reparse-symbol classsubparts) [4419 4440])
+                    ("extForce" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4443 4462])
+                    ("wheel_theta_dot" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4507 4539]))                  
+                :type "struct")
+                nil [4256 4547])
+            ("Base" type
+               (:typedef ("_base" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4256 4547])
+            ("_arm" type
+               (:members 
+                  ( ("iTj" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [4573 4590])
+                    ("dof_type" variable (:type "int") (reparse-symbol classsubparts) [4593 4606])
+                    ("axis" variable (:type "int") (reparse-symbol classsubparts) [4654 4663])
+                    ("theta" variable (:type "double") (reparse-symbol classsubparts) [4708 4721])
+                    ("theta_dot" variable (:type "double") (reparse-symbol classsubparts) [4724 4741])
+                    ("torque" variable (:type "double") (reparse-symbol classsubparts) [4744 4758])
+                    ("extForce" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4761 4780]))                  
+                :type "struct")
+                nil [4549 4845])
+            ("Arm" type
+               (:typedef ("_arm" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4549 4845])
+            ("_eye" type
+               (:members 
+                  ( ("position" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [4871 4890])
+                    ("theta" variable (:type "double") (reparse-symbol classsubparts) [4946 4959])
+                    ("theta_dot" variable (:type "double") (reparse-symbol classsubparts) [5018 5035])
+                    ("image" variable
+                       (:dereference 1
+                        :type "int")
+                        (reparse-symbol classsubparts) [5069 5091])
+                    ("torque" variable (:type "double") (reparse-symbol classsubparts) [5117 5131]))                  
+                :type "struct")
+                nil [4847 5186])
+            ("Eye" type
+               (:typedef ("_eye" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4847 5186])
+            ("_polyball" type
+               (:members 
+                  ( ("id" variable (:type "int") (reparse-symbol classsubparts) [5290 5297])
+                    ("N" variable (:type "int") (reparse-symbol classsubparts) [5366 5372])
+                    ("Rsphere" variable (:type "double") (reparse-symbol classsubparts) [5443 5458])
+                    ("radius" variable (:type "double") (reparse-symbol classsubparts) [5505 5519])
+                    ("mass" variable (:type "double") (reparse-symbol classsubparts) [5630 5642])
+                    ("moi" variable (:type "double") (reparse-symbol classsubparts) [5691 5702])
+                    ("position" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [5766 5785])
+                    ("velocity" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [5829 5848])
+                    ("net_extForce" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [5880 5903]))                  
+                :type "struct")
+                nil [5261 5953])
+            ("PolyBall" type
+               (:typedef ("_polyball" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [5261 5953])
+            ("_wheel" type
+               (:members 
+                  ( ("leftTicks" variable (:type "int") (reparse-symbol classsubparts) [5981 5995])
+                    ("rightTicks" variable (:type "int") (reparse-symbol classsubparts) [5998 6013])
+                    ("time" variable (:type "double") (reparse-symbol classsubparts) [6016 6028]))                  
+                :type "struct")
+                nil [5955 6037])
+            ("Wheel" type
+               (:typedef ("_wheel" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [5955 6037])
+            ("_simcolor" type
+               (:members 
+                  ( ("name" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [6406 6420])
+                    ("display_color" variable (:type "int") (reparse-symbol classsubparts) [6423 6441])
+                    ("red" variable (:type "int") (reparse-symbol classsubparts) [6444 6452])
+                    ("green" variable (:type "int") (reparse-symbol classsubparts) [6455 6465])
+                    ("blue" variable (:type "int") (reparse-symbol classsubparts) [6468 6477]))                  
+                :type "struct")
+                nil [6377 6489])
+            ("SimColor" type
+               (:typedef ("_simcolor" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [6377 6489])
+            ("MAX_HISTORY" variable (:constant-flag t) nil [6576 6587])
+            ("_history" type
+               (:members 
+                  ( ("arm_pos" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol classsubparts) [6624 6649])
+                    ("base_pos" variable
+                       (:dereference 1
+                        :type "double")
+                        (reparse-symbol classsubparts) [6678 6697]))                  
+                :type "struct")
+                nil [6596 6735])
+            ("History" type
+               (:typedef ("_history" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [6596 6735]))          
+      :file "simulate.h"
+      :pointmax 6738
+      :fsize 6826
+      :lastmodtime '(23188 28019 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NBINS" . ((number "64" 854 . 856)))
+          ("CENTER_Y" . ((number "220" 1459 . 1462)))
+          ("T22RD" (spp-arg-list ("num") 2430 . 2435) . ((semantic-list "(RIGHT_MAP_CENTER_Y-((int)(MAP_SCALE*1000.0*((num)))/1000))" 2437 . 2496)))
+          ("GAZE_COLOR" . ((number "65" 3634 . 3636)))
+          ("MIN_X" . ((punctuation "-" 729 . 730) (number "2.0" 730 . 733)))
+          ("T2_MAX" . ((semantic-list "(M_PI)" 1145 . 1151)))
+          ("RIGHT_MAP_CENTER_X" . ((number "890" 1490 . 1493)))
+          ("T2DR" (spp-arg-list ("num") 2132 . 2137) . ((semantic-list "(((int)(MAP_SCALE*1000.0*(num))/1000))" 2140 . 2178)))
+          ("EYE_COLOR" . ((symbol "DARKGREEN" 3709 . 3718)))
+          ("NOTYPE" . ((punctuation "-" 3917 . 3918) (number "1" 3918 . 3919)))
+          ("MIN_Y" . ((punctuation "-" 760 . 761) (number "2.0" 761 . 764)))
+          ("T1" . ((number "0" 1010 . 1011)))
+          ("T2_MIN" . ((punctuation "-" 1088 . 1089) (semantic-list "(M_PI)" 1089 . 1095)))
+          ("TDELTA" . ((semantic-list "((2.0*M_PI)/NBINS)" 1169 . 1187)))
+          ("RIGHT_MAP_CENTER_Y" . ((number "220" 1521 . 1524)))
+          ("DT" . ((number "0.001" 2879 . 2884)))
+          ("TIMER_UPDATE" . ((number "5" 3110 . 3111)))
+          ("T2" . ((number "1" 1038 . 1039)))
+          ("D2WR" (spp-arg-list ("scale" "num") 1894 . 1905) . ((semantic-list "((double)(num*1000)/(scale*1000.0))" 1909 . 1944)))
+          ("PIXEL_WIDTH" . ((semantic-list "(IMAGE_WIDTH/NPIXELS)" 2654 . 2675)))
+          ("PIXEL_HEIGHT" . ((number "20" 2703 . 2705)))
+          ("W2DR" (spp-arg-list ("scale" "num") 1658 . 1669) . ((semantic-list "(((int)(scale*1000.0*(num))/1000))" 1679 . 1713)))
+          ("SERVO_RATE" . ((number "1" 3033 . 3034)))
+          ("FILL" . ((number "1" 3168 . 3169)))
+          ("LIGHTRED" . ((number "103" 3383 . 3386)))
+          ("LIGHTYELLOW" . ((number "112" 3608 . 3611)))
+          ("ARM_COLOR" . ((symbol "BLUE" 3683 . 3687)))
+          ("PRISMATIC" . ((number "1" 4040 . 4041)))
+          ("COUPLED_DYNAMICS" . ((number "1" 489 . 490)))
+          ("MAX_X" . ((number "2.0" 792 . 795)))
+          ("MAP_SCALE" . ((semantic-list "(50.0)" 1584 . 1590)))
+          ("DARKBLUE" . ((number "104" 3408 . 3411)))
+          ("GREEN" . ((number "108" 3508 . 3511)))
+          ("NOAXIS" . ((punctuation "-" 3991 . 3992) (number "1" 3992 . 3993)))
+          ("REVOLUTE" . ((number "0" 4016 . 4017)))
+          ("MAX_Y" . ((number "2.0" 823 . 826)))
+          ("R_OBSTACLE" . ((semantic-list "(XDELTA/2.0)" 970 . 982)))
+          ("GOAL_COLOR" . ((symbol "GREEN" 3740 . 3745)))
+          ("XAXIS" . ((number "0" 4064 . 4065)))
+          ("T12LD" (spp-arg-list ("num") 2192 . 2197) . ((semantic-list "(LEFT_MAP_CENTER_X+((int)(MAP_SCALE*1000.0*((num)))/1000))" 2199 . 2257)))
+          ("NOFILL" . ((number "0" 3139 . 3140)))
+          ("HEIGHT" . ((number "480" 680 . 683)))
+          ("YDELTA" . ((semantic-list "((MAX_Y-MIN_Y)/NBINS)" 921 . 942)))
+          ("BOXH" . ((number "18" 1232 . 1234)))
+          ("T22LD" (spp-arg-list ("num") 2271 . 2276) . ((semantic-list "(LEFT_MAP_CENTER_Y-((int)(MAP_SCALE*1000.0*((num)))/1000))" 2278 . 2336)))
+          ("BLUE" . ((number "105" 3433 . 3436)))
+          ("WIDTH" . ((number "1100" 643 . 647)))
+          ("ZOOM_SCALE" . ((semantic-list "(100.0)" 1549 . 1556)))
+          ("D2WX" (spp-arg-list ("scale" "num") 1957 . 1968) . ((semantic-list "((double)((num-CENTER_X)*1000)/(scale*1000.0))" 1972 . 2018)))
+          ("RIGHT_IMAGE_X" . ((semantic-list "(CENTER_X + 5)" 2581 . 2595)))
+          ("DARKGREEN" . ((number "107" 3483 . 3486)))
+          ("YAXIS" . ((number "1" 4088 . 4089)))
+          ("BOXW" . ((semantic-list "((int) WIDTH/7 - 7)" 1259 . 1278)))
+          ("W2DX" (spp-arg-list ("scale" "num") 1726 . 1737) . ((semantic-list "(CENTER_X+((int)(scale*1000.0*((num)))/1000))" 1741 . 1786)))
+          ("D2WY" (spp-arg-list ("scale" "num") 2031 . 2042) . ((semantic-list "((double)((CENTER_Y-num)*1000)/(scale*1000.0))" 2046 . 2092)))
+          ("LIGHTBLUE" . ((number "106" 3458 . 3461)))
+          ("OBJECT_COLOR" . ((symbol "RED" 3658 . 3661)))
+          ("MAX_HISTORY" . ((number "1000" 6590 . 6594)))
+          ("T1_MAX" . ((semantic-list "(M_PI)" 1117 . 1123)))
+          ("LEFT_MAP_CENTER_X" . ((number "170" 1366 . 1369)))
+          ("W2DY" (spp-arg-list ("scale" "num") 1799 . 1810) . ((semantic-list "(CENTER_Y-((int)(scale*1000.0*((num)))/1000))" 1814 . 1859)))
+          ("LEFT_IMAGE_X" . ((semantic-list "(CENTER_X - (IMAGE_WIDTH+5))" 2525 . 2553)))
+          ("TIMEOUT" . ((number "60" 2802 . 2804)))
+          ("DARKRED" . ((number "101" 3333 . 3336)))
+          ("LIGHTGREEN" . ((number "109" 3533 . 3536)))
+          ("DARKYELLOW" . ((number "110" 3558 . 3561)))
+          ("XDELTA" . ((semantic-list "((MAX_X-MIN_X)/NBINS)" 878 . 899)))
+          ("T1_MIN" . ((punctuation "-" 1060 . 1061) (semantic-list "(M_PI)" 1061 . 1067)))
+          ("LEFT_MAP_CENTER_Y" . ((number "220" 1397 . 1400)))
+          ("CENTER_X" . ((number "530" 1428 . 1431)))
+          ("T12RD" (spp-arg-list ("num") 2350 . 2355) . ((semantic-list "(RIGHT_MAP_CENTER_X+((int)(MAP_SCALE*1000.0*((num)))/1000))" 2357 . 2416)))
+          ("IMAGE_Y" . ((number "440" 2623 . 2626)))
+          ("RENDER_RATE" . ((number "1" 2956 . 2957)))
+          ("RED" . ((number "102" 3358 . 3361)))
+          ("YELLOW" . ((number "111" 3583 . 3586)))
+          ("ZAXIS" . ((number "2" 4112 . 4113)))
+          )
+)
+    (semanticdb-table "semanticdb-table"
+      :file "Roger.h"
+      :fsize 5139
+      :lastmodtime '(22716 16749 0 0)))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!603_Robotics!mmRoger2017-distrib!RogerSimulator!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

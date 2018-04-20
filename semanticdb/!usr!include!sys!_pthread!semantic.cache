@@ -201,7 +201,7 @@
       :file "_pthread_types.h"
       :pointmax 3860
       :fsize 3859
-      :lastmodtime '(22459 29440 0 0)
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__PTHREAD_CONDATTR_SIZE__" . ((number "8" 1640 . 1641)))
@@ -220,14 +220,15 @@
       :major-mode c-mode
       :tags 
         '( ("_PTHREAD_ATTR_T" variable (:constant-flag t) nil [1363 1378])
+            ("sys/_pthread/_pthread_types.h" include (:system-flag t) nil [1380 1420])
             ("pthread_attr_t" type
                (:typedef ("__darwin_pthread_attr_t" type (:type "class") nil nil)
                 :type "typedef")
-                nil [1380 1427]))          
+                nil [1451 1498]))          
       :file "_pthread_attr_t.h"
-      :pointmax 1458
-      :fsize 1457
-      :lastmodtime '(22459 29440 0 0)
+      :pointmax 1529
+      :fsize 1528
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_ATTR_T")
@@ -243,8 +244,8 @@
                 nil [1378 1425]))          
       :file "_pthread_cond_t.h"
       :pointmax 1455
-      :fsize 1454
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1525
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_COND_T")
@@ -260,8 +261,8 @@
                 nil [1386 1441]))          
       :file "_pthread_condattr_t.h"
       :pointmax 1475
-      :fsize 1474
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1549
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_CONDATTR_T")
@@ -277,8 +278,8 @@
                 nil [1376 1421]))          
       :file "_pthread_key_t.h"
       :pointmax 1450
-      :fsize 1449
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1515
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_KEY_T")
@@ -294,8 +295,8 @@
                 nil [1380 1429]))          
       :file "_pthread_mutex_t.h"
       :pointmax 1459
-      :fsize 1458
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1526
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_MUTEX_T")
@@ -311,8 +312,8 @@
                 nil [1388 1445]))          
       :file "_pthread_mutexattr_t.h"
       :pointmax 1480
-      :fsize 1479
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1551
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_MUTEXATTR_T")
@@ -328,8 +329,8 @@
                 nil [1378 1425]))          
       :file "_pthread_once_t.h"
       :pointmax 1455
-      :fsize 1454
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1521
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_ONCE_T")
@@ -345,8 +346,8 @@
                 nil [1382 1433]))          
       :file "_pthread_rwlock_t.h"
       :pointmax 1465
-      :fsize 1464
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1537
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_RWLOCK_T")
@@ -362,8 +363,8 @@
                 nil [1390 1449]))          
       :file "_pthread_rwlockattr_t.h"
       :pointmax 1485
-      :fsize 1484
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1561
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_RWLOCKATTR_T")
@@ -379,8 +380,8 @@
                 nil [1368 1405]))          
       :file "_pthread_t.h"
       :pointmax 1430
-      :fsize 1429
-      :lastmodtime '(22459 29440 0 0)
+      :fsize 1495
+      :lastmodtime '(23013 44953 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_PTHREAD_T")

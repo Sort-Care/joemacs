@@ -1,0 +1,98 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("matplotlib" include nil nil [1 18])
+            ("numpy" include nil nil [19 37])
+            ("scipy.ndimage" include nil nil [38 78])
+            ("extract_features" function
+               (:documentation "
+  Given pixel data for images and several feature functions that can operate on
+  single images, apply all feature functions to all images, concatenating the
+  feature vectors for each image and storing the features for all images in
+  a single matrix.
+
+  Inputs:
+  - imgs: N x H X W X C array of pixel data for N images.
+  - feature_fns: List of k feature functions. The ith feature function should
+    take as input an H x W x D array and return a (one-dimensional) array of
+    length F_i.
+  - verbose: Boolean; if true, print progress.
+
+  Returns:
+  An array of shape (N, F_1 + ... + F_k) where each row is the concatenation
+  of all features for a single image.
+  "
+                :arguments 
+                  ( ("imgs" variable nil (reparse-symbol function_parameters) [102 106])
+                    ("feature_fns" variable nil (reparse-symbol function_parameters) [108 119])
+                    ("verbose" variable nil (reparse-symbol function_parameters) [121 128]))                  )
+                nil [81 1928])
+            ("rgb2gray" function
+               (:documentation "Convert RGB image to grayscale
+
+    Parameters:
+      rgb : RGB image
+
+    Returns:
+      gray : grayscale image
+
+  "
+                :arguments 
+                  ( ("rgb" variable nil (reparse-symbol function_parameters) [1943 1946]))                  )
+                nil [1930 2126])
+            ("hog_feature" function
+               (:documentation "Compute Histogram of Gradient (HOG) feature for an image
+
+       Modified from skimage.feature.hog
+       http://pydoc.net/Python/scikits-image/0.4.2/skimage.feature.hog
+
+     Reference:
+       Histograms of Oriented Gradients for Human Detection
+       Navneet Dalal and Bill Triggs, CVPR 2005
+
+    Parameters:
+      im : an input grayscale or rgb image
+
+    Returns:
+      feat: Histogram of Gradient (HOG) feature
+
+  "
+                :arguments 
+                  ( ("im" variable nil (reparse-symbol function_parameters) [2144 2146]))                  )
+                nil [2128 3990])
+            ("color_histogram_hsv" function
+               (:documentation "
+  Compute color histogram for an image using hue.
+
+  Inputs:
+  - im: H x W x C array of pixel data for an RGB image.
+  - nbin: Number of histogram bins. (default: 10)
+  - xmin: Minimum pixel value (default: 0)
+  - xmax: Maximum pixel value (default: 255)
+  - normalized: Whether to normalize the histogram (default: True)
+
+  Returns:
+    1D vector of length nbin giving the color histogram over the hue of the
+    input image.
+  "
+                :arguments 
+                  ( ("im" variable nil (reparse-symbol function_parameters) [4016 4018])
+                    ("nbin" variable nil (reparse-symbol function_parameters) [4020 4024])
+                    ("xmin" variable nil (reparse-symbol function_parameters) [4029 4033])
+                    ("xmax" variable nil (reparse-symbol function_parameters) [4037 4041])
+                    ("normalized" variable nil (reparse-symbol function_parameters) [4047 4057]))                  )
+                nil [3992 4770])
+            ("pass" code nil nil [4772 4776]))          
+      :file "features.py"
+      :pointmax 4777
+      :fsize 4776
+      :lastmodtime '(22496 550 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!682_Neural_Networks!assignment1!asgn1!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

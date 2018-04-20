@@ -1,0 +1,305 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("" code nil nil [19 200])
+            ("collections" include nil nil [202 237])
+            ("math" include nil nil [238 249])
+            ("random" include nil nil [250 263])
+            ("sys" include nil nil [264 274])
+            ("bisect" include nil nil [275 288])
+            ("operator" include nil nil [289 320])
+            ("time" include nil nil [321 332])
+            ("infinity" variable nil nil [334 357])
+            ("Problem" type
+               (:documentation "The abstract class for a formal problem. You should subclass
+    this and implement the methods actions and result, and possibly
+    __init__, goal_test, and path_cost. Then you will create instances
+    of your subclass and solve them with the various search functions."
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"The constructor specifies the initial state, and possibly a goal
+        state, if there is a unique goal. Your subclass's constructor can add
+        other arguments.\"\"\"" code nil (reparse-symbol indented_block_body) [800 973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [982 1004])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1013 1029]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [765 769])
+                            ("initial" variable nil (reparse-symbol function_parameters) [771 778])
+                            ("goal" variable nil (reparse-symbol function_parameters) [780 784]))                          
+                        :documentation "The constructor specifies the initial state, and possibly a goal
+        state, if there is a unique goal. Your subclass's constructor can add
+        other arguments."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [752 1030])
+                    ("actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1047 1051])
+                            ("state" variable nil (reparse-symbol function_parameters) [1053 1058]))                          
+                        :documentation "Return the actions that can be executed in the given
+        state. The result would typically be a list, but if there are
+        many actions, consider yielding them one at a time in an
+        iterator, rather than building them all at once.")
+                        (reparse-symbol indented_block_body) [1035 1354])
+                    ("result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1370 1374])
+                            ("state" variable nil (reparse-symbol function_parameters) [1376 1381])
+                            ("action" variable nil (reparse-symbol function_parameters) [1383 1389]))                          
+                        :documentation "Return the state that results from executing the given
+        action in the given state. The action must be one of
+        self.actions(state).")
+                        (reparse-symbol indented_block_body) [1359 1585])
+                    ("goal_test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1604 1608])
+                            ("state" variable nil (reparse-symbol function_parameters) [1610 1615]))                          
+                        :documentation "Return True if the state is a goal. The default method compares the
+        state to self.goal or checks for state in self.goal if it is a
+        list, as specified in the constructor. Override this method if
+        checking against a single self.goal is not enough.")
+                        (reparse-symbol indented_block_body) [1590 2036])
+                    ("path_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2055 2059])
+                            ("c" variable nil (reparse-symbol function_parameters) [2061 2062])
+                            ("state1" variable nil (reparse-symbol function_parameters) [2064 2070])
+                            ("action" variable nil (reparse-symbol function_parameters) [2072 2078])
+                            ("state2" variable nil (reparse-symbol function_parameters) [2080 2086]))                          
+                        :documentation "Return the cost of a solution path that arrives at state2 from
+        state1 via action, assuming cost c to get up to state1. If the problem
+        is such that the path doesn't matter, this function will only look at
+        state2.  If the path does matter, it will consider c and maybe state1
+        and action. The default method costs 1 for every step in the path.")
+                        (reparse-symbol indented_block_body) [2041 2497])
+                    ("value" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2512 2516])
+                            ("state" variable nil (reparse-symbol function_parameters) [2518 2523]))                          
+                        :documentation "For optimization problems, each state has a value.  Hill-climbing
+        and related algorithms try to maximize this value.")
+                        (reparse-symbol indented_block_body) [2502 2699]))                  
+                :type "class")
+                nil [442 2699])
+            ("Node" type
+               (:documentation "A node in a search tree. Contains a pointer to the parent (the node
+    that this is a successor of) and to the actual state for this node. Note
+    that if a state is arrived at by two paths, then there are two nodes with
+    the same state.  Also includes the action that got us to this state, and
+    the total path_cost (also known as g) to reach the node.  Other functions
+    may add an f and h value; see best_first_graph_search and astar_search for
+    an explanation of how the f and h values are handled. You will not need to
+    subclass this class."
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Create a search tree Node, derived from a parent by an action.\"\"\"" code nil (reparse-symbol indented_block_body) [3445 3513])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3522 3540])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3549 3569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3578 3598])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3607 3633])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3642 3656])
+                            ("if" code nil (reparse-symbol indented_block_body) [3665 3718]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3384 3388])
+                            ("state" variable nil (reparse-symbol function_parameters) [3390 3395])
+                            ("parent" variable nil (reparse-symbol function_parameters) [3397 3403])
+                            ("action" variable nil (reparse-symbol function_parameters) [3410 3416])
+                            ("path_cost" variable nil (reparse-symbol function_parameters) [3423 3432]))                          
+                        :documentation "Create a search tree Node, derived from a parent by an action."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3371 3718])
+                    ("__repr__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3736 3740]))                          )
+                        (reparse-symbol indented_block_body) [3723 3789])
+                    ("__lt__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3805 3809])
+                            ("node" variable nil (reparse-symbol function_parameters) [3811 3815]))                          )
+                        (reparse-symbol indented_block_body) [3794 3857])
+                    ("expand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3873 3877])
+                            ("problem" variable nil (reparse-symbol function_parameters) [3879 3886]))                          
+                        :documentation "List the nodes reachable in one step from this node.")
+                        (reparse-symbol indented_block_body) [3862 4064])
+                    ("child_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4084 4088])
+                            ("problem" variable nil (reparse-symbol function_parameters) [4090 4097])
+                            ("action" variable nil (reparse-symbol function_parameters) [4099 4105]))                          
+                        :documentation "[Figure 3.10]")
+                        (reparse-symbol indented_block_body) [4069 4345])
+                    ("solution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4363 4367]))                          
+                        :documentation "Return the sequence of actions to go from the root to this node.")
+                        (reparse-symbol indented_block_body) [4350 4506])
+                    ("path" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4520 4524]))                          
+                        :documentation "Return a list of nodes forming the path from the root to this node.")
+                        (reparse-symbol indented_block_body) [4511 4771])
+                    ("__eq__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5019 5023])
+                            ("other" variable nil (reparse-symbol function_parameters) [5025 5030]))                          )
+                        (reparse-symbol indented_block_body) [5008 5102])
+                    ("__hash__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5120 5124]))                          )
+                        (reparse-symbol indented_block_body) [5107 5159]))                  
+                :type "class")
+                nil [2782 5159])
+            ("node_num" variable nil nil [5241 5253])
+            ("best_first_tree_search" function
+               (:documentation "Search the nodes with the lowest f scores first.
+    You specify the function f(node) that you want to minimize; for example,
+    if f is a heuristic estimate to the goal, then we have greedy best
+    first search; if f is node.depth then we have breadth-first search.
+    There is a subtlety: the line \"f = memoize(f, 'f')\" means that the f
+    values will be cached on the nodes as they are computed. So after doing
+    a best first search you can examine the f values of the path returned."
+                :arguments 
+                  ( ("problem" variable nil (reparse-symbol function_parameters) [5282 5289])
+                    ("f" variable nil (reparse-symbol function_parameters) [5291 5292]))                  )
+                nil [5255 6589])
+            ("h" function
+               (:documentation "MST heuristic"
+                :arguments 
+                  ( ("city" variable nil (reparse-symbol function_parameters) [6678 6682])
+                    ("path" variable nil (reparse-symbol function_parameters) [6684 6688])
+                    ("randomTSP" variable nil (reparse-symbol function_parameters) [6690 6699]))                  )
+                nil [6672 7584])
+            ("astar_search" function
+               (:documentation "A* search is best-first graph search with f(n) = g(n)+h(n).
+    You need to specify the h function when you call astar_search, or
+    else in your Problem subclass."
+                :arguments 
+                  ( ("problem" variable nil (reparse-symbol function_parameters) [7684 7691])
+                    ("h" variable nil (reparse-symbol function_parameters) [7693 7694]))                  )
+                nil [7667 8120])
+            ("RandomTSP" type
+               (:documentation "This class is for solving TSP (Travelling Salesperson Problem)."
+                :superclasses ("Problem")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [8418 8434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8443 8456])
+                            ("self" variable nil (reparse-symbol indented_block_body) [8465 8493])
+                            ("self" code nil (reparse-symbol indented_block_body) [8502 8537]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8322 8326])
+                            ("num_cities" variable nil (reparse-symbol function_parameters) [8328 8338])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [8340 8347]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8309 8538])
+                    ("actions" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8555 8559])
+                            ("city" variable nil (reparse-symbol function_parameters) [8561 8565])
+                            ("path" variable nil (reparse-symbol function_parameters) [8567 8571]))                          )
+                        (reparse-symbol indented_block_body) [8543 8922])
+                    ("result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8938 8942])
+                            ("city" variable nil (reparse-symbol function_parameters) [8944 8948])
+                            ("action" variable nil (reparse-symbol function_parameters) [8950 8956]))                          )
+                        (reparse-symbol indented_block_body) [8927 8984])
+                    ("goal_test" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9003 9007])
+                            ("city" variable nil (reparse-symbol function_parameters) [9009 9013])
+                            ("path" variable nil (reparse-symbol function_parameters) [9015 9019]))                          )
+                        (reparse-symbol indented_block_body) [8989 9196])
+                    ("path_cost" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9215 9219])
+                            ("c" variable nil (reparse-symbol function_parameters) [9221 9222])
+                            ("action" variable nil (reparse-symbol function_parameters) [9224 9230]))                          )
+                        (reparse-symbol indented_block_body) [9201 9398])
+                    ("generator" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9433 9437])
+                            ("num_cities" variable nil (reparse-symbol function_parameters) [9439 9449])
+                            ("epsilon" variable nil (reparse-symbol function_parameters) [9451 9458]))                          )
+                        (reparse-symbol indented_block_body) [9419 10561]))                  
+                :type "class")
+                nil [8203 10561])
+            ("City" type
+               (:documentation "This class represents each city as node in graph"
+                :superclasses ("Node")
+                :members 
+                  ( ("expand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10739 10743])
+                            ("randomTSP" variable nil (reparse-symbol function_parameters) [10745 10754]))                          )
+                        (reparse-symbol indented_block_body) [10728 10887])
+                    ("child_node" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10907 10911])
+                            ("randomTSP" variable nil (reparse-symbol function_parameters) [10913 10922])
+                            ("action" variable nil (reparse-symbol function_parameters) [10924 10930]))                          )
+                        (reparse-symbol indented_block_body) [10892 11091])
+                    ("path_city" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11110 11114]))                          )
+                        (reparse-symbol indented_block_body) [11096 11285])
+                    ("solution" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11303 11307]))                          )
+                        (reparse-symbol indented_block_body) [11290 11342]))                  
+                :type "class")
+                nil [10645 11342])
+            ("\"\"\"
+ You can run as many times as you want by adjusting the range
+ But typically our algorithm runs within minutes for cities up to 18
+ More cities will take much longer time
+ You can also get unlucky with 18 cities
+ Use python3 when run this script
+ After each iteration the solution path, cost and nodes expanded are printed
+ in the best_first_tree_search function
+ You can print more information by uncommenting some lines below
+\"\"\"" code nil nil [11426 11861])
+            ("for" code nil nil [11863 13234]))          
+      :file "RandomTSP.py"
+      :pointmax 13234
+      :fsize 13233
+      :lastmodtime '(23171 29142 418226 706000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!683_AI!q6!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

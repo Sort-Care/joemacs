@@ -1,0 +1,666 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"CSP (Constraint Satisfaction Problems) problems and solvers. (Chapter 6).\"\"\"" code nil nil [1 80])
+            ("utils" include nil nil [82 131])
+            ("collections" include nil nil [133 168])
+            ("functools" include nil nil [169 197])
+            ("itertools" include nil nil [199 215])
+            ("re" include nil nil [216 225])
+            ("random" include nil nil [226 239])
+            ("CSP" type
+               (:documentation "This class describes finite-domain Constraint Satisfaction Problems.
+    A CSP is specified by the following inputs:
+        variables   A list of variables; each is atomic (e.g. int or string).
+        domains     A dict of {var:[possible_value, ...]} entries.
+        neighbors   A dict of {var:[var,...]} that for each variable lists
+                    the other variables that participate in constraints.
+        constraints A function f(A, a, B, b) that returns true if neighbors
+                    A, B satisfy the constraint when they have values A=a, B=b
+    In the textbook and in most mathematical definitions, the
+    constraints are specified as explicit pairs of allowable values,
+    but the formulation here is easier to express and more compact for
+    most cases. (For example, the n-Queens problem can be represented
+    in O(n) space using this notation, instead of O(N^4) for the
+    explicit representation.) In terms of describing the CSP as a
+    problem, that's all there is.
+    However, the class also supports data structures and methods that help you
+    solve CSPs by calling a search function on the CSP. Methods and slots are
+    as follows, where the argument 'a' represents an assignment, which is a
+    dict of {var:val} entries:
+        assign(var, val, a)     Assign a[var] = val; do other bookkeeping
+        unassign(var, a)        Do del a[var], plus other bookkeeping
+        nconflicts(var, val, a) Return the number of other variables that
+                                conflict with var=val
+        curr_domains[var]       Slot: remaining consistent values for var
+                                Used by constraint propagation routines.
+    The following methods are used only by graph_search and tree_search:
+        actions(state)          Return a list of actions
+        result(state, action)   Return a successor of state
+        goal_test(state)        Return true if all constraints satisfied
+    The following are just for debugging purposes:
+        nassigns                Slot: tracks the number of assignments made
+        display(a)              Print a human-readable representation
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Construct a CSP problem. If variables is empty, it becomes domains.keys().\"\"\"" code nil (reparse-symbol indented_block_body) [2498 2578])
+                            ("variables" code nil (reparse-symbol indented_block_body) [2587 2632])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2642 2668])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2677 2699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2708 2734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2743 2773])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2782 2799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2808 2832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2841 2858]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2439 2443])
+                            ("variables" variable nil (reparse-symbol function_parameters) [2445 2454])
+                            ("domains" variable nil (reparse-symbol function_parameters) [2456 2463])
+                            ("neighbors" variable nil (reparse-symbol function_parameters) [2465 2474])
+                            ("constraints" variable nil (reparse-symbol function_parameters) [2476 2487]))                          
+                        :documentation "Construct a CSP problem. If variables is empty, it becomes domains.keys()."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2426 2859])
+                    ("assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2875 2879])
+                            ("var" variable nil (reparse-symbol function_parameters) [2881 2884])
+                            ("val" variable nil (reparse-symbol function_parameters) [2886 2889])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [2891 2901]))                          
+                        :documentation "Add {var: val} to assignment; Discard the old value if any.")
+                        (reparse-symbol indented_block_body) [2864 3035])
+                    ("unassign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3053 3057])
+                            ("var" variable nil (reparse-symbol function_parameters) [3059 3062])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3064 3074]))                          
+                        :documentation "Remove {var: val} from assignment.
+        DO NOT call this if you are changing a variable to a new value;
+        just call assign for that.")
+                        (reparse-symbol indented_block_body) [3040 3295])
+                    ("nconflicts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3315 3319])
+                            ("var" variable nil (reparse-symbol function_parameters) [3321 3324])
+                            ("val" variable nil (reparse-symbol function_parameters) [3326 3329])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3331 3341]))                          
+                        :documentation "Return the number of conflicts var=val has with other variables.")
+                        (reparse-symbol indented_block_body) [3300 3949])
+                    ("display" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3966 3970])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3972 3982]))                          
+                        :documentation "Show a human-readable representation of the CSP.")
+                        (reparse-symbol indented_block_body) [3954 4180])
+                    ("support_pruning" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4249 4253]))                          
+                        :documentation "Make sure we can prune values from domains. (We want to pay
+        for this only if we use it.)")
+                        (reparse-symbol indented_block_body) [4229 4488])
+                    ("suppose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4505 4509])
+                            ("var" variable nil (reparse-symbol function_parameters) [4511 4514])
+                            ("value" variable nil (reparse-symbol function_parameters) [4516 4521]))                          
+                        :documentation "Start accumulating inferences from assuming var=value.")
+                        (reparse-symbol indented_block_body) [4493 4765])
+                    ("prune" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4780 4784])
+                            ("var" variable nil (reparse-symbol function_parameters) [4786 4789])
+                            ("value" variable nil (reparse-symbol function_parameters) [4791 4796])
+                            ("removals" variable nil (reparse-symbol function_parameters) [4798 4806]))                          
+                        :documentation "Rule out var=value.")
+                        (reparse-symbol indented_block_body) [4770 4963])
+                    ("choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4980 4984])
+                            ("var" variable nil (reparse-symbol function_parameters) [4986 4989]))                          
+                        :documentation "Return all values for var that aren't currently ruled out.")
+                        (reparse-symbol indented_block_body) [4968 5121])
+                    ("infer_assignment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5147 5151]))                          
+                        :documentation "Return the partial assignment implied by the current inferences.")
+                        (reparse-symbol indented_block_body) [5126 5382])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5399 5403])
+                            ("removals" variable nil (reparse-symbol function_parameters) [5405 5413]))                          
+                        :documentation "Undo a supposition and all inferences from it.")
+                        (reparse-symbol indented_block_body) [5387 5550]))                  
+                :type "class")
+                nil [242 5550])
+            ("AC3" function
+               (:documentation "[Figure 6.3]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [5677 5680])
+                    ("queue" variable nil (reparse-symbol function_parameters) [5682 5687])
+                    ("removals" variable nil (reparse-symbol function_parameters) [5694 5702]))                  )
+                nil [5669 6149])
+            ("revise" function
+               (:documentation "Return true if we remove a value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [6162 6165])
+                    ("Xi" variable nil (reparse-symbol function_parameters) [6167 6169])
+                    ("Xj" variable nil (reparse-symbol function_parameters) [6171 6173])
+                    ("removals" variable nil (reparse-symbol function_parameters) [6175 6183]))                  )
+                nil [6151 6529])
+            ("first_unassigned_variable" function
+               (:documentation "The default variable order."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6690 6700])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6702 6705]))                  )
+                nil [6660 6820])
+            ("mrv" function
+               (:documentation "Minimum-remaining-values heuristic."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6830 6840])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6842 6845]))                  )
+                nil [6822 7170])
+            ("num_legal_values" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7193 7196])
+                ("var" variable nil (reparse-symbol function_parameters) [7198 7201])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7203 7213]))              ) nil [7172 7406])
+            ("unordered_domain_values" function
+               (:documentation "The default value order."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7454 7457])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7459 7469])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7471 7474]))                  )
+                nil [7426 7540])
+            ("lcv" function
+               (:documentation "Least-constraining-values heuristic."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7550 7553])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7555 7565])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7567 7570]))                  )
+                nil [7542 7728])
+            ("no_inference" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7760 7763])
+                ("var" variable nil (reparse-symbol function_parameters) [7765 7768])
+                ("value" variable nil (reparse-symbol function_parameters) [7770 7775])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7777 7787])
+                ("removals" variable nil (reparse-symbol function_parameters) [7789 7797]))              ) nil [7743 7816])
+            ("forward_checking" function
+               (:documentation "Prune neighbor values inconsistent with var=value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [7839 7842])
+                    ("var" variable nil (reparse-symbol function_parameters) [7844 7847])
+                    ("value" variable nil (reparse-symbol function_parameters) [7849 7854])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7856 7866])
+                    ("removals" variable nil (reparse-symbol function_parameters) [7868 7876]))                  )
+                nil [7818 8239])
+            ("mac" function
+               (:documentation "Maintain arc consistency."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8249 8252])
+                    ("var" variable nil (reparse-symbol function_parameters) [8254 8257])
+                    ("value" variable nil (reparse-symbol function_parameters) [8259 8264])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8266 8276])
+                    ("removals" variable nil (reparse-symbol function_parameters) [8278 8286]))                  )
+                nil [8241 8395])
+            ("backtracking_search" function
+               (:documentation "[Figure 6.5]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8443 8446])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8448 8458])
+                    ("select_unassigned_variable" variable nil (reparse-symbol function_parameters) [8487 8513])
+                    ("order_domain_values" variable nil (reparse-symbol function_parameters) [8565 8584])
+                    ("inference" variable nil (reparse-symbol function_parameters) [8634 8643]))                  )
+                nil [8419 9669])
+            ("Sudoku" type
+               (:documentation "
+    Author: Haoyu Ji, Hanwen Xiong
+    This is a class for constructing Sudoku problem.
+    Sudoku world is a 3x3 boxes each containing 3x3 cells.
+    List xxx holds 81 variables for each cell,
+    dict xxx holds 81 keys whose values correspond to its domains.
+    "
+                :superclasses ("CSP")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10090 10102])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10111 10123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10132 10150])
+                            ("variables" variable nil (reparse-symbol indented_block_body) [10160 10198])
+                            ("domains" variable nil (reparse-symbol indented_block_body) [10207 10274])
+                            ("neighbors" variable nil (reparse-symbol indented_block_body) [10283 10336])
+                            ("for" code nil (reparse-symbol indented_block_body) [10345 10821])
+                            ("super" code nil (reparse-symbol indented_block_body) [10830 10902]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10075 10079]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10062 10903])
+                    ("read_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10924 10928])
+                            ("filename" variable nil (reparse-symbol function_parameters) [10930 10938]))                          
+                        :documentation "
+        Read Sudoku from file with format:
+        - 1 9 - - - - - -
+        - - 8 - - 3 - 5 -
+        - 7 - 6 - - - 8 -
+        - - 1 - - 6 8 - 9
+        8 - - - 4 - - - 7
+        9 4 - - - - - 1 -
+        - - - - - 2 - - -
+        - - - - 8 - 5 6 1
+        - - 3 7 - - - 9 -
+        ")
+                        (reparse-symbol indented_block_body) [10908 11583])
+                    ("print_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11605 11609])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11611 11619]))                          
+                        :documentation "
+        Print Sudoku solution to file with the same format
+        ")
+                        (reparse-symbol indented_block_body) [11588 12032])
+                    ("display_puzzle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12056 12060]))                          
+                        :documentation "
+        Display puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12037 12444])
+                    ("display_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12468 12472]))                          
+                        :documentation "
+        Display solution to this puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12449 12763])
+                    ("sudoku_constraints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12791 12795])
+                            ("A" variable nil (reparse-symbol function_parameters) [12797 12798])
+                            ("a" variable nil (reparse-symbol function_parameters) [12800 12801])
+                            ("B" variable nil (reparse-symbol function_parameters) [12803 12804])
+                            ("b" variable nil (reparse-symbol function_parameters) [12806 12807]))                          
+                        :documentation "
+        r and l are row and column of a variable in a sudoku world
+        b is coordinates of the box in which a variable lies
+        ")
+                        (reparse-symbol indented_block_body) [12768 13279]))                  
+                :type "class")
+                nil [9761 13279])
+            ("Sudoku_solver" function
+               (:documentation "
+    Solve an instance of Sudoku
+    "
+                :arguments 
+                  ( ("sudoku" variable nil (reparse-symbol function_parameters) [13299 13305]))                  )
+                nil [13281 13772])
+            ("sudoku" variable nil nil [13773 13790])
+            ("sudoku" code nil nil [13791 13823])
+            ("sudoku" code nil nil [13824 13847])
+            ("Sudoku_solver" code nil nil [13848 13869])
+            ("print" code nil nil [13870 13877])
+            ("print" code nil nil [13878 13896])
+            ("print" code nil nil [13897 13904])
+            ("sudoku" code nil nil [13905 13928]))          
+      :file "csp.py"
+      :pointmax 13930
+      :fsize 13929
+      :lastmodtime '(23189 48337 849849 980000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("\"\"\"CSP (Constraint Satisfaction Problems) problems and solvers. (Chapter 6).\"\"\"" code nil nil [1 80])
+            ("utils" include nil nil [82 131])
+            ("collections" include nil nil [133 168])
+            ("functools" include nil nil [169 197])
+            ("itertools" include nil nil [199 215])
+            ("re" include nil nil [216 225])
+            ("random" include nil nil [226 239])
+            ("CSP" type
+               (:documentation "This class describes finite-domain Constraint Satisfaction Problems.
+    A CSP is specified by the following inputs:
+        variables   A list of variables; each is atomic (e.g. int or string).
+        domains     A dict of {var:[possible_value, ...]} entries.
+        neighbors   A dict of {var:[var,...]} that for each variable lists
+                    the other variables that participate in constraints.
+        constraints A function f(A, a, B, b) that returns true if neighbors
+                    A, B satisfy the constraint when they have values A=a, B=b
+    In the textbook and in most mathematical definitions, the
+    constraints are specified as explicit pairs of allowable values,
+    but the formulation here is easier to express and more compact for
+    most cases. (For example, the n-Queens problem can be represented
+    in O(n) space using this notation, instead of O(N^4) for the
+    explicit representation.) In terms of describing the CSP as a
+    problem, that's all there is.
+    However, the class also supports data structures and methods that help you
+    solve CSPs by calling a search function on the CSP. Methods and slots are
+    as follows, where the argument 'a' represents an assignment, which is a
+    dict of {var:val} entries:
+        assign(var, val, a)     Assign a[var] = val; do other bookkeeping
+        unassign(var, a)        Do del a[var], plus other bookkeeping
+        nconflicts(var, val, a) Return the number of other variables that
+                                conflict with var=val
+        curr_domains[var]       Slot: remaining consistent values for var
+                                Used by constraint propagation routines.
+    The following methods are used only by graph_search and tree_search:
+        actions(state)          Return a list of actions
+        result(state, action)   Return a successor of state
+        goal_test(state)        Return true if all constraints satisfied
+    The following are just for debugging purposes:
+        nassigns                Slot: tracks the number of assignments made
+        display(a)              Print a human-readable representation
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"Construct a CSP problem. If variables is empty, it becomes domains.keys().\"\"\"" code nil (reparse-symbol indented_block_body) [2498 2578])
+                            ("variables" code nil (reparse-symbol indented_block_body) [2587 2632])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2642 2668])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2677 2699])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2708 2734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2743 2773])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2782 2799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2808 2832])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2841 2858]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2439 2443])
+                            ("variables" variable nil (reparse-symbol function_parameters) [2445 2454])
+                            ("domains" variable nil (reparse-symbol function_parameters) [2456 2463])
+                            ("neighbors" variable nil (reparse-symbol function_parameters) [2465 2474])
+                            ("constraints" variable nil (reparse-symbol function_parameters) [2476 2487]))                          
+                        :documentation "Construct a CSP problem. If variables is empty, it becomes domains.keys()."
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2426 2859])
+                    ("assign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2875 2879])
+                            ("var" variable nil (reparse-symbol function_parameters) [2881 2884])
+                            ("val" variable nil (reparse-symbol function_parameters) [2886 2889])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [2891 2901]))                          
+                        :documentation "Add {var: val} to assignment; Discard the old value if any.")
+                        (reparse-symbol indented_block_body) [2864 3035])
+                    ("unassign" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3053 3057])
+                            ("var" variable nil (reparse-symbol function_parameters) [3059 3062])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3064 3074]))                          
+                        :documentation "Remove {var: val} from assignment.
+        DO NOT call this if you are changing a variable to a new value;
+        just call assign for that.")
+                        (reparse-symbol indented_block_body) [3040 3295])
+                    ("nconflicts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3315 3319])
+                            ("var" variable nil (reparse-symbol function_parameters) [3321 3324])
+                            ("val" variable nil (reparse-symbol function_parameters) [3326 3329])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3331 3341]))                          
+                        :documentation "Return the number of conflicts var=val has with other variables.")
+                        (reparse-symbol indented_block_body) [3300 3949])
+                    ("display" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3966 3970])
+                            ("assignment" variable nil (reparse-symbol function_parameters) [3972 3982]))                          
+                        :documentation "Show a human-readable representation of the CSP.")
+                        (reparse-symbol indented_block_body) [3954 4180])
+                    ("support_pruning" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4249 4253]))                          
+                        :documentation "Make sure we can prune values from domains. (We want to pay
+        for this only if we use it.)")
+                        (reparse-symbol indented_block_body) [4229 4488])
+                    ("suppose" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4505 4509])
+                            ("var" variable nil (reparse-symbol function_parameters) [4511 4514])
+                            ("value" variable nil (reparse-symbol function_parameters) [4516 4521]))                          
+                        :documentation "Start accumulating inferences from assuming var=value.")
+                        (reparse-symbol indented_block_body) [4493 4765])
+                    ("prune" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4780 4784])
+                            ("var" variable nil (reparse-symbol function_parameters) [4786 4789])
+                            ("value" variable nil (reparse-symbol function_parameters) [4791 4796])
+                            ("removals" variable nil (reparse-symbol function_parameters) [4798 4806]))                          
+                        :documentation "Rule out var=value.")
+                        (reparse-symbol indented_block_body) [4770 4963])
+                    ("choices" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4980 4984])
+                            ("var" variable nil (reparse-symbol function_parameters) [4986 4989]))                          
+                        :documentation "Return all values for var that aren't currently ruled out.")
+                        (reparse-symbol indented_block_body) [4968 5121])
+                    ("infer_assignment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5147 5151]))                          
+                        :documentation "Return the partial assignment implied by the current inferences.")
+                        (reparse-symbol indented_block_body) [5126 5382])
+                    ("restore" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5399 5403])
+                            ("removals" variable nil (reparse-symbol function_parameters) [5405 5413]))                          
+                        :documentation "Undo a supposition and all inferences from it.")
+                        (reparse-symbol indented_block_body) [5387 5550]))                  
+                :type "class")
+                nil [242 5550])
+            ("AC3" function
+               (:documentation "[Figure 6.3]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [5677 5680])
+                    ("queue" variable nil (reparse-symbol function_parameters) [5682 5687])
+                    ("removals" variable nil (reparse-symbol function_parameters) [5694 5702]))                  )
+                nil [5669 6149])
+            ("revise" function
+               (:documentation "Return true if we remove a value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [6162 6165])
+                    ("Xi" variable nil (reparse-symbol function_parameters) [6167 6169])
+                    ("Xj" variable nil (reparse-symbol function_parameters) [6171 6173])
+                    ("removals" variable nil (reparse-symbol function_parameters) [6175 6183]))                  )
+                nil [6151 6529])
+            ("first_unassigned_variable" function
+               (:documentation "The default variable order."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6690 6700])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6702 6705]))                  )
+                nil [6660 6820])
+            ("mrv" function
+               (:documentation "Minimum-remaining-values heuristic."
+                :arguments 
+                  ( ("assignment" variable nil (reparse-symbol function_parameters) [6830 6840])
+                    ("csp" variable nil (reparse-symbol function_parameters) [6842 6845]))                  )
+                nil [6822 7170])
+            ("num_legal_values" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7193 7196])
+                ("var" variable nil (reparse-symbol function_parameters) [7198 7201])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7203 7213]))              ) nil [7172 7406])
+            ("unordered_domain_values" function
+               (:documentation "The default value order."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7454 7457])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7459 7469])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7471 7474]))                  )
+                nil [7426 7540])
+            ("lcv" function
+               (:documentation "Least-constraining-values heuristic."
+                :arguments 
+                  ( ("var" variable nil (reparse-symbol function_parameters) [7550 7553])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7555 7565])
+                    ("csp" variable nil (reparse-symbol function_parameters) [7567 7570]))                  )
+                nil [7542 7728])
+            ("no_inference" function (:arguments 
+              ( ("csp" variable nil (reparse-symbol function_parameters) [7760 7763])
+                ("var" variable nil (reparse-symbol function_parameters) [7765 7768])
+                ("value" variable nil (reparse-symbol function_parameters) [7770 7775])
+                ("assignment" variable nil (reparse-symbol function_parameters) [7777 7787])
+                ("removals" variable nil (reparse-symbol function_parameters) [7789 7797]))              ) nil [7743 7816])
+            ("forward_checking" function
+               (:documentation "Prune neighbor values inconsistent with var=value."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [7839 7842])
+                    ("var" variable nil (reparse-symbol function_parameters) [7844 7847])
+                    ("value" variable nil (reparse-symbol function_parameters) [7849 7854])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [7856 7866])
+                    ("removals" variable nil (reparse-symbol function_parameters) [7868 7876]))                  )
+                nil [7818 8239])
+            ("mac" function
+               (:documentation "Maintain arc consistency."
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8249 8252])
+                    ("var" variable nil (reparse-symbol function_parameters) [8254 8257])
+                    ("value" variable nil (reparse-symbol function_parameters) [8259 8264])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8266 8276])
+                    ("removals" variable nil (reparse-symbol function_parameters) [8278 8286]))                  )
+                nil [8241 8395])
+            ("backtracking_search" function
+               (:documentation "[Figure 6.5]"
+                :arguments 
+                  ( ("csp" variable nil (reparse-symbol function_parameters) [8443 8446])
+                    ("assignment" variable nil (reparse-symbol function_parameters) [8448 8458])
+                    ("select_unassigned_variable" variable nil (reparse-symbol function_parameters) [8487 8513])
+                    ("order_domain_values" variable nil (reparse-symbol function_parameters) [8565 8584])
+                    ("inference" variable nil (reparse-symbol function_parameters) [8634 8643]))                  )
+                nil [8419 9669])
+            ("Sudoku" type
+               (:documentation "
+    Author: Haoyu Ji, Hanwen Xiong
+    This is a class for constructing Sudoku problem.
+    Sudoku world is a 3x3 boxes each containing 3x3 cells.
+    List xxx holds 81 variables for each cell,
+    dict xxx holds 81 keys whose values correspond to its domains.
+    "
+                :superclasses ("CSP")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10090 10102])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10111 10123])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10132 10150])
+                            ("variables" variable nil (reparse-symbol indented_block_body) [10160 10198])
+                            ("domains" variable nil (reparse-symbol indented_block_body) [10207 10274])
+                            ("neighbors" variable nil (reparse-symbol indented_block_body) [10283 10336])
+                            ("for" code nil (reparse-symbol indented_block_body) [10345 10821])
+                            ("super" code nil (reparse-symbol indented_block_body) [10830 10902]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10075 10079]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10062 10903])
+                    ("read_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10924 10928])
+                            ("filename" variable nil (reparse-symbol function_parameters) [10930 10938]))                          
+                        :documentation "
+        Read Sudoku from file with format:
+        - 1 9 - - - - - -
+        - - 8 - - 3 - 5 -
+        - 7 - 6 - - - 8 -
+        - - 1 - - 6 8 - 9
+        8 - - - 4 - - - 7
+        9 4 - - - - - 1 -
+        - - - - - 2 - - -
+        - - - - 8 - 5 6 1
+        - - 3 7 - - - 9 -
+        ")
+                        (reparse-symbol indented_block_body) [10908 11583])
+                    ("print_sudoku" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11605 11609])
+                            ("filename" variable nil (reparse-symbol function_parameters) [11611 11619]))                          
+                        :documentation "
+        Print Sudoku solution to file with the same format
+        ")
+                        (reparse-symbol indented_block_body) [11588 12032])
+                    ("display_puzzle" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12056 12060]))                          
+                        :documentation "
+        Display puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12037 12444])
+                    ("display_result" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12468 12472]))                          
+                        :documentation "
+        Display solution to this puzzle on screen (standard output)
+        ")
+                        (reparse-symbol indented_block_body) [12449 12763])
+                    ("sudoku_constraints" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12791 12795])
+                            ("A" variable nil (reparse-symbol function_parameters) [12797 12798])
+                            ("a" variable nil (reparse-symbol function_parameters) [12800 12801])
+                            ("B" variable nil (reparse-symbol function_parameters) [12803 12804])
+                            ("b" variable nil (reparse-symbol function_parameters) [12806 12807]))                          
+                        :documentation "
+        r and l are row and column of a variable in a sudoku world
+        b is coordinates of the box in which a variable lies
+        ")
+                        (reparse-symbol indented_block_body) [12768 13279]))                  
+                :type "class")
+                nil [9761 13279])
+            ("Sudoku_solver" function
+               (:documentation "
+    Solve an instance of Sudoku
+    "
+                :arguments 
+                  ( ("sudoku" variable nil (reparse-symbol function_parameters) [13299 13305]))                  )
+                nil [13281 13785])
+            ("sudoku" variable nil nil [13786 13803])
+            ("sudoku" code nil nil [13804 13836])
+            ("sudoku" code nil nil [13837 13860])
+            ("Sudoku_solver" code nil nil [13861 13882])
+            ("print" code nil nil [13883 13890])
+            ("print" code nil nil [13891 13909])
+            ("print" code nil nil [13910 13917])
+            ("sudoku" code nil nil [13918 13941]))          
+      :file "csp (1).py"
+      :pointmax 13943
+      :fsize 13942
+      :lastmodtime '(23189 54993 994494 557000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Downloads!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

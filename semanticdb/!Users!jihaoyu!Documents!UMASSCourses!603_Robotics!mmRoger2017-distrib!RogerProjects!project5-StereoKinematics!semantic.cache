@@ -1,0 +1,114 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [457 474])
+            ("stdio.h" include (:system-flag t) nil [475 493])
+            ("stdlib.h" include (:system-flag t) nil [494 513])
+            ("Xkw/Xkw.h" include nil nil [515 535])
+            ("roger.h" include nil nil [536 554])
+            ("simulate.h" include nil nil [555 576])
+            ("control.h" include nil nil [577 597])
+            ("modes.h" include nil nil [598 616])
+            ("models.h" include nil nil [617 636])
+            ("matrix_math.h" include nil nil [637 661])
+            ("N_ST_ACTIONS" variable (:constant-flag t) nil [671 683])
+            ("SEA" variable (:constant-flag t) nil [720 723])
+            ("TRCK" variable (:constant-flag t) nil [734 738])
+            ("N_ST_DOF" variable (:constant-flag t) nil [749 757])
+            ("LEFT_EYE" variable (:constant-flag t) nil [818 826])
+            ("RIGHT_EYE" variable (:constant-flag t) nil [837 846])
+            ("SEARCH" function
+               (:prototype-flag t
+                :constructor-flag t
+                :type "int")
+                nil [850 901])
+            ("draw_observation" function
+               (:prototype-flag t
+                :type "void")
+                nil [902 926])
+            ("printObs" function
+               (:arguments 
+                  ( ("obs" variable
+                       (:pointer 1
+                        :type ("Observation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [943 960]))                  
+                :type "void")
+                nil [929 1139])
+            ("printMatrix" function
+               (:arguments 
+                  ( ("s" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1158 1166])
+                    ("m" variable
+                       (:dereference 2
+                        :type "double")
+                        (reparse-symbol arg-sub-list) [1167 1182]))                  
+                :type "void")
+                nil [1141 1281])
+            ("recommended_setpoints" variable
+               (:dereference 2
+                :type "double")
+                nil [1283 1336])
+            ("stereo_observation" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1362 1376])
+                    ("time" variable (:type "double") (reparse-symbol arg-sub-list) [1377 1389])
+                    ("obs" variable
+                       (:pointer 1
+                        :type ("Observation" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1390 1408]))                  
+                :type "void")
+                nil [1338 3562])
+            ("SEARCHTRACKLOCALIZE" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "int")
+                nil [3569 9468])
+            ("project5_control" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [9475 9617])
+            ("project5_reset" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [9694 9738])
+            ("project5_enter_params" function (:type "void") nil [9792 9874]))          
+      :file "project5.c"
+      :pointmax 10953
+      :fsize 10952
+      :lastmodtime '(23257 3133 834250 815000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("N_ST_DOF" . ((number "3" 763 . 764)))
+          ("RIGHT_EYE" . ((number "2" 847 . 848)))
+          ("SEA" . ((number "0" 724 . 725)))
+          ("TRCK" . ((number "1" 739 . 740)))
+          ("LEFT_EYE" . ((number "1" 827 . 828)))
+          ("N_ST_ACTIONS" . ((number "2" 685 . 686)))
+          )
+))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!603_Robotics!mmRoger2017-distrib!RogerProjects!project5-StereoKinematics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

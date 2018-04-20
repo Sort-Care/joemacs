@@ -1,0 +1,309 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("asgn3.layers" include nil nil [21 47])
+            ("asgn3.rnn_layers" include nil nil [48 78])
+            ("CaptioningRNN" type
+               (:documentation "
+  A CaptioningRNN produces captions from image features using a recurrent
+  neural network.
+
+  The RNN receives input vectors of size D, has a vocab size of V, works on
+  sequences of length T, has an RNN hidden dimension of H, uses word vectors
+  of dimension W, and operates on minibatches of size N.
+
+  Note that we don't use any regularization for the CaptioningRNN.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Construct a new CaptioningRNN instance.
+
+    Inputs:
+    - word_to_idx: A dictionary giving the vocabulary. It contains V entries,
+      and maps each string to a unique integer in the range [0, V).
+    - input_dim: Dimension D of input image feature vectors.
+    - wordvec_dim: Dimension W of word vectors.
+    - hidden_dim: Dimension H for the hidden state of the RNN.
+    - cell_type: What type of RNN to use; either 'rnn' or 'lstm'.
+    - dtype: numpy datatype to use; use float32 for training and float64 for
+      numeric gradient checking.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [633 1195])
+                            ("if" code nil (reparse-symbol indented_block_body) [1200 1298])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1307 1333])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1338 1356])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1361 1391])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1396 1457])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1462 1478])
+                            ("vocab_size" variable nil (reparse-symbol indented_block_body) [1488 1517])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1523 1557])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1562 1608])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1613 1655])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1695 1760])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1765 1794])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1863 1925])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1930 1973])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1978 2022])
+                            ("dim_mul" variable nil (reparse-symbol indented_block_body) [2068 2110])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2115 2185])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2190 2231])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2236 2305])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2310 2350])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2355 2404])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2455 2519])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2524 2569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2574 2619])
+                            ("for" code nil (reparse-symbol indented_block_body) [2670 2751]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [511 515])
+                            ("word_to_idx" variable nil (reparse-symbol function_parameters) [517 528])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [530 539])
+                            ("wordvec_dim" variable nil (reparse-symbol function_parameters) [545 556])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [577 587])
+                            ("cell_type" variable nil (reparse-symbol function_parameters) [593 602])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [610 615]))                          
+                        :documentation "
+    Construct a new CaptioningRNN instance.
+
+    Inputs:
+    - word_to_idx: A dictionary giving the vocabulary. It contains V entries,
+      and maps each string to a unique integer in the range [0, V).
+    - input_dim: Dimension D of input image feature vectors.
+    - wordvec_dim: Dimension W of word vectors.
+    - hidden_dim: Dimension H for the hidden state of the RNN.
+    - cell_type: What type of RNN to use; either 'rnn' or 'lstm'.
+    - dtype: numpy datatype to use; use float32 for training and float64 for
+      numeric gradient checking.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [498 2751])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2764 2768])
+                            ("features" variable nil (reparse-symbol function_parameters) [2770 2778])
+                            ("captions" variable nil (reparse-symbol function_parameters) [2780 2788]))                          
+                        :documentation "
+    Compute training-time loss for the RNN. We input image features and
+    ground-truth captions for those images, and use an RNN (or LSTM) to compute
+    loss and gradients on all parameters.
+    
+    Inputs:
+    - features: Input image features, of shape (N, D)
+    - captions: Ground-truth captions; an integer array of shape (N, T) where
+      each element is in the range 0 <= y[i, t] < V
+      
+    Returns a tuple of:
+    - loss: Scalar loss
+    - grads: Dictionary of gradients parallel to self.params
+    ")
+                        (reparse-symbol indented_block_body) [2755 7791])
+                    ("sample" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7806 7810])
+                            ("features" variable nil (reparse-symbol function_parameters) [7812 7820])
+                            ("max_length" variable nil (reparse-symbol function_parameters) [7822 7832]))                          
+                        :documentation "
+    Run a test-time forward pass for the model, sampling captions for input
+    feature vectors.
+
+    At each timestep, we embed the current word, pass it and the previous hidden
+    state to the RNN to get the next hidden state, use the hidden state to get
+    scores for all vocab words, and choose the word with the highest score as
+    the next word. The initial hidden state is computed by applying an affine
+    transform to the input image features, and the initial word is the <START>
+    token.
+
+    For LSTMs you will also have to keep track of the cell state; in that case
+    the initial cell state should be zero.
+
+    Inputs:
+    - features: Array of input image features of shape (N, D).
+    - max_length: Maximum length T of generated captions.
+
+    Returns:
+    - captions: Array of shape (N, max_length) giving sampled captions,
+      where each element is an integer in the range [0, V). The first element
+      of captions should be the first sampled word, not the <START> token.
+    ")
+                        (reparse-symbol indented_block_body) [7795 12306]))                  
+                :type "class")
+                nil [81 12306]))          
+      :file "rnn.py"
+      :pointmax 12306
+      :fsize 12305
+      :lastmodtime '(23251 50226 226221 695000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("h5py" include nil nil [20 31])
+            ("asgn3.layers" include nil nil [33 59])
+            ("asgn3.fast_layers" include nil nil [60 91])
+            ("asgn3.layer_utils" include nil nil [92 123])
+            ("PretrainedCNN" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [245 263])
+                            ("self" variable nil (reparse-symbol indented_block_body) [268 289])
+                            ("self" variable nil (reparse-symbol indented_block_body) [294 322])
+                            ("self" variable nil (reparse-symbol indented_block_body) [327 357])
+                            ("self" code nil (reparse-symbol indented_block_body) [530 578])
+                            ("self" code nil (reparse-symbol indented_block_body) [583 631])
+                            ("self" code nil (reparse-symbol indented_block_body) [636 684])
+                            ("self" code nil (reparse-symbol indented_block_body) [689 737])
+                            ("self" code nil (reparse-symbol indented_block_body) [742 790])
+                            ("self" code nil (reparse-symbol indented_block_body) [795 843])
+                            ("self" code nil (reparse-symbol indented_block_body) [848 896])
+                            ("self" code nil (reparse-symbol indented_block_body) [901 949])
+                            ("self" code nil (reparse-symbol indented_block_body) [954 1002])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1008 1055])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1060 1123])
+                            ("hidden_dim" variable nil (reparse-symbol indented_block_body) [1128 1144])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1150 1169])
+                            ("cur_size" variable nil (reparse-symbol indented_block_body) [1179 1200])
+                            ("prev_dim" variable nil (reparse-symbol indented_block_body) [1205 1217])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1222 1238])
+                            ("for" code nil (reparse-symbol indented_block_body) [1243 1761])
+                            ("fan_in" code nil (reparse-symbol indented_block_body) [1805 1856])
+                            ("self" code nil (reparse-symbol indented_block_body) [1861 1951])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1956 2007])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2012 2066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2071 2125])
+                            ("self" code nil (reparse-symbol indented_block_body) [2130 2170])
+                            ("self" code nil (reparse-symbol indented_block_body) [2175 2274])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2279 2331])
+                            ("for" code nil (reparse-symbol indented_block_body) [2341 2417])
+                            ("if" code nil (reparse-symbol indented_block_body) [2422 2479]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [170 174])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [176 181])
+                            ("num_classes" variable nil (reparse-symbol function_parameters) [194 205])
+                            ("input_size" variable nil (reparse-symbol function_parameters) [211 221])
+                            ("h5_file" variable nil (reparse-symbol function_parameters) [226 233]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [157 2479])
+                    ("load_weights" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2502 2506])
+                            ("h5_file" variable nil (reparse-symbol function_parameters) [2508 2515])
+                            ("verbose" variable nil (reparse-symbol function_parameters) [2517 2524]))                          
+                        :documentation "
+    Load pretrained weights from an HDF5 file.
+
+    Inputs:
+    - h5_file: Path to the HDF5 file where pretrained weights are stored.
+    - verbose: Whether to print debugging info
+    ")
+                        (reparse-symbol indented_block_body) [2485 4006])
+                    ("forward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4024 4028])
+                            ("X" variable nil (reparse-symbol function_parameters) [4030 4031])
+                            ("start" variable nil (reparse-symbol function_parameters) [4033 4038])
+                            ("end" variable nil (reparse-symbol function_parameters) [4045 4048])
+                            ("mode" variable nil (reparse-symbol function_parameters) [4055 4059]))                          
+                        :documentation "
+    Run part of the model forward, starting and ending at an arbitrary layer,
+    in either training mode or testing mode.
+
+    You can pass arbitrary input to the starting layer, and you will receive
+    output from the ending layer and a cache object that can be used to run
+    the model backward over the same set of layers.
+
+    For the purposes of this function, a \"layer\" is one of the following blocks:
+
+    [conv - spatial batchnorm - relu] (There are 9 of these)
+    [affine - batchnorm - relu] (There is one of these)
+    [affine] (There is one of these)
+
+    Inputs:
+    - X: The input to the starting layer. If start=0, then this should be an
+      array of shape (N, C, 64, 64).
+    - start: The index of the layer to start from. start=0 starts from the first
+      convolutional layer. Default is 0.
+    - end: The index of the layer to end at. start=11 ends at the last
+      fully-connected layer, returning class scores. Default is 11.
+    - mode: The mode to use, either 'test' or 'train'. We need this because
+      batch normalization behaves differently at training time and test time.
+
+    Returns:
+    - out: Output from the end layer.
+    - cache: A cache object that can be passed to the backward method to run the
+      network backward over the same range of layers.
+    ")
+                        (reparse-symbol indented_block_body) [4012 6821])
+                    ("backward" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6838 6842])
+                            ("dout" variable nil (reparse-symbol function_parameters) [6844 6848])
+                            ("cache" variable nil (reparse-symbol function_parameters) [6850 6855]))                          
+                        :documentation "
+    Run the model backward over a sequence of layers that were previously run
+    forward using the self.forward method.
+
+    Inputs:
+    - dout: Gradient with respect to the ending layer; this should have the same
+      shape as the out variable returned from the corresponding call to forward.
+    - cache: A cache object returned from self.forward.
+
+    Returns:
+    - dX: Gradient with respect to the start layer. This will have the same
+      shape as the input X passed to self.forward.
+    - grads: Gradient of all parameters in the layers. For example if you run
+      forward through two convolutional layers, then on the corresponding call
+      to backward grads will contain the gradients with respect to the weights,
+      biases, and spatial batchnorm parameters of those two convolutional
+      layers. The grads dictionary will therefore contain a subset of the keys
+      of self.params, and grads[k] and self.params[k] will have the same shape.
+    ")
+                        (reparse-symbol indented_block_body) [6825 8990])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9003 9007])
+                            ("X" variable nil (reparse-symbol function_parameters) [9009 9010])
+                            ("y" variable nil (reparse-symbol function_parameters) [9012 9013]))                          
+                        :documentation "
+    Classification loss used to train the network.
+
+    Inputs:
+    - X: Array of data, of shape (N, 3, 64, 64)
+    - y: Array of labels, of shape (N,)
+
+    If y is None, then run a test-time forward pass and return:
+    - scores: Array of shape (N, 100) giving class scores.
+
+    If y is not None, then run a training-time forward and backward pass and
+    return a tuple of:
+    - loss: Scalar giving loss
+    - grads: Dictionary of gradients, with the same keys as self.params.
+    ")
+                        (reparse-symbol indented_block_body) [8994 9845]))                  
+                :type "class")
+                nil [126 9845]))          
+      :file "pretrained_cnn.py"
+      :pointmax 9846
+      :fsize 9845
+      :lastmodtime '(22558 6184 0 0)
+      :unmatched-syntax '((NAME 9602 . 9606) (IF 9616 . 9618) (ELSE 9629 . 9633))))
+  :file "!Users!jihaoyu!Downloads!assignment3!asgn3!classifiers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

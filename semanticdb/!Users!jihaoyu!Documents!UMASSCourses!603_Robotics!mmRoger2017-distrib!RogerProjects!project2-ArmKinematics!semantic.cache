@@ -1,0 +1,148 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [835 852])
+            ("stdio.h" include (:system-flag t) nil [853 871])
+            ("roger.h" include nil nil [872 890])
+            ("simulate.h" include nil nil [891 912])
+            ("control.h" include nil nil [913 933])
+            ("modes.h" include nil nil [934 952])
+            ("matrix_math.h" include nil nil [953 977])
+            ("construct_transfer" function
+               (:arguments 
+                  ( ("theta" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("T" variable
+                       (:dereference 2
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [1283 1705])
+            ("fwd_arm_kinematics" function
+               (:pointer 1
+                :arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("limb" variable (:type "int") nil nil)
+                    ("res" variable
+                       (:pointer 1
+                        :type "double")
+                        nil nil))                  
+                :type "double")
+                nil [1707 2407])
+            ("inv_arm_kinematics" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("limb" variable (:type "int") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil))                  
+                :type "int")
+                nil [2409 5353])
+            ("project2_control" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [5735 6017])
+            ("project2_reset" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [6020 6067])
+            ("project2_enter_params" function (:type "void") nil [6069 6151])
+            ("project2_visualize" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [6153 6201]))          
+      :file "project2.c"
+      :pointmax 6204
+      :fsize 6203
+      :lastmodtime '(23180 47501 28108 955000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [835 852])
+            ("stdio.h" include (:system-flag t) nil [853 871])
+            ("Roger.h" include nil nil [872 890])
+            ("simulate.h" include nil nil [891 912])
+            ("control.h" include nil nil [913 933])
+            ("modes.h" include nil nil [934 952])
+            ("matrix_math.h" include nil nil [953 977])
+            ("fwd_arm_kinematics" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("limb" variable (:type "int") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [1283 1367])
+            ("inv_arm_kinematics" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("limb" variable (:type "int") nil nil)
+                    ("y" variable (:type "double") nil nil)
+                    ("x" variable (:type "double") nil nil))                  
+                :type "int")
+                nil [1369 2080])
+            ("project2_control" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [2462 2528])
+            ("project2_reset" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [2531 2575])
+            ("project2_enter_params" function (:type "void") nil [2577 2657])
+            ("project2_visualize" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [2659 2707]))          
+      :file "project2.c~"
+      :pointmax 2710
+      :fsize 2709
+      :lastmodtime '(21695 51397 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!603_Robotics!mmRoger2017-distrib!RogerProjects!project2-ArmKinematics!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

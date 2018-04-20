@@ -10,6 +10,7 @@
 
 ;;modify the cursor
 (setq-default cursor-type 'bar)
+(set-cursor-color "#ff4500")
 
 ;; cancel welcome page
 (setq inhibit-splash-screen t)
@@ -38,6 +39,6 @@
                      ((numberp (cadr alpha)) (cadr alpha)))
                100)
           '(95 . 50) '(100 . 100)))))
- (global-set-key (kbd "C-c c t") 'toggle-transparency)
+ (global-set-key (kbd "C-c t t") 'toggle-transparency)
 
 (provide 'init-ui)

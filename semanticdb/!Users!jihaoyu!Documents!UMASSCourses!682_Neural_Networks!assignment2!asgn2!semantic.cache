@@ -1,0 +1,535 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("asgn2.layers" include nil nil [1 27])
+            ("asgn2.fast_layers" include nil nil [28 59])
+            ("affine_relu_forward" function
+               (:documentation "
+  Convenience layer that perorms an affine transform followed by a ReLU
+
+  Inputs:
+  - x: Input to the affine layer
+  - w, b: Weights for the affine layer
+
+  Returns a tuple of:
+  - out: Output from the ReLU
+  - cache: Object to give to the backward pass
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [86 87])
+                    ("w" variable nil (reparse-symbol function_parameters) [89 90])
+                    ("b" variable nil (reparse-symbol function_parameters) [92 93]))                  )
+                nil [62 492])
+            ("affine_relu_backward" function
+               (:documentation "
+  Backward pass for the affine-relu convenience layer
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [519 523])
+                    ("cache" variable nil (reparse-symbol function_parameters) [525 530]))                  )
+                nil [494 734])
+            ("pass" code nil nil [736 740])
+            ("conv_relu_forward" function
+               (:documentation "
+  A convenience layer that performs a convolution followed by a ReLU.
+
+  Inputs:
+  - x: Input to the convolutional layer
+  - w, b, conv_param: Weights and parameters for the convolutional layer
+
+  Returns a tuple of:
+  - out: Output from the ReLU
+  - cache: Object to give to the backward pass
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [765 766])
+                    ("w" variable nil (reparse-symbol function_parameters) [768 769])
+                    ("b" variable nil (reparse-symbol function_parameters) [771 772])
+                    ("conv_param" variable nil (reparse-symbol function_parameters) [774 784]))                  )
+                nil [743 1241])
+            ("conv_relu_backward" function
+               (:documentation "
+  Backward pass for the conv-relu convenience layer.
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [1266 1270])
+                    ("cache" variable nil (reparse-symbol function_parameters) [1272 1277]))                  )
+                nil [1243 1487])
+            ("conv_relu_pool_forward" function
+               (:documentation "
+  Convenience layer that performs a convolution, a ReLU, and a pool.
+
+  Inputs:
+  - x: Input to the convolutional layer
+  - w, b, conv_param: Weights and parameters for the convolutional layer
+  - pool_param: Parameters for the pooling layer
+
+  Returns a tuple of:
+  - out: Output from the pooling layer
+  - cache: Object to give to the backward pass
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [1516 1517])
+                    ("w" variable nil (reparse-symbol function_parameters) [1519 1520])
+                    ("b" variable nil (reparse-symbol function_parameters) [1522 1523])
+                    ("conv_param" variable nil (reparse-symbol function_parameters) [1525 1535])
+                    ("pool_param" variable nil (reparse-symbol function_parameters) [1537 1547]))                  )
+                nil [1489 2128])
+            ("conv_relu_pool_backward" function
+               (:documentation "
+  Backward pass for the conv-relu-pool convenience layer
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [2158 2162])
+                    ("cache" variable nil (reparse-symbol function_parameters) [2164 2169]))                  )
+                nil [2130 2441]))          
+      :file "layer_utils.py"
+      :pointmax 2442
+      :fsize 2441
+      :lastmodtime '(22488 31126 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("try" code nil nil [20 332])
+            ("asgn2.im2col" include nil nil [333 359])
+            ("conv_forward_im2col" function
+               (:documentation "
+  A fast implementation of the forward pass for a convolutional layer
+  based on im2col and col2im.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [386 387])
+                    ("w" variable nil (reparse-symbol function_parameters) [389 390])
+                    ("b" variable nil (reparse-symbol function_parameters) [392 393])
+                    ("conv_param" variable nil (reparse-symbol function_parameters) [395 405]))                  )
+                nil [362 1404])
+            ("conv_forward_strides" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1431 1432])
+                ("w" variable nil (reparse-symbol function_parameters) [1434 1435])
+                ("b" variable nil (reparse-symbol function_parameters) [1437 1438])
+                ("conv_param" variable nil (reparse-symbol function_parameters) [1440 1450]))              ) nil [1406 2778])
+            ("conv_backward_strides" function (:arguments 
+              ( ("dout" variable nil (reparse-symbol function_parameters) [2806 2810])
+                ("cache" variable nil (reparse-symbol function_parameters) [2812 2817]))              ) nil [2780 3332])
+            ("conv_backward_im2col" function
+               (:documentation "
+  A fast implementation of the backward pass for a convolutional layer
+  based on im2col and col2im.
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [3359 3363])
+                    ("cache" variable nil (reparse-symbol function_parameters) [3365 3370]))                  )
+                nil [3334 4103])
+            ("conv_forward_fast" variable nil nil [4105 4145])
+            ("conv_backward_fast" variable nil nil [4146 4188])
+            ("max_pool_forward_fast" function
+               (:documentation "
+  A fast implementation of the forward pass for a max pooling layer.
+
+  This chooses between the reshape method and the im2col method. If the pooling
+  regions are square and tile the input image, then we can use the reshape
+  method which is very fast. Otherwise we fall back on the im2col method, which
+  is not much faster than the naive method.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [4217 4218])
+                    ("pool_param" variable nil (reparse-symbol function_parameters) [4220 4230]))                  )
+                nil [4191 5093])
+            ("max_pool_backward_fast" function
+               (:documentation "
+  A fast implementation of the backward pass for a max pooling layer.
+
+  This switches between the reshape method an the im2col method depending on
+  which method was used to generate the cache.
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [5122 5126])
+                    ("cache" variable nil (reparse-symbol function_parameters) [5128 5133]))                  )
+                nil [5095 5600])
+            ("max_pool_forward_reshape" function
+               (:documentation "
+  A fast implementation of the forward pass for the max pooling layer that uses
+  some clever reshaping.
+
+  This can only be used for square pooling regions that tile the input.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [5631 5632])
+                    ("pool_param" variable nil (reparse-symbol function_parameters) [5634 5644]))                  )
+                nil [5602 6309])
+            ("max_pool_backward_reshape" function
+               (:documentation "
+  A fast implementation of the backward pass for the max pooling layer that
+  uses some clever broadcasting and reshaping.
+
+  This can only be used if the forward pass was computed using
+  max_pool_forward_reshape.
+
+  NOTE: If there are multiple argmaxes, this method will assign gradient to
+  ALL argmax elements of the input rather than picking one. In this case the
+  gradient will actually be incorrect. However this is unlikely to occur in
+  practice, so it shouldn't matter much. One possible solution is to split the
+  upstream gradient equally among all argmax elements; this should result in a
+  valid subgradient. You can make this happen by uncommenting the line below;
+  however this results in a significant performance penalty (about 40% slower)
+  and is unlikely to matter in practice so we don't do it.
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [6341 6345])
+                    ("cache" variable nil (reparse-symbol function_parameters) [6347 6352]))                  )
+                nil [6311 7628])
+            ("max_pool_forward_im2col" function
+               (:documentation "
+  An implementation of the forward pass for max pooling based on im2col.
+
+  This isn't much faster than the naive version, so it should be avoided if
+  possible.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [7658 7659])
+                    ("pool_param" variable nil (reparse-symbol function_parameters) [7661 7671]))                  )
+                nil [7630 8565])
+            ("max_pool_backward_im2col" function
+               (:documentation "
+  An implementation of the backward pass for max pooling based on im2col.
+
+  This isn't much faster than the naive version, so it should be avoided if
+  possible.
+  "
+                :arguments 
+                  ( ("dout" variable nil (reparse-symbol function_parameters) [8596 8600])
+                    ("cache" variable nil (reparse-symbol function_parameters) [8602 8607]))                  )
+                nil [8567 9281]))          
+      :file "fast_layers.py"
+      :pointmax 9281
+      :fsize 9280
+      :lastmodtime '(22488 31114 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("asgn2" include nil nil [21 44])
+            ("Solver" type
+               (:documentation "
+  A Solver encapsulates all the logic necessary for training classification
+  models. The Solver performs stochastic gradient descent using different
+  update rules defined in optim.py.
+
+  The solver accepts both training and validataion data and labels so it can
+  periodically check classification accuracy on both training and validation
+  data to watch out for overfitting.
+
+  To train a model, you will first construct a Solver instance, passing the
+  model, dataset, and various optoins (learning rate, batch size, etc) to the
+  constructor. You will then call the train() method to run the optimization
+  procedure and train the model.
+
+  After the train() method returns, model.params will contain the parameters
+  that performed best on the validation set over the course of training.
+  In addition, the instance variable solver.loss_history will contain a list
+  of all losses encountered during training and the instance variables
+  solver.train_acc_history and solver.val_acc_history will be lists containing
+  the accuracies of the model on the training and validation set at each epoch.
+
+  Example usage might look something like this:
+
+  data = {
+    'X_train': # training data
+    'y_train': # training labels
+    'X_val': # validation data
+    'y_val': # validation labels
+  }
+  model = MyAwesomeModel(hidden_size=100, reg=10)
+  solver = Solver(model, data,
+                  update_rule='sgd',
+                  optim_config={
+                    'learning_rate': 1e-3,
+                  },
+                  lr_decay=0.95,
+                  num_epochs=10, batch_size=100,
+                  print_every=100)
+  solver.train()
+
+
+  A Solver works on a model object that must conform to the following API:
+
+  - model.params must be a dictionary mapping string parameter names to numpy
+    arrays containing parameter values.
+
+  - model.loss(X, y) must be a function that computes training-time loss and
+    gradients, and test-time classification scores, with the following inputs
+    and outputs:
+
+    Inputs:
+    - X: Array giving a minibatch of input data of shape (N, d_1, ..., d_k)
+    - y: Array of labels, of shape (N,) giving labels for X where y[i] is the
+      label for X[i].
+
+    Returns:
+    If y is None, run a test-time forward pass and return:
+    - scores: Array of shape (N, C) giving classification scores for X where
+      scores[i, c] gives the score of class c for X[i].
+
+    If y is not None, run a training time forward and backward pass and return
+    a tuple of:
+    - loss: Scalar giving the loss
+    - grads: Dictionary with the same keys as self.params mapping parameter
+      names to gradients of the loss with respect to those parameters.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Construct a new Solver instance.
+
+    Required arguments:
+    - model: A model object conforming to the API described above
+    - data: A dictionary of training and validation data with the following:
+      'X_train': Array of shape (N_train, d_1, ..., d_k) giving training images
+      'X_val': Array of shape (N_val, d_1, ..., d_k) giving validation images
+      'y_train': Array of shape (N_train,) giving labels for training images
+      'y_val': Array of shape (N_val,) giving labels for validation images
+
+    Optional arguments:
+    - update_rule: A string giving the name of an update rule in optim.py.
+      Default is 'sgd'.
+    - optim_config: A dictionary containing hyperparameters that will be
+      passed to the chosen update rule. Each update rule requires different
+      hyperparameters (see optim.py) but all update rules require a
+      'learning_rate' parameter so that should always be present.
+    - lr_decay: A scalar for learning rate decay; after each epoch the learning
+      rate is multiplied by this value.
+    - batch_size: Size of minibatches used to compute loss and gradient during
+      training.
+    - num_epochs: The number of epochs to run for during training.
+    - print_every: Integer; training losses will be printed every print_every
+      iterations.
+    - verbose: Boolean; if set to false then no output will be printed during
+      training.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [2816 4221])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4226 4244])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4249 4279])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4284 4314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4319 4345])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4350 4376])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4413 4464])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4469 4519])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4524 4567])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4572 4619])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4624 4670])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4676 4724])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4729 4771])
+                            ("if" code nil (reparse-symbol indented_block_body) [4835 4974])
+                            ("if" code nil (reparse-symbol indented_block_body) [5079 5190])
+                            ("self" variable nil (reparse-symbol indented_block_body) [5194 5245])
+                            ("self" code nil (reparse-symbol indented_block_body) [5251 5264]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2782 2786])
+                            ("model" variable nil (reparse-symbol function_parameters) [2788 2793])
+                            ("data" variable nil (reparse-symbol function_parameters) [2795 2799])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [2801 2809]))                          
+                        :documentation "
+    Construct a new Solver instance.
+
+    Required arguments:
+    - model: A model object conforming to the API described above
+    - data: A dictionary of training and validation data with the following:
+      'X_train': Array of shape (N_train, d_1, ..., d_k) giving training images
+      'X_val': Array of shape (N_val, d_1, ..., d_k) giving validation images
+      'y_train': Array of shape (N_train,) giving labels for training images
+      'y_val': Array of shape (N_val,) giving labels for validation images
+
+    Optional arguments:
+    - update_rule: A string giving the name of an update rule in optim.py.
+      Default is 'sgd'.
+    - optim_config: A dictionary containing hyperparameters that will be
+      passed to the chosen update rule. Each update rule requires different
+      hyperparameters (see optim.py) but all update rules require a
+      'learning_rate' parameter so that should always be present.
+    - lr_decay: A scalar for learning rate decay; after each epoch the learning
+      rate is multiplied by this value.
+    - batch_size: Size of minibatches used to compute loss and gradient during
+      training.
+    - num_epochs: The number of epochs to run for during training.
+    - print_every: Integer; training losses will be printed every print_every
+      iterations.
+    - verbose: Boolean; if set to false then no output will be printed during
+      training.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2769 5265])
+                    ("_reset" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5280 5284]))                          
+                        :documentation "
+    Set up some book-keeping variables for optimization. Don't call this
+    manually.
+    ")
+                        (reparse-symbol indented_block_body) [5269 5809])
+                    ("_step" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5823 5827]))                          
+                        :documentation "
+    Make a single gradient update. This is called by train() and should not
+    be called manually.
+    ")
+                        (reparse-symbol indented_block_body) [5813 6560])
+                    ("check_accuracy" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6583 6587])
+                            ("X" variable nil (reparse-symbol function_parameters) [6589 6590])
+                            ("y" variable nil (reparse-symbol function_parameters) [6592 6593])
+                            ("num_samples" variable nil (reparse-symbol function_parameters) [6595 6606])
+                            ("batch_size" variable nil (reparse-symbol function_parameters) [6613 6623]))                          
+                        :documentation "
+    Check accuracy of the model on the provided data.
+
+    Inputs:
+    - X: Array of data, of shape (N, d_1, ..., d_k)
+    - y: Array of labels, of shape (N,)
+    - num_samples: If not None, subsample the data and only test the model
+      on num_samples datapoints.
+    - batch_size: Split X and y into batches of this size to avoid using too
+      much memory.
+
+    Returns:
+    - acc: Scalar giving the fraction of instances that were correctly
+      classified by the model.
+    ")
+                        (reparse-symbol indented_block_body) [6564 7736])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7750 7754]))                          
+                        :documentation "
+    Run optimization to train the model.
+    ")
+                        (reparse-symbol indented_block_body) [7740 9555]))                  
+                :type "class")
+                nil [47 9555]))          
+      :file "solver.py"
+      :pointmax 9556
+      :fsize 9555
+      :lastmodtime '(23216 6445 511892 293000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("\"\"\"
+This file implements various first-order update rules that are commonly used for
+training neural networks. Each update rule accepts current weights and the
+gradient of the loss with respect to those weights and produces the next set of
+weights. Each update rule has the same interface:
+
+def update(w, dw, config=None):
+
+Inputs:
+  - w: A numpy array giving the current weights.
+  - dw: A numpy array of the same shape as w giving the gradient of the
+    loss with respect to w.
+  - config: A dictionary containing hyperparameter values such as learning rate,
+    momentum, etc. If the update rule requires caching values over many
+    iterations, then config will also hold these cached values.
+
+Returns:
+  - next_w: The next point after the update.
+  - config: The config dictionary to be passed to the next iteration of the
+    update rule.
+
+NOTE: For most update rules, the default learning rate will probably not perform
+well; however the default values of the other hyperparameters should work well
+for a variety of different problems.
+
+For efficiency, update rules may perform in-place updates, mutating w and
+setting next_w equal to w.
+\"\"\"" code nil nil [21 1170])
+            ("sgd" function
+               (:documentation "
+  Performs vanilla stochastic gradient descent.
+
+  config format:
+  - learning_rate: Scalar learning rate.
+  "
+                :arguments 
+                  ( ("w" variable nil (reparse-symbol function_parameters) [1181 1182])
+                    ("dw" variable nil (reparse-symbol function_parameters) [1184 1186])
+                    ("config" variable nil (reparse-symbol function_parameters) [1188 1194]))                  )
+                nil [1173 1453])
+            ("sgd_momentum" function
+               (:documentation "
+  Performs stochastic gradient descent with momentum.
+
+  config format:
+  - learning_rate: Scalar learning rate.
+  - momentum: Scalar between 0 and 1 giving the momentum value.
+    Setting momentum = 0 reduces to sgd.
+  - velocity: A numpy array of the same shape as w and dw used to store a moving
+    average of the gradients.
+  "
+                :arguments 
+                  ( ("w" variable nil (reparse-symbol function_parameters) [1472 1473])
+                    ("dw" variable nil (reparse-symbol function_parameters) [1475 1477])
+                    ("config" variable nil (reparse-symbol function_parameters) [1479 1485]))                  )
+                nil [1455 2700])
+            ("rmsprop" function
+               (:documentation "
+  Uses the RMSProp update rule, which uses a moving average of squared gradient
+  values to set adaptive per-parameter learning rates.
+
+  config format:
+  - learning_rate: Scalar learning rate.
+  - decay_rate: Scalar between 0 and 1 giving the decay rate for the squared
+    gradient cache.
+  - epsilon: Small scalar used for smoothing to avoid dividing by zero.
+  - cache: Moving average of second moments of gradients.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [2715 2716])
+                    ("dx" variable nil (reparse-symbol function_parameters) [2718 2720])
+                    ("config" variable nil (reparse-symbol function_parameters) [2722 2728]))                  )
+                nil [2703 4244])
+            ("adam" function
+               (:documentation "
+  Uses the Adam update rule, which incorporates moving averages of both the
+  gradient and its square and a bias correction term.
+
+  config format:
+  - learning_rate: Scalar learning rate.
+  - beta1: Decay rate for moving average of first moment of gradient.
+  - beta2: Decay rate for moving average of second moment of gradient.
+  - epsilon: Small scalar used for smoothing to avoid dividing by zero.
+  - m: Moving average of gradient.
+  - v: Moving average of squared gradient.
+  - t: Iteration number.
+  "
+                :arguments 
+                  ( ("x" variable nil (reparse-symbol function_parameters) [4255 4256])
+                    ("dx" variable nil (reparse-symbol function_parameters) [4258 4260])
+                    ("config" variable nil (reparse-symbol function_parameters) [4262 4268]))                  )
+                nil [4246 6138]))          
+      :file "optim.py"
+      :pointmax 6149
+      :fsize 6148
+      :lastmodtime '(23210 38647 352611 784000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :file "im2col.py"
+      :fsize 2090
+      :lastmodtime '(22178 48082 0 0)))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!682_Neural_Networks!assignment2!asgn2!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

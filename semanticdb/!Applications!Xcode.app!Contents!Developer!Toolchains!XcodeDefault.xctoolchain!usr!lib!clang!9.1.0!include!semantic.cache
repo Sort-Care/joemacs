@@ -1,0 +1,41 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("__STDARG_H" variable (:constant-flag t) nil [1309 1319])
+            ("va_list" type
+               (:typedef ("__builtin_va_list" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1338 1372])
+            ("_VA_LIST" variable (:constant-flag t) nil [1381 1389])
+            ("va_start" variable (:constant-flag t) nil [1405 1413])
+            ("va_end" variable (:constant-flag t) nil [1463 1469])
+            ("va_arg" variable (:constant-flag t) nil [1512 1518])
+            ("__va_copy" variable (:constant-flag t) nil [1712 1721])
+            ("__GNUC_VA_LIST" variable (:constant-flag t) nil [1934 1948])
+            ("__gnuc_va_list" type
+               (:typedef ("__builtin_va_list" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1951 1992]))          
+      :file "stdarg.h"
+      :pointmax 2025
+      :fsize 2024
+      :lastmodtime '(23206 59927 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("va_start" (spp-arg-list ("ap" "param") 1413 . 1424) . ((symbol "__builtin_va_start" 1425 . 1443) (semantic-list "(ap, param)" 1443 . 1454)))
+          ("va_end" (spp-arg-list ("ap") 1469 . 1473) . ((symbol "__builtin_va_end" 1483 . 1499) (semantic-list "(ap)" 1499 . 1503)))
+          ("_VA_LIST")
+          ("__va_copy" (spp-arg-list ("d" "s") 1721 . 1726) . ((symbol "__builtin_va_copy" 1727 . 1744) (semantic-list "(d,s)" 1744 . 1749)))
+          ("__STDARG_H")
+          ("va_arg" (spp-arg-list ("ap" "type") 1518 . 1528) . ((symbol "__builtin_va_arg" 1532 . 1548) (semantic-list "(ap, type)" 1548 . 1558)))
+          ("__GNUC_VA_LIST" . ((number "1" 1949 . 1950)))
+          )
+))
+  :file "!Applications!Xcode.app!Contents!Developer!Toolchains!XcodeDefault.xctoolchain!usr!lib!clang!9.1.0!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

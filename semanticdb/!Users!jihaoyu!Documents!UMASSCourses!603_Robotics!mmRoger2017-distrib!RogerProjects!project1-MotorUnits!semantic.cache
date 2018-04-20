@@ -1,0 +1,257 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("math.h" include (:system-flag t) nil [761 778])
+            ("stdio.h" include (:system-flag t) nil [779 797])
+            ("roger.h" include nil nil [798 816])
+            ("simulate.h" include nil nil [817 838])
+            ("control.h" include nil nil [839 859])
+            ("modes.h" include nil nil [860 878])
+            ("matrix_math.h" include nil nil [879 903])
+            ("update_setpoints" function
+               (:prototype-flag t
+                :type "void")
+                nil [905 929])
+            ("Kp_eye" variable
+               (:default-value "20.5"
+                :type "double")
+                nil [1120 1141])
+            ("Kd_eye" variable
+               (:default-value "0.338"
+                :type "double")
+                nil [1142 1164])
+            ("passive_Kd_eye" variable
+               (:default-value "0.001"
+                :type "double")
+                nil [1173 1203])
+            ("Kp_arm" variable
+               (:default-value "10"
+                :type "double")
+                nil [1214 1233])
+            ("Kd_arm" variable
+               (:default-value "2.5"
+                :type "double")
+                nil [1238 1258])
+            ("passive_Kd_arm" variable
+               (:default-value "1.0"
+                :type "double")
+                nil [1266 1294])
+            ("Kp_base_trans" variable
+               (:default-value "25.0"
+                :type "double")
+                nil [1316 1344])
+            ("Kd_base_trans" variable
+               (:default-value "14.5"
+                :type "double")
+                nil [1376 1404])
+            ("passive_Kd_base_trans" variable
+               (:default-value "2.0"
+                :type "double")
+                nil [1406 1441])
+            ("Kp_base_rot" variable
+               (:default-value "8.0"
+                :type "double")
+                nil [1460 1486])
+            ("Kd_base_rot" variable
+               (:default-value "4.8"
+                :type "double")
+                nil [1487 1512])
+            ("passive_Kd_base_rot" variable
+               (:default-value "1.0"
+                :type "double")
+                nil [1513 1546])
+            ("Kp" variable
+               (:default-value "5.0"
+                :type "double")
+                nil [1564 1580])
+            ("Kd" variable
+               (:default-value "0.5"
+                :type "double")
+                nil [1581 1597])
+            ("PDController_eyes" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [1827 2864])
+            ("PDLeftEye" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [2867 3258])
+            ("PDRightEye" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [3260 3713])
+            ("PDController_arms" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [3867 5344])
+            ("PDLeftShoulder" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [5346 5954])
+            ("PDLeftElbow" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [5956 6561])
+            ("PDRightShoulder" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [6564 7179])
+            ("PDRightElbow" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [7181 7793])
+            ("PDBase_translate" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [7842 8798])
+            ("PDBase_rotate" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "double")
+                nil [8846 11146])
+            ("baseJT" variable
+               (:dereference 2
+                :default-value "{{(1.0/2.0), -(1.0/(2.0*R_AXLE))}, {(1.0/2.0), (1.0/(2.0*R_AXLE))}}"
+                :type "double")
+                nil [11606 11697])
+            ("PDController_base" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [11699 13271])
+            ("initialize_q_double_dot" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil)
+                    ("qdd" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [13274 13866])
+            ("decouple" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil)
+                    ("torques" variable
+                       (:dereference 1
+                        :type "double")
+                        nil nil))                  
+                :type "void")
+                nil [13868 14671])
+            ("set_input" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [14673 15033])
+            ("record_error" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [15035 16081])
+            ("control_roger" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil)
+                    ("time" variable (:type "double") nil nil))                  
+                :type "void")
+                nil [16388 17754])
+            ("project1_reset" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [17836 17880])
+            ("project1_enter_params" function (:type "void") nil [18110 18414])
+            ("project1_visualize" function
+               (:arguments 
+                  ( ("roger" variable
+                       (:pointer 1
+                        :type ("Robot" type (:type "class") nil nil))
+                        nil nil))                  
+                :type "void")
+                nil [18573 18621]))          
+      :file "project1.c"
+      :pointmax 18623
+      :fsize 18622
+      :lastmodtime '(23199 2752 137977 200000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!603_Robotics!mmRoger2017-distrib!RogerProjects!project1-MotorUnits!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

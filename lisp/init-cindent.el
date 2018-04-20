@@ -1,9 +1,9 @@
 (setq indent-tabs-mode nil)
-;;(setq default-tab-width 4)
-;;(setq tab-width 4)
-;; (setq tab-stop-list ())
-;; (loop for x downfrom 40 to 1 do
-;;       (setq tab-stop-list (cons (* x 4) tab-stop-list)))
+(setq default-tab-width 4)
+(setq tab-width 4)
+(setq tab-stop-list ())
+(loop for x downfrom 40 to 1 do
+      (setq tab-stop-list (cons (* x 4) tab-stop-list)))
 
 (defconst my-c-style
   '((c-tab-always-indent        . t)
@@ -43,7 +43,7 @@
   ;; key bindings for all supported languages.  We can put these in
   ;; c-mode-base-map because c-mode-map, c++-mode-map, objc-mode-map,
   ;; java-mode-map, idl-mode-map, and pike-mode-map inherit from it.
-  (define-key c-mode-base-map "/C-m" 'c-context-line-break)
+  ;;(define-key c-mode-base-map "/C-m" 'c-context-line-break)
   )
 
 (add-hook 'c-mode-common-hook 'my-c-mode-common-hook)

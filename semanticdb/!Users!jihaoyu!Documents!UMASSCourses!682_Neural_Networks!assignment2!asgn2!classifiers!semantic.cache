@@ -1,0 +1,393 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("asgn2.layers" include nil nil [21 47])
+            ("asgn2.layer_utils" include nil nil [48 79])
+            ("TwoLayerNet" type
+               (:documentation "
+  A two-layer fully-connected neural network with ReLU nonlinearity and
+  softmax loss that uses a modular layer design. We assume an input dimension
+  of D, a hidden dimension of H, and perform classification over C classes.
+
+  The architecure should be affine - relu - affine - softmax.
+
+  Note that this class does not implement gradient descent; instead, it
+  will interact with a separate Solver object that is responsible for running
+  optimization.
+
+  The learnable parameters of the model are stored in the dictionary
+  self.params that maps parameter names to numpy arrays.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: An integer giving the size of the input
+    - hidden_dim: An integer giving the size of the hidden layer
+    - num_classes: An integer giving the number of classes to classify
+    - dropout: Scalar between 0 and 1 giving dropout strength.
+    - weight_scale: Scalar giving the standard deviation for random
+      initialization of the weights.
+    - reg: Scalar giving L2 regularization strength.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [825 1293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1298 1314])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1319 1333])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1987 2109])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2114 2154])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2159 2285])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2290 2331]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [720 724])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [726 735])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [745 755])
+                            ("num_classes" variable nil (reparse-symbol function_parameters) [761 772])
+                            ("weight_scale" variable nil (reparse-symbol function_parameters) [792 804])
+                            ("reg" variable nil (reparse-symbol function_parameters) [811 814]))                          
+                        :documentation "
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: An integer giving the size of the input
+    - hidden_dim: An integer giving the size of the hidden layer
+    - num_classes: An integer giving the number of classes to classify
+    - dropout: Scalar between 0 and 1 giving dropout strength.
+    - weight_scale: Scalar giving the standard deviation for random
+      initialization of the weights.
+    - reg: Scalar giving L2 regularization strength.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [707 2332])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2588 2592])
+                            ("X" variable nil (reparse-symbol function_parameters) [2594 2595])
+                            ("y" variable nil (reparse-symbol function_parameters) [2597 2598]))                          
+                        :documentation "
+    Compute loss and gradient for a minibatch of data.
+
+    Inputs:
+    - X: Array of input data of shape (N, d_1, ..., d_k)
+    - y: Array of labels, of shape (N,). y[i] gives the label for X[i].
+
+    Returns:
+    If y is None, then run a test-time forward pass of the model and return:
+    - scores: Array of shape (N, C) giving classification scores, where
+      scores[i, c] is the classification score for X[i] and class c.
+
+    If y is not None, then run a training-time forward and backward pass and
+    return a tuple of:
+    - loss: Scalar value giving the loss
+    - grads: Dictionary with the same keys as self.params, mapping parameter
+      names to gradients of the loss with respect to those parameters.
+    ")
+                        (reparse-symbol indented_block_body) [2579 5999]))                  
+                :type "class")
+                nil [82 5999])
+            ("FullyConnectedNet" type
+               (:documentation "
+  A fully-connected neural network with an arbitrary number of hidden layers,
+  ReLU nonlinearities, and a softmax loss function. This will also implement
+  dropout and batch normalization as options. For a network with L layers,
+  the architecture will be
+
+  {affine - [batch norm] - relu - [dropout]} x (L - 1) - affine - softmax
+
+  where batch normalization and dropout are optional, and the {...} block is
+  repeated L - 1 times.
+
+  Similar to the TwoLayerNet above, learnable parameters are stored in the
+  self.params dictionary and will be learned using the Solver class.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Initialize a new FullyConnectedNet.
+
+    Inputs:
+    - hidden_dims: A list of integers giving the size of each hidden layer.
+    - input_dim: An integer giving the size of the input.
+    - num_classes: An integer giving the number of classes to classify.
+    - dropout: Scalar between 0 and 1 giving dropout strength. If dropout=0 then
+      the network should not use dropout at all.
+    - use_batchnorm: Whether or not the network should use batch normalization.
+    - reg: Scalar giving L2 regularization strength.
+    - weight_scale: Scalar giving the standard deviation for random
+      initialization of the weights.
+    - dtype: A numpy datatype object; all computations will be performed using
+      this datatype. float32 is faster but less accurate, so you should use
+      float64 for numeric gradient checking.
+    - seed: If not None, then pass this random seed to the dropout layers. This
+      will make the dropout layers deteriminstic so we can gradient check the
+      model.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [6819 7828])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7833 7867])
+                            ("self" code nil (reparse-symbol indented_block_body) [7872 7902])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7907 7921])
+                            ("self" code nil (reparse-symbol indented_block_body) [7926 7964])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7969 7987])
+                            ("self" variable nil (reparse-symbol indented_block_body) [7992 8008])
+                            ("hidden_dims" code nil (reparse-symbol indented_block_body) [9065 9097])
+                            ("hidden_dims" code nil (reparse-symbol indented_block_body) [9102 9133])
+                            ("for" code nil (reparse-symbol indented_block_body) [9138 9717])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10203 10226])
+                            ("if" code nil (reparse-symbol indented_block_body) [10231 10380])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10752 10771])
+                            ("if" code nil (reparse-symbol indented_block_body) [10776 10879])
+                            ("for" code nil (reparse-symbol indented_block_body) [10934 11010]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6641 6645])
+                            ("hidden_dims" variable nil (reparse-symbol function_parameters) [6647 6658])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [6660 6669])
+                            ("num_classes" variable nil (reparse-symbol function_parameters) [6679 6690])
+                            ("dropout" variable nil (reparse-symbol function_parameters) [6710 6717])
+                            ("use_batchnorm" variable nil (reparse-symbol function_parameters) [6721 6734])
+                            ("reg" variable nil (reparse-symbol function_parameters) [6742 6745])
+                            ("weight_scale" variable nil (reparse-symbol function_parameters) [6766 6778])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [6785 6790])
+                            ("seed" variable nil (reparse-symbol function_parameters) [6803 6807]))                          
+                        :documentation "
+    Initialize a new FullyConnectedNet.
+
+    Inputs:
+    - hidden_dims: A list of integers giving the size of each hidden layer.
+    - input_dim: An integer giving the size of the input.
+    - num_classes: An integer giving the number of classes to classify.
+    - dropout: Scalar between 0 and 1 giving dropout strength. If dropout=0 then
+      the network should not use dropout at all.
+    - use_batchnorm: Whether or not the network should use batch normalization.
+    - reg: Scalar giving L2 regularization strength.
+    - weight_scale: Scalar giving the standard deviation for random
+      initialization of the weights.
+    - dtype: A numpy datatype object; all computations will be performed using
+      this datatype. float32 is faster but less accurate, so you should use
+      float64 for numeric gradient checking.
+    - seed: If not None, then pass this random seed to the dropout layers. This
+      will make the dropout layers deteriminstic so we can gradient check the
+      model.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6628 11010])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11023 11027])
+                            ("X" variable nil (reparse-symbol function_parameters) [11029 11030])
+                            ("y" variable nil (reparse-symbol function_parameters) [11032 11033]))                          
+                        :documentation "
+    Compute loss and gradient for the fully-connected net.
+
+    Input / output: Same as TwoLayerNet above.
+    ")
+                        (reparse-symbol indented_block_body) [11014 16503]))                  
+                :type "class")
+                nil [6001 16503]))          
+      :file "fc_net.py"
+      :pointmax 16503
+      :fsize 16502
+      :lastmodtime '(23212 9868 119744 782000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("asgn2.layers" include nil nil [21 47])
+            ("asgn2.fast_layers" include nil nil [48 79])
+            ("asgn2.layer_utils" include nil nil [80 111])
+            ("ThreeLayerConvNet" type
+               (:documentation "
+  A three-layer convolutional network with the following architecture:
+
+  conv - relu - 2x2 max pool - affine - relu - affine - softmax
+
+  The network operates on minibatches of data that have shape (N, C, H, W)
+  consisting of N images, each with height H and width W and with C input
+  channels.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: Tuple (C, H, W) giving size of input data
+    - num_filters: Number of filters to use in the convolutional layer
+    - filter_size: Size of filters to use in the convolutional layer
+    - hidden_dim: Number of units to use in the fully-connected hidden layer
+    - num_classes: Number of scores to produce from the final affine layer.
+    - weight_scale: Scalar giving standard deviation for random initialization
+      of weights.
+    - reg: Scalar giving L2 regularization strength
+    - dtype: numpy datatype to use for computation.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [646 1253])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1258 1274])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1279 1293])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1298 1316])
+                            ("C, H, W" code nil (reparse-symbol indented_block_body) [2132 2151])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2161 2323])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2328 2369])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2441 2589])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2594 2634])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2640 2766])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2771 2812])
+                            ("for" code nil (reparse-symbol indented_block_body) [3061 3137]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [473 477])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [479 488])
+                            ("num_filters" variable nil (reparse-symbol function_parameters) [502 513])
+                            ("filter_size" variable nil (reparse-symbol function_parameters) [518 529])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [548 558])
+                            ("num_classes" variable nil (reparse-symbol function_parameters) [564 575])
+                            ("weight_scale" variable nil (reparse-symbol function_parameters) [580 592])
+                            ("reg" variable nil (reparse-symbol function_parameters) [599 602])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [623 628]))                          
+                        :documentation "
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: Tuple (C, H, W) giving size of input data
+    - num_filters: Number of filters to use in the convolutional layer
+    - filter_size: Size of filters to use in the convolutional layer
+    - hidden_dim: Number of units to use in the fully-connected hidden layer
+    - num_classes: Number of scores to produce from the final affine layer.
+    - weight_scale: Scalar giving standard deviation for random initialization
+      of weights.
+    - reg: Scalar giving L2 regularization strength
+    - dtype: numpy datatype to use for computation.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [460 3137])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3150 3154])
+                            ("X" variable nil (reparse-symbol function_parameters) [3156 3157])
+                            ("y" variable nil (reparse-symbol function_parameters) [3159 3160]))                          
+                        :documentation "
+    Evaluate loss and gradient for the three-layer convolutional network.
+
+    Input / output: Same API as TwoLayerNet in fc_net.py.
+    ")
+                        (reparse-symbol indented_block_body) [3141 6339]))                  
+                :type "class")
+                nil [114 6339])
+            ("pass" code nil nil [6341 6345]))          
+      :file "cnn.py"
+      :pointmax 6346
+      :fsize 6345
+      :lastmodtime '(23214 56332 843968 872000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("asgn2.layers" include nil nil [21 47])
+            ("asgn2.fast_layers" include nil nil [48 79])
+            ("asgn2.layer_utils" include nil nil [80 111])
+            ("MultiConvNet" type
+               (:documentation "
+  A three-layer convolutional network with the following architecture:
+
+  conv - relu - 2x2 max pool - affine - relu - affine - softmax
+
+  The network operates on minibatches of data that have shape (N, C, H, W)
+  consisting of N images, each with height H and width W and with C input
+  channels.
+  "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"\"\"
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: Tuple (C, H, W) giving size of input data
+    - num_filters: Number of filters to use in the convolutional layer
+    - filter_size: Size of filters to use in the convolutional layer
+    - hidden_dim: Number of units to use in the fully-connected hidden layer
+    - num_classes: Number of scores to produce from the final affine layer.
+    - weight_scale: Scalar giving standard deviation for random initialization
+      of weights.
+    - reg: Scalar giving L2 regularization strength
+    - dtype: numpy datatype to use for computation.
+    \"\"\"" code nil (reparse-symbol indented_block_body) [641 1248])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1253 1269])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1274 1288])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1293 1311])
+                            ("C, H, W" code nil (reparse-symbol indented_block_body) [2208 2227])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2233 2472])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2477 2518])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2590 2919])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2924 2964])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2970 3137])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3142 3183])
+                            ("for" code nil (reparse-symbol indented_block_body) [3189 3360])
+                            ("for" code nil (reparse-symbol indented_block_body) [3608 3684]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [468 472])
+                            ("input_dim" variable nil (reparse-symbol function_parameters) [474 483])
+                            ("num_filters" variable nil (reparse-symbol function_parameters) [497 508])
+                            ("filter_size" variable nil (reparse-symbol function_parameters) [513 524])
+                            ("hidden_dim" variable nil (reparse-symbol function_parameters) [543 553])
+                            ("num_classes" variable nil (reparse-symbol function_parameters) [559 570])
+                            ("weight_scale" variable nil (reparse-symbol function_parameters) [575 587])
+                            ("reg" variable nil (reparse-symbol function_parameters) [594 597])
+                            ("dtype" variable nil (reparse-symbol function_parameters) [618 623]))                          
+                        :documentation "
+    Initialize a new network.
+
+    Inputs:
+    - input_dim: Tuple (C, H, W) giving size of input data
+    - num_filters: Number of filters to use in the convolutional layer
+    - filter_size: Size of filters to use in the convolutional layer
+    - hidden_dim: Number of units to use in the fully-connected hidden layer
+    - num_classes: Number of scores to produce from the final affine layer.
+    - weight_scale: Scalar giving standard deviation for random initialization
+      of weights.
+    - reg: Scalar giving L2 regularization strength
+    - dtype: numpy datatype to use for computation.
+    "
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [455 3684])
+                    ("loss" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3697 3701])
+                            ("X" variable nil (reparse-symbol function_parameters) [3703 3704])
+                            ("y" variable nil (reparse-symbol function_parameters) [3706 3707]))                          
+                        :documentation "
+    Evaluate loss and gradient for the three-layer convolutional network.
+
+    Input / output: Same API as TwoLayerNet in fc_net.py.
+    ")
+                        (reparse-symbol indented_block_body) [3688 6878]))                  
+                :type "class")
+                nil [114 6878])
+            ("pass" code nil nil [6880 6884]))          
+      :file "convet.py"
+      :pointmax 6885
+      :fsize 6848
+      :lastmodtime '(23215 61565 605373 901000)
+      :unmatched-syntax nil))
+  :file "!Users!jihaoyu!Documents!UMASSCourses!682_Neural_Networks!assignment2!asgn2!classifiers!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
