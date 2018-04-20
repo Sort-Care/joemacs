@@ -46,6 +46,7 @@
 							 function-args
 							 flyspell-correct-helm
 							 org-bullets
+							 atom-one-dark
 							 
 							 
 							 ;;---------------- Packages for edit convenience ---------- 
