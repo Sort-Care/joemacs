@@ -45,6 +45,7 @@ a ;;;Packages
 							 multiple-cursors
 							 function-args
 							 flyspell-correct-helm
+							 org-bullets
 							 
 							 
 							 ;;---------------- Packages for edit convenience ---------- 
