@@ -1,4 +1,4 @@
-a ;;;Packages
+;;;Packages
 
 (when (>= emacs-major-version 24)
   (package-initialize)
