@@ -81,8 +81,8 @@
 (global-set-key (kbd "C-c w f") 'windmove-right)
 
 ;;chinese-fonts-setup
-(global-set-key (kbd "C-c f i") 'cfs-increase-fontsize)
-(global-set-key (kbd "C-c f d") 'cfs-decrease-fontsize)
+;;(global-set-key (kbd "C-c f i") 'cfs-increase-fontsize)
+;;(global-set-key (kbd "C-c f d") 'cfs-decrease-fontsize)
 
 (global-set-key (kbd "M-s i") 'counsel-imenu)
 

@@ -1,4 +1,4 @@
- ;;;packages
+a ;;;Packages
 
 (when (>= emacs-major-version 24)
   (package-initialize)
@@ -30,12 +30,22 @@
 							 which-key
 							 auctex
 							 company-auctex
-							 chinese-fonts-setup
+							 ;;chinese-fonts-setup
 							 ag
 							 helm
 							 helm-swoop
 							 helm-gtags
 							 ggtags
+							 window-numbering
+							 powerline
+							 undo-tree
+							 shell-pop
+							 ;;org-jekyll
+							 web-beautify
+							 multiple-cursors
+							 function-args
+							 flyspell-correct-helm
+							 
 							 
 							 ;;---------------- Packages for edit convenience ---------- 
 							 hungry-delete
@@ -150,7 +160,7 @@
 
 
 ;;chinese-fonts-setup
-(require 'chinese-fonts-setup)
+;;(require 'chinese-fonts-setup)
 
 ;;ag
 (require 'ag)
@@ -191,7 +201,7 @@
        (artist-figlet-get-font-list))
 
 ;; org-jekyll
-(require 'org-jekyll)
+;;(require 'org-jekyll)
 
 ;; web beautify
 (require 'web-beautify)
