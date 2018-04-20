@@ -154,7 +154,7 @@
 (require 'move-lines)
 (move-lines-binding)
 
-(set-default-font "Menlo-14")
+(set-default-font "Mono-11")
 
 (setq display-buffer-alist '(("\\*undo-tree\\*" display-buffer-below-selected)))
 
